@@ -1,0 +1,5 @@
+#                                                                                --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name            accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#    ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+chr6:29907008-29916976:1 -           3322 MHC_I                PF00129.11   179   2.5e-48  152.7   0.2   1   1   1.2e-48   3.7e-48  152.1   0.1    88   179  1343  1434  1339  1434 0.98 -
+chr6:29907008-29916976:0 -           3323 MHC_I                PF00129.11   179   2.4e-46  146.2   0.2   1   1   1.2e-46   3.5e-46  145.7   0.1     1    91  1176  1266  1176  1267 0.99 -

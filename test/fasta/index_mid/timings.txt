@@ -1,0 +1,24 @@
+
+real	0m0.333s
+user	0Create pickle index..
+rCreate sqlite3 index...
+Lookup text index...
+Lookup pickle index...
+Lookup sqlite3 index...
+Sequences: 1000Sequences: 2000Sequences: 3000Sequences: 4000Sequences: 5000Sequences: 6000Sequences: 7000Sequences: 8000Sequences: 9000Sequences: 9999
+
+real	0m1.089s
+user	0m0.328s
+sys	0m0.305s
+
+real	0m0.297s
+user	0m0.047s
+sys	0m0.225s
+
+real	0m0.283s
+user	0m0.057s
+sys	0m0.226s
+
+real	0m0.252s
+user	0m0.028s
+sys	0m0.222s

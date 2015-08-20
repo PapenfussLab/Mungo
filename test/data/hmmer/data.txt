@@ -1,0 +1,313 @@
+hmmsearch - search a sequence database with a profile HMM
+HMMER 2.3.2 (Oct 2003)
+Copyright (C) 1992-2003 HHMI/Washington University School of Medicine
+Freely distributed under the GNU General Public License (GPL)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+HMM file:                   HMMs/CAP.hmm [aligned_all]
+Sequence database:          human/db/proteins.fa
+per-sequence score cutoff:  [none]
+per-domain score cutoff:    [none]
+per-sequence Eval cutoff:   <= 10        
+per-domain Eval cutoff:     [none]
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query HMM:   aligned_all
+Accession:   [none]
+Description: [none]
+  [HMM has been calibrated; E-values are empirical estimates]
+
+Scores for complete sequences (score includes all domains):
+Sequence    Description                                 Score    E-value  N 
+--------    -----------                                 -----    ------- ---
+NP_006357.1 adenylyl cyclase-associated protein 2; 28   403.0   1.3e-117   1
+NP_006358.1 adenylyl cyclase-associated protein [Homo   395.0   3.4e-115   1
+NP_543153.1 solute carrier family 34 (sodium phosphat  -114.6          4   1
+NP_689728.2 hypothetical protein FLJ40629 [Homo sapie  -117.8        6.6   1
+NP_071918.1 zinc finger protein 106 homolog; zinc fin  -120.0        9.5   1
+
+Parsed for domains:
+Sequence    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+--------    ------- ----- -----    ----- -----      -----  -------
+NP_006357.1   1/1     290   476 ..     1   208 []   403.0 1.3e-117
+NP_006358.1   1/1     284   474 ..     1   208 []   395.0 3.4e-115
+NP_543153.1   1/1      23   177 ..     1   208 []  -114.6        4
+NP_689728.2   1/1     462   638 ..     1   208 []  -117.8      6.6
+NP_071918.1   1/1    1467  1597 ..     1   208 []  -120.0      9.5
+
+Alignments of top-scoring domains:
+NP_006357.1: domain 1 of 1, from 290 to 476: score 403.0, E = 1.3e-117
+                   *->PsLRaqstvpksgssskask.ksppkpakkkpkpealpskkqkpPkk
+                      PsLRaq+++ +s      ++++++p+p+++k+ p+      qk++++
+  NP_006357.   290    PSLRAQGGQTQS------PTkSHTPSPTSPKSYPS------QKHAPV 324  
+
+                   eLegGkKWivEnqegdnknlviietelkQsVyIfkCenstiqIkGKvNsI
+                   ++++GkKW+vE+qe d+++lvi+etelkQ+ yIfkCe+stiqIkGKvNsI
+  NP_006357.   325 LELEGKKWRVEYQE-DRNDLVISETELKQVAYIFKCEKSTIQIKGKVNSI 373  
+
+                   tldnCkKtslVfDslVSsvEVinCksvqiQVlGkvPTIsIDktdgcqiYL
+                   ++dnCkK++lVfD++V++vEVin++++qiQV+G+vPTIsI+kt+gc+iYL
+  NP_006357.   374 IIDNCKKLGLVFDNVVGIVEVINSQDIQIQVMGRVPTISINKTEGCHIYL 423  
+
+                   SkdSldsveteIvtSKSSemNvlvPteaeedGDyvEfPlPEQfkttvvda
+                   S+d+ld   +eIv++KSSemN+l+P+    dGDy+EfP+PEQfkt ++  
+  NP_006357.   424 SEDALD---CEIVSAKSSEMNILIPQ----DGDYREFPIPEQFKTAWD-- 464  
+
+                   ggKLvTevveha<-*
+                   g+KL+Te+ e++   
+  NP_006357.   465 GSKLITEPAEIM    476  
+
+NP_006358.1: domain 1 of 1, from 284 to 474: score 395.0, E = 3.4e-115
+                   *->PsLRaqstvpksgssskask.ksppkpakkkpkpealpskkqkpPkk
+                      P L+aqs++++s      ++++++++++  +p+p+ ++  k++p+++
+  NP_006358.   284    PALKAQSGPVRS------GPkPFSAPKPQTSPSPKRAT--KKEPAVL 322  
+
+                   eLegGkKWivEnqegdnknlviietelkQsVyIfkCenstiqIkGKvNsI
+                   eLeg kKW+vEnqe +  nlvi++telkQ+ yI+kC+n+t+qIkGK+NsI
+  NP_006358.   323 ELEG-KKWRVENQE-NVSNLVIEDTELKQVAYIYKCVNTTLQIKGKINSI 370  
+
+                   tldnCkKtslVfDslVSsvEVinCksvqiQVlGkvPTIsIDktdgcqiYL
+                   t+dnCkK++lVfD++V++vE+in+k+v++QV+GkvPTIsI+ktdgc+ YL
+  NP_006358.   371 TVDNCKKLGLVFDDVVGIVEIINSKDVKVQVMGKVPTISINKTDGCHAYL 420  
+
+                   SkdSldsveteIvtSKSSemNvlvPteaeedGDyvEfPlPEQfkttvvda
+                   Sk+Sld   +eIv++KSSemNvl+Pt   e GD+ EfP+PEQfkt ++  
+  NP_006358.   421 SKNSLD---CEIVSAKSSEMNVLIPT---EGGDFNEFPVPEQFKTLWN-- 462  
+
+                   ggKLvTevveha<-*
+                   g+KLvT+v+e+a   
+  NP_006358.   463 GQKLVTTVTEIA    474  
+
+NP_543153.1: domain 1 of 1, from 23 to 177: score -114.6, E = 4
+                   *->PsLRaqstvpksgssskask.ksppkpakkkpkpealpskkqkpPkk
+                        LR+++t +++      +  + +   +   p+ +++      +P k
+  NP_543153.    23    KTLRNEGTSSSA------PVlEEGDTDPWTLPQLKDTS-----QPWK 58   
+
+                   eLegGkKWivEnqeg...dnknlviietelkQsVyIfkCenstiqIkGKv
+                   eL+           g+ +  ++ v+  + l  s y f C+  ++      
+  NP_543153.    59 ELRV---------AGrlrRVAGSVLKACGLLGSLYFFICSLDVLS----- 94   
+
+                   NsItldnCkKtslVfDslVSsvEVinCksvqiQVlGkvPTIsIDktdgcq
+                    + +l + k  + +f++      V+ ++ v+  V+G + T +++ ++   
+  NP_543153.    95 SAFQLLGSKVAGDIFKD-----NVVLSNPVAGLVIGVLVTALVQSSST-- 137  
+
+                   iYLSkdSldsveteIvtSKSSemNvlvPteaeedGDyvEfPlPEQfkttv
+                      S  S+    +  v +K   + v+vP                 ++ + 
+  NP_543153.   138 ---S-SSIV---VSMVAAKLLTVRVSVPI----------------IMGVN 164  
+
+                   vdaggKLvTevveha<-*
+                   v  g    ++ v++a   
+  NP_543153.   165 V--GTSITSTLVSMA    177  
+
+NP_689728.2: domain 1 of 1, from 462 to 638: score -117.8, E = 6.6
+                   *->PsLRaqstvpksgssskaskksppkpakkkpkpealpskkqkpPkke
+                       ++R+q  + ++           +k+++ k+ p +l++k     k++
+  NP_689728.   462    EDRRKQLEEWQK-----------SKGKTYKRPPMELKTKR----KVI 493  
+
+                   LegGkKWivEnqegdnknlviietelkQsVyIfkCenstiqIkGKvNsIt
+                    e+     +   + +      ie e  +       ++  +    K+N+ t
+  NP_689728.   494 KEM----NISFWK-S------IEKEEEE-------KKAQLELSSKINN-T 524  
+
+                   ldnCkKtslVfDslVSsvEVinCksvqiQVl...................
+                   l +C ++   +++ V s E+ n       +l++ ++ ++  +    + + 
+  NP_689728.   525 LTECLNL---IEGGVPSNEILN-------ILssipeaekfakfwickakl 564  
+
+                   ...................GkvPTIsIDktdgcqiYLSkdSldsveteIv
+                     ++++ +  +  ++  ++G +P   I+    + + + +dS+   +te +
+  NP_689728.   565 laskgtfdviglyeeaiknGATP---IQELRKVVLNILQDSNR--TTEGI 609  
+
+                   tSKSSemNvlvPteaeedGDyvEfPlPEQfkttvvdaggKLvTevveha<
+                   tS S     lv     ++            +t+v++  +K++++ + ++ 
+  NP_689728.   610 TSDS-----LVAE---TS------------ITSVEELAKKMESVKSCLS  638  
+
+                   -*
+                     
+  NP_689728.     -    -    
+
+NP_071918.1: domain 1 of 1, from 1467 to 1597: score -120.0, E = 9.5
+                   *->PsLRaqstvpksgssskask.ksppkpakkkpkpealpskkqkpPkk
+                      +s+++   v+++      s  +++ k + + +  e+       + ++
+  NP_071918.  1467    TSRSGCDEVSST------SEiGTRYKDGIPVSVAET-------QTVI 1500 
+
+                   eLegGkKWivEnqeg..dnknlviietelkQsVyIfkCenstiqIkGKvN
+                       G K   E   +++d+ ++++   e +Q+                vN
+  NP_071918.  1501 SSIKGSKNSSEISSEpgDDDEPTEGSFEGHQAA---------------VN 1535 
+
+                   sItldnCkKtslVfDslVSsvEVinCksvqiQVlGkvPTIsIDktdgcqi
+                   +I++ +                            + + T+s Dkt  +  
+  NP_071918.  1536 AIQIFG----------------------------NLLYTCSADKTVRVYN 1557 
+
+                   YLSkdSldsveteIvtSKSSemNvlvPteaeedGDyvEfPlPEQfkttvv
+                     S+++++     ++   +S +N l+ t                 +t+ +
+  NP_071918.  1558 LVSRKCIG-----VFEGHTSKVNCLLVT-----------------QTSGK 1585 
+
+                   daggKLvTevveha<-*
+                   +    L+T  ++h    
+  NP_071918.  1586 N--AALYTGSSDHT    1597 
+
+
+Histogram of all scores:
+score    obs    exp  (one = represents 13 sequences)
+-----    ---    ---
+<-255      2      -|=                                                          
+ -255      1      0|=                                                          
+ -254      0      0|                                                           
+ -253      2      0|=                                                          
+ -252      1      0|=                                                          
+ -251      2      0|=                                                          
+ -250      1      0|=                                                          
+ -249      2      0|=                                                          
+ -248      0      0|                                                           
+ -247      0      0|                                                           
+ -246      3      0|=                                                          
+ -245      6      0|=                                                          
+ -244      5      0|=                                                          
+ -243      4      0|=                                                          
+ -242      4      0|=                                                          
+ -241      2      0|=                                                          
+ -240      3      0|=                                                          
+ -239      4      0|=                                                          
+ -238      3      0|=                                                          
+ -237      4      0|=                                                          
+ -236      0      0|                                                           
+ -235      3      0|=                                                          
+ -234      0      0|                                                           
+ -233      3      0|=                                                          
+ -232      4      0|=                                                          
+ -231      2      0|=                                                          
+ -230      3      0|=                                                          
+ -229      8      0|=                                                          
+ -228      6      0|=                                                          
+ -227     11      0|=                                                          
+ -226      5      0|=                                                          
+ -225      6      0|=                                                          
+ -224      8      0|=                                                          
+ -223     14      0|==                                                         
+ -222      9      0|=                                                          
+ -221      8      0|=                                                          
+ -220     15      0|==                                                         
+ -219     14      0|==                                                         
+ -218     16      0|==                                                         
+ -217     23      0|==                                                         
+ -216     27      0|===                                                        
+ -215     24      0|==                                                         
+ -214     27      0|===                                                        
+ -213     23      0|==                                                         
+ -212     39      0|===                                                        
+ -211     49      0|====                                                       
+ -210     45      0|====                                                       
+ -209     58      0|=====                                                      
+ -208     61      0|=====                                                      
+ -207     84      0|=======                                                    
+ -206     82      0|=======                                                    
+ -205     97      0|========                                                   
+ -204     99      0|========                                                   
+ -203    113      0|=========                                                  
+ -202    121      0|==========                                                 
+ -201    110      0|=========                                                  
+ -200    132      0|===========                                                
+ -199    156      0|============                                               
+ -198    183      0|===============                                            
+ -197    179      0|==============                                             
+ -196    220      0|=================                                          
+ -195    227      0|==================                                         
+ -194    261      0|=====================                                      
+ -193    279      0|======================                                     
+ -192    313      0|=========================                                  
+ -191    285      0|======================                                     
+ -190    328      0|==========================                                 
+ -189    315      0|=========================                                  
+ -188    356      0|============================                               
+ -187    379      0|==============================                             
+ -186    417      0|=================================                          
+ -185    438      1|*=================================                         
+ -184    504      6|*======================================                    
+ -183    495     18|=*=====================================                    
+ -182    528     47|===*=====================================                  
+ -181    542    104|=======*==================================                 
+ -180    581    198|===============*=============================              
+ -179    615    336|=========================*======================           
+ -178    602    515|=======================================*=======            
+ -177    648    722|==================================================     *   
+ -176    694    942|======================================================    *
+ -175    687   1154|=====================================================     *
+ -174    712   1340|=======================================================   *
+ -173    720   1487|========================================================  *
+ -172    703   1586|=======================================================   *
+ -171    710   1637|=======================================================   *
+ -170    718   1643|========================================================  *
+ -169    698   1608|======================================================    *
+ -168    704   1543|=======================================================   *
+ -167    725   1455|========================================================  *
+ -166    702   1351|======================================================    *
+ -165    766   1238|==========================================================*
+ -164    697   1123|======================================================    *
+ -163    718   1009|========================================================  *
+ -162    654    900|===================================================       *
+ -161    619    797|================================================          *
+ -160    572    702|============================================         *     
+ -159    565    615|============================================   *           
+ -158    482    536|======================================   *                 
+ -157    484    466|===================================*==                     
+ -156    418    404|===============================*=                          
+ -155    389    349|==========================*===                             
+ -154    411    301|=======================*========                           
+ -153    387    259|===================*==========                             
+ -152    307    223|=================*======                                   
+ -151    288    191|==============*========                                    
+ -150    313    164|============*============                                  
+ -149    260    141|==========*=========                                       
+ -148    214    120|=========*=======                                          
+ -147    213    103|=======*=========                                          
+ -146    181     88|======*=======                                             
+ -145    145     75|=====*======                                               
+ -144    110     64|====*====                                                  
+ -143    126     55|====*=====                                                 
+ -142    103     46|===*====                                                   
+ -141     67     40|===*==                                                     
+ -140     78     34|==*===                                                     
+ -139     52     29|==*=                                                       
+ -138     42     24|=*==                                                       
+ -137     51     21|=*==                                                       
+ -136     35     18|=*=                                                        
+ -135     39     15|=*=                                                        
+ -134     21     13|*=                                                         
+ -133     29     11|*==                                                        
+ -132     11      9|*                                                          
+ -131     26      8|*=                                                         
+ -130      2      6|*                                                          
+ -129     14      5|*=                                                         
+ -128     15      5|*=                                                         
+ -127     10      4|*                                                          
+ -126      0      3|*                                                          
+ -125      5      3|*                                                          
+ -124      9      2|*                                                          
+ -123      3      2|*                                                          
+ -122      1      1|*                                                          
+ -121      2      1|*                                                          
+ -120      0      1|*                                                          
+ -119      0      1|*                                                          
+ -118      1      1|*                                                          
+ -117      0      0|                                                           
+ -116      0      0|                                                           
+>-115      3      -|=                                                          
+
+
+% Statistical details of theoretical EVD fit:
+              mu =  -169.8892
+          lambda =     0.1602
+chi-sq statistic = 67077.2734
+  P(chi-square)  =          0
+
+Total sequences searched: 27960
+
+Whole sequence top hits:
+tophits_s report:
+     Total hits:           146
+     Satisfying E cutoff:  5
+     Total memory:         30K
+
+Domain top hits:
+tophits_s report:
+     Total hits:           146
+     Satisfying E cutoff:  146
+     Total memory:         141K

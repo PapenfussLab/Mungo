@@ -1,0 +1,107 @@
+hmmsearch - search a sequence database with a profile HMM
+HMMER 2.3.2 (Oct 2003)
+Copyright (C) 1992-2003 HHMI/Washington University School of Medicine
+Freely distributed under the GNU General Public License (GPL)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+HMM file:                   HMMs/MHC_I_fs.hmm [MHC_I]
+Sequence database:          seq/6frames.fa
+per-sequence score cutoff:  [none]
+per-domain score cutoff:    [none]
+per-sequence Eval cutoff:   <= 1e+02     
+per-domain Eval cutoff:     [none]
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query HMM:   MHC_I
+Accession:   PF00129.8
+Description: Class I Histocompatibility antigen, domains alpha 1 and 2
+  [HMM has been calibrated; E-values are empirical estimates]
+
+Scores for complete sequences (score includes all domains):
+Sequence                 Description                    Score    E-value  N 
+--------                 -----------                    -----    ------- ---
+hg18_refGene_NM_002116:0                                235.8    6.4e-71   1
+hg18_refGene_NM_002116:2                                232.5    6.2e-70   1
+hg18_refGene_NM_002116:3                                 -4.2       0.11   1
+hg18_refGene_NM_002116:4                                 -7.0       0.63   1
+hg18_refGene_NM_002116:1                                 -7.1       0.67   1
+hg18_refGene_NM_002116:5                                 -8.0        1.2   1
+
+Parsed for domains:
+Sequence                 Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+--------                 ------- ----- -----    ----- -----      -----  -------
+hg18_refGene_NM_002116:0   1/1     572   660 ..    91   180 .]   235.8  6.4e-71
+hg18_refGene_NM_002116:2   1/1     401   491 ..     1    91 [.   232.5  6.2e-70
+hg18_refGene_NM_002116:3   1/1     942   951 ..   171   180 .]    -4.2     0.11
+hg18_refGene_NM_002116:4   1/1    1056  1060 ..     1     5 [.    -7.0     0.63
+hg18_refGene_NM_002116:1   1/1     769   773 ..     1     5 [.    -7.1     0.67
+hg18_refGene_NM_002116:5   1/1    1036  1041 ..     1     6 [.    -8.0      1.2
+
+Alignments of top-scoring domains:
+hg18_refGene_NM_002116:0: domain 1 of 1, from 572 to 660: score 235.8, E = 6.4e-71
+                   *->GSHTlQwMyGCDvgpDgrllRGYeQfAYDGkDYIaLNeDLrsWTAaD
+                      GSHT+Q MyGCDvg+Dgr+lRGY+Q+AYDGkDYIaLNeDLrsWTAaD
+  hg18_refGe   572    GSHTIQIMYGCDVGSDGRFLRGYRQDAYDGKDYIALNEDLRSWTAAD 618  
+
+                   tAAqITkrKWEaageAerkeRaYLEgeCvEwLrRYLEnGKetL<-*
+                   +AAqITkrKWEaa+eAe+  RaYL g+CvEwLrRYLEnGKetL   
+  hg18_refGe   619 MAAQITKRKWEAAHEAEQ-LRAYLDGTCVEWLRRYLENGKETL    660  
+
+hg18_refGene_NM_002116:2: domain 1 of 1, from 401 to 491: score 232.5, E = 6.2e-70
+                   *->gsHSLrYFyTAVSrPGlGePrFiaVGYVDDtQFVRFDSdaenpRmeP
+                      gsHS+rYF T+VSrPG+GePrFiaVGYVDDtQFVRFDSda+++RmeP
+  hg18_refGe   401    GSHSMRYFFTSVSRPGRGEPRFIAVGYVDDTQFVRFDSDAASQRMEP 447  
+
+                   rapWieqEGpeYWereTqiaKaneqifRvnLrtLlgYYNQSegG<-*
+                   rapWieqEGpeYW++eT+++Ka+ q++Rv+L+tL+gYYNQSe+G   
+  hg18_refGe   448 RAPWIEQEGPEYWDQETRNVKAQSQTDRVDLGTLRGYYNQSEAG    491  
+
+hg18_refGene_NM_002116:3: domain 1 of 1, from 942 to 951: score -4.2, E = 0.11
+                   *->RYLEnGKetL<-*
+                      ++LEnG +t    
+  hg18_refGe   942    GHLENGQDTR    951  
+
+hg18_refGene_NM_002116:4: domain 1 of 1, from 1056 to 1060: score -7.0, E = 0.63
+                   *->gsHSL<-*
+                       sHSL   
+  hg18_refGe  1056    QSHSL    1060 
+
+hg18_refGene_NM_002116:1: domain 1 of 1, from 769 to 773: score -7.1, E = 0.67
+                   *->gsHSL<-*
+                       sHS+   
+  hg18_refGe   769    ASHSM    773  
+
+hg18_refGene_NM_002116:5: domain 1 of 1, from 1036 to 1041: score -8.0, E = 1.2
+                   *->gsHSLr<-*
+                       +HS r   
+  hg18_refGe  1036    SRHSFR    1041 
+
+
+Histogram of all scores:
+score    obs    exp  (one = represents 1 sequences)
+-----    ---    ---
+   -9      1      0|=                                                          
+   -8      1      0|=                                                          
+   -7      1      0|=                                                          
+   -6      0      0|                                                           
+>  -5      3      -|===                                                        
+
+
+% Statistical details of theoretical EVD fit:
+              mu =   -10.4096
+          lambda =     0.6460
+chi-sq statistic =     0.0000
+  P(chi-square)  =          0
+
+Total sequences searched: 6
+
+Whole sequence top hits:
+tophits_s report:
+     Total hits:           6
+     Satisfying E cutoff:  6
+     Total memory:         16K
+
+Domain top hits:
+tophits_s report:
+     Total hits:           6
+     Satisfying E cutoff:  6
+     Total memory:         17K

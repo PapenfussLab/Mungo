@@ -1,0 +1,50 @@
+Mungo
+Version 1
+1/11/2007
+
+A python sequence analysis and feature munging library.
+
+A collection of modules for reading and manipulating sequence, 
+alignment, and other types of sequence analysis data. 
+
+Author:
+Dr Tony Papenfuss
+Bioinformatics Division
+Walter & Eliza Hall Institute of Medical Research
+1G Royal Parade
+Parkville Victoria 3050 Australia
+
+Email: papenfuss@wehi.edu.au
+Phone: +613 9345 2627
+Fax:   +613 9347 0852                                                           
+
+----------
+
+Installation:
+
+1. Untar in python directory or site-packages.
+
+tar -zxf mungo.tar.gz
+
+2. If necessary include
+
+     export PYTHONPATH=$PYTHONPATH:$HOME/python/mungo
+
+   in .bashrc file
+
+3. Go crazy.
+
+4. Look at the documentation.
+
+----------
+
+Patterns & other interesting features:
+- Munging data structure for rapid development
+- Data file iteration and index file creation
+- Visualization
+- natural interface
+
+Why not biopython?
+- unnatural
+- poorly documented
+- often overly complicated

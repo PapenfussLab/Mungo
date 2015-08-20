@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>mungo.blastz</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="mungo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="mungo-module.html">Package&nbsp;mungo</a> ::
+        Module&nbsp;blastz
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="mungo.blastz-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="mungo.blastz-module.html">Module mungo.blastz</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">blastz module</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring">Example blastz stanza::</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-docstring">    a {</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-docstring">      s 10978</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-docstring">      b 529 48927125</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-docstring">      e 726 48927322</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-docstring">      l 529 48927125 726 48927322 76</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-docstring">    }</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">sys</tt><tt class="py-op">,</tt> <tt class="py-name">copy</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Module mungo.mungoCore=mungo.mungoCore-module.html"><a title="mungo.mungoCore" class="py-name" href="#" onclick="return doclink('link-0', 'mungoCore', 'link-0');">mungoCore</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-1" class="py-name" targets="Package mungo.useful=mungo.useful-module.html"><a title="mungo.useful" class="py-name" href="#" onclick="return doclink('link-1', 'useful', 'link-1');">useful</a></tt> <tt class="py-keyword">import</tt> <tt id="link-2" class="py-name" targets="Function mungo.useful.smartopen()=mungo.useful-module.html#smartopen"><a title="mungo.useful.smartopen" class="py-name" href="#" onclick="return doclink('link-2', 'smartopen', 'link-2');">smartopen</a></tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt id="link-3" class="py-name" targets="Variable mungo.blastz.strandDict=mungo.blastz-module.html#strandDict"><a title="mungo.blastz.strandDict" class="py-name" href="#" onclick="return doclink('link-3', 'strandDict', 'link-3');">strandDict</a></tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-string">'0'</tt><tt class="py-op">:</tt> <tt class="py-string">'+'</tt><tt class="py-op">,</tt> <tt class="py-string">'1'</tt><tt class="py-op">:</tt> <tt class="py-string">'-'</tt><tt class="py-op">}</tt> </tt>
+<a name="HSP"></a><div id="HSP-def"><a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt> <a class="py-toggle" href="#" id="HSP-toggle" onclick="return toggle('HSP');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="mungo.blastz.HSP-class.html">HSP</a><tt class="py-op">:</tt> </tt>
+</div><div id="HSP-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="HSP-expanded"><a name="HSP.__init__"></a><div id="HSP.__init__-def"><a name="L24"></a><tt class="py-lineno"> 24</tt> <a class="py-toggle" href="#" id="HSP.__init__-toggle" onclick="return toggle('HSP.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.blastz.HSP-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">tokens</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HSP.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="HSP.__init__-expanded"><a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">interval1</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">2</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">interval2</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">3</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">pcIdent</tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">4</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line">     </tt>
+<a name="HSP.__repr__"></a><div id="HSP.__repr__-def"><a name="L29"></a><tt class="py-lineno"> 29</tt> <a class="py-toggle" href="#" id="HSP.__repr__-toggle" onclick="return toggle('HSP.__repr__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.blastz.HSP-class.html#__repr__">__repr__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HSP.__repr__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="HSP.__repr__-expanded"><a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-string">'%i %i %i %i %i'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">interval1</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">interval1</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">,</tt>  </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">interval2</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">interval2</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">pcIdent</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"> </tt>
+<a name="Chain"></a><div id="Chain-def"><a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt> <a class="py-toggle" href="#" id="Chain-toggle" onclick="return toggle('Chain');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="mungo.blastz.Chain-class.html">Chain</a><tt class="py-op">:</tt> </tt>
+</div><div id="Chain-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="Chain-expanded"><a name="Chain.__init__"></a><div id="Chain.__init__-def"><a name="L35"></a><tt class="py-lineno"> 35</tt> <a class="py-toggle" href="#" id="Chain.__init__-toggle" onclick="return toggle('Chain.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.blastz.Chain-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Chain.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Chain.__init__-expanded"><a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">filenames</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">headers</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">lengths</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">strands</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">         </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">score</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">interval1</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">interval2</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">hsps</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+</div><a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">     </tt>
+<a name="Chain.__repr__"></a><div id="Chain.__repr__-def"><a name="L46"></a><tt class="py-lineno"> 46</tt> <a class="py-toggle" href="#" id="Chain.__repr__-toggle" onclick="return toggle('Chain.__repr__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.blastz.Chain-class.html#__repr__">__repr__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Chain.__repr__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Chain.__repr__-expanded"><a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-string">'%s%s--&gt;%s%s Score=%s'</tt> \ </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">            <tt class="py-op">%</tt> <tt class="py-name">tuple</tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">x</tt><tt class="py-op">)</tt> <tt class="py-keyword">for</tt> <tt class="py-name">x</tt> <tt class="py-keyword">in</tt> <tt class="py-op">[</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">interval1</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">strands</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">interval2</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">strands</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">score</tt><tt class="py-op">]</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">     </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">staticmethod</tt> </tt>
+<a name="Chain.fromBlock"></a><div id="Chain.fromBlock-def"><a name="L51"></a><tt class="py-lineno"> 51</tt> <a class="py-toggle" href="#" id="Chain.fromBlock-toggle" onclick="return toggle('Chain.fromBlock');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.blastz.Chain-class.html#fromBlock">fromBlock</a><tt class="py-op">(</tt><tt class="py-param">block</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Chain.fromBlock-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Chain.fromBlock-expanded"><a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">        <tt class="py-name">chain</tt> <tt class="py-op">=</tt> <tt id="link-4" class="py-name" targets="Class mungo.blastz.Chain=mungo.blastz.Chain-class.html,Class mungo.blat.Chain=mungo.blat.Chain-class.html,Class mungo.blat_old.Chain=mungo.blat_old.Chain-class.html"><a title="mungo.blastz.Chain
+mungo.blat.Chain
+mungo.blat_old.Chain" class="py-name" href="#" onclick="return doclink('link-4', 'Chain', 'link-4');">Chain</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">        <tt class="py-name">chain</tt><tt class="py-op">.</tt><tt class="py-name">filenames</tt> <tt class="py-op">=</tt> <tt class="py-name">block</tt><tt class="py-op">.</tt><tt class="py-name">filenames</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">        <tt class="py-name">chain</tt><tt class="py-op">.</tt><tt class="py-name">headers</tt> <tt class="py-op">=</tt> <tt class="py-name">block</tt><tt class="py-op">.</tt><tt class="py-name">headers</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">        <tt class="py-name">chain</tt><tt class="py-op">.</tt><tt class="py-name">lengths</tt> <tt class="py-op">=</tt> <tt class="py-name">block</tt><tt class="py-op">.</tt><tt class="py-name">lengths</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">        <tt class="py-name">chain</tt><tt class="py-op">.</tt><tt class="py-name">strands</tt> <tt class="py-op">=</tt> <tt class="py-name">block</tt><tt class="py-op">.</tt><tt class="py-name">strands</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">         </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">        <tt class="py-name">chain</tt><tt class="py-op">.</tt><tt class="py-name">score</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">        <tt class="py-name">chain</tt><tt class="py-op">.</tt><tt class="py-name">interval1</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">        <tt class="py-name">chain</tt><tt class="py-op">.</tt><tt class="py-name">interval2</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">        <tt class="py-name">chain</tt><tt class="py-op">.</tt><tt class="py-name">hsps</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">chain</tt> </tt>
+</div></div><a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"> </tt>
+<a name="Block"></a><div id="Block-def"><a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt> <a class="py-toggle" href="#" id="Block-toggle" onclick="return toggle('Block');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="mungo.blastz.Block-class.html">Block</a><tt class="py-op">:</tt> </tt>
+</div><div id="Block-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="Block-expanded"><a name="Block.__init__"></a><div id="Block.__init__-def"><a name="L66"></a><tt class="py-lineno"> 66</tt> <a class="py-toggle" href="#" id="Block.__init__-toggle" onclick="return toggle('Block.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.blastz.Block-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Block.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Block.__init__-expanded"><a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">filenames</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">headers</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">lengths</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">strands</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+</div></div><a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"> </tt>
+<a name="Alignment"></a><div id="Alignment-def"><a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt> <a class="py-toggle" href="#" id="Alignment-toggle" onclick="return toggle('Alignment');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="mungo.blastz.Alignment-class.html">Alignment</a><tt class="py-op">:</tt> </tt>
+</div><div id="Alignment-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="Alignment-expanded"><a name="Alignment.__init__"></a><div id="Alignment.__init__-def"><a name="L74"></a><tt class="py-lineno"> 74</tt> <a class="py-toggle" href="#" id="Alignment.__init__-toggle" onclick="return toggle('Alignment.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.blastz.Alignment-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Alignment.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Alignment.__init__-expanded"><a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">matrix</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">chains</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+</div><a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">     </tt>
+<a name="Alignment.__repr__"></a><div id="Alignment.__repr__-def"><a name="L78"></a><tt class="py-lineno"> 78</tt> <a class="py-toggle" href="#" id="Alignment.__repr__-toggle" onclick="return toggle('Alignment.__repr__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.blastz.Alignment-class.html#__repr__">__repr__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Alignment.__repr__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Alignment.__repr__-expanded"><a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">        <tt class="py-name">output</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">chain</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">chains</tt><tt class="py-op">:</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">            <tt class="py-name">output</tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Method mungo.align.Alignment.append()=mungo.align.Alignment-class.html#append"><a title="mungo.align.Alignment.append" class="py-name" href="#" onclick="return doclink('link-5', 'append', 'link-5');">append</a></tt><tt class="py-op">(</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">chain</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-string">'\n'</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-name">output</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">     </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">staticmethod</tt> </tt>
+<a name="Alignment.load"></a><div id="Alignment.load-def"><a name="L85"></a><tt class="py-lineno"> 85</tt> <a class="py-toggle" href="#" id="Alignment.load-toggle" onclick="return toggle('Alignment.load');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.blastz.Alignment-class.html#load">load</a><tt class="py-op">(</tt><tt class="py-param">iFileHandle</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Alignment.load-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Alignment.load-expanded"><a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">        <tt class="py-name">iFile</tt> <tt class="py-op">=</tt> <tt id="link-6" class="py-name"><a title="mungo.useful.smartopen" class="py-name" href="#" onclick="return doclink('link-6', 'smartopen', 'link-2');">smartopen</a></tt><tt class="py-op">(</tt><tt class="py-name">iFileHandle</tt><tt class="py-op">)</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">        <tt class="py-name">aln</tt> <tt class="py-op">=</tt> <tt id="link-7" class="py-name" targets="Class mungo.align.Alignment=mungo.align.Alignment-class.html,Class mungo.blastz.Alignment=mungo.blastz.Alignment-class.html"><a title="mungo.align.Alignment
+mungo.blastz.Alignment" class="py-name" href="#" onclick="return doclink('link-7', 'Alignment', 'link-7');">Alignment</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">        <tt class="py-name">state</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">line</tt> <tt class="py-keyword">in</tt> <tt class="py-name">iFile</tt><tt class="py-op">:</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">            <tt class="py-name">line</tt> <tt class="py-op">=</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt class="py-name">rstrip</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">line</tt><tt class="py-op">:</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">                <tt class="py-keyword">continue</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">==</tt><tt class="py-string">'#:lav'</tt><tt class="py-op">:</tt> <tt class="py-comment"># Section break</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">                <tt class="py-name">state</tt> <tt class="py-op">=</tt> <tt class="py-string">'BLOCK'</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">                <tt class="py-name">block</tt> <tt class="py-op">=</tt> <tt id="link-8" class="py-name" targets="Class mungo.blastz.Block=mungo.blastz.Block-class.html,Class mungo.diagram.Glyphs.Block=mungo.diagram.Glyphs.Block-class.html"><a title="mungo.blastz.Block
+mungo.diagram.Glyphs.Block" class="py-name" href="#" onclick="return doclink('link-8', 'Block', 'link-8');">Block</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">                <tt class="py-keyword">continue</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">==</tt><tt class="py-string">'#:eof'</tt><tt class="py-op">:</tt> <tt class="py-comment"># End of file</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">                <tt class="py-name">state</tt> <tt class="py-op">=</tt> <tt class="py-string">'EOF'</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">                <tt class="py-keyword">break</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">==</tt><tt class="py-string">'d'</tt><tt class="py-op">:</tt> <tt class="py-comment"># Substitution matrix stanza</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">                <tt class="py-name">state</tt> <tt class="py-op">=</tt> <tt class="py-string">'MATRIX'</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">                <tt class="py-keyword">continue</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">==</tt><tt class="py-string">'s'</tt><tt class="py-op">:</tt> <tt class="py-comment"># Sequence files stanza</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">                <tt class="py-name">state</tt> <tt class="py-op">=</tt> <tt class="py-string">'FILES'</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">                <tt class="py-keyword">continue</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">==</tt><tt class="py-string">'h'</tt><tt class="py-op">:</tt> <tt class="py-comment"># Fasta headers stanza</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">                <tt class="py-name">state</tt> <tt class="py-op">=</tt> <tt class="py-string">'HEADERS'</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">                <tt class="py-keyword">continue</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">==</tt><tt class="py-string">'a'</tt><tt class="py-op">:</tt> <tt class="py-comment"># Alignment stanza</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">                <tt class="py-name">state</tt> <tt class="py-op">=</tt> <tt class="py-string">'ALIGN'</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">                <tt class="py-name">chain</tt> <tt class="py-op">=</tt> <tt id="link-9" class="py-name"><a title="mungo.blastz.Chain
+mungo.blat.Chain
+mungo.blat_old.Chain" class="py-name" href="#" onclick="return doclink('link-9', 'Chain', 'link-4');">Chain</a></tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Static Method mungo.blastz.Chain.fromBlock()=mungo.blastz.Chain-class.html#fromBlock"><a title="mungo.blastz.Chain.fromBlock" class="py-name" href="#" onclick="return doclink('link-10', 'fromBlock', 'link-10');">fromBlock</a></tt><tt class="py-op">(</tt><tt class="py-name">copy</tt><tt class="py-op">.</tt><tt class="py-name">copy</tt><tt class="py-op">(</tt><tt class="py-name">block</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">                <tt class="py-keyword">continue</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-keyword">in</tt> <tt class="py-op">[</tt><tt class="py-string">'x'</tt><tt class="py-op">,</tt> <tt class="py-string">'m'</tt><tt class="py-op">]</tt><tt class="py-op">:</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">                <tt class="py-name">state</tt> <tt class="py-op">=</tt> <tt class="py-string">'BORING'</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">                <tt class="py-keyword">continue</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-name">state</tt><tt class="py-op">==</tt><tt class="py-string">'MATRIX'</tt> <tt class="py-keyword">and</tt> <tt class="py-name">line</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">==</tt><tt class="py-string">'}'</tt><tt class="py-op">:</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">                <tt class="py-name">state</tt> <tt class="py-op">=</tt> <tt class="py-string">'MATRIX_END'</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">                <tt class="py-name">aln</tt><tt class="py-op">.</tt><tt class="py-name">matrix</tt> <tt class="py-op">=</tt> <tt class="py-string">'\n'</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-name">aln</tt><tt class="py-op">.</tt><tt class="py-name">matrix</tt><tt class="py-op">)</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">                <tt class="py-keyword">continue</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-name">state</tt><tt class="py-op">==</tt><tt class="py-string">'ALIGN'</tt> <tt class="py-keyword">and</tt> <tt class="py-name">line</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">==</tt><tt class="py-string">'}'</tt><tt class="py-op">:</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">                <tt class="py-name">state</tt> <tt class="py-op">=</tt> <tt class="py-string">'ALIGN_END'</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">                <tt class="py-name">aln</tt><tt class="py-op">.</tt><tt class="py-name">chains</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name"><a title="mungo.align.Alignment.append" class="py-name" href="#" onclick="return doclink('link-11', 'append', 'link-5');">append</a></tt><tt class="py-op">(</tt><tt class="py-name">chain</tt><tt class="py-op">)</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">                <tt class="py-name">chain</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">                <tt class="py-keyword">continue</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">==</tt><tt class="py-string">'}'</tt><tt class="py-op">:</tt> <tt class="py-comment"># End of state</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">                <tt class="py-keyword">continue</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">             </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">            <tt class="py-name">tokens</tt> <tt class="py-op">=</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt class="py-name">lstrip</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">state</tt><tt class="py-op">==</tt><tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">                <tt class="py-keyword">print</tt> <tt class="py-name">line</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">                <tt class="py-keyword">raise</tt> <tt class="py-name">Exception</tt><tt class="py-op">(</tt><tt class="py-string">'Wrong'</tt><tt class="py-op">)</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-name">state</tt><tt class="py-op">==</tt><tt class="py-string">'MATRIX'</tt><tt class="py-op">:</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line">                <tt class="py-name">aln</tt><tt class="py-op">.</tt><tt class="py-name">matrix</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name"><a title="mungo.align.Alignment.append" class="py-name" href="#" onclick="return doclink('link-12', 'append', 'link-5');">append</a></tt><tt class="py-op">(</tt><tt class="py-name">line</tt><tt class="py-op">)</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-name">state</tt><tt class="py-op">==</tt><tt class="py-string">'FILES'</tt><tt class="py-op">:</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">                <tt class="py-name">block</tt><tt class="py-op">.</tt><tt class="py-name">filenames</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name"><a title="mungo.align.Alignment.append" class="py-name" href="#" onclick="return doclink('link-13', 'append', 'link-5');">append</a></tt><tt class="py-op">(</tt><tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">                <tt class="py-name">block</tt><tt class="py-op">.</tt><tt class="py-name">lengths</tt><tt class="py-op">.</tt><tt id="link-14" class="py-name"><a title="mungo.align.Alignment.append" class="py-name" href="#" onclick="return doclink('link-14', 'append', 'link-5');">append</a></tt><tt class="py-op">(</tt><tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">2</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">                <tt class="py-name">block</tt><tt class="py-op">.</tt><tt class="py-name">strands</tt><tt class="py-op">.</tt><tt id="link-15" class="py-name"><a title="mungo.align.Alignment.append" class="py-name" href="#" onclick="return doclink('link-15', 'append', 'link-5');">append</a></tt><tt class="py-op">(</tt><tt id="link-16" class="py-name"><a title="mungo.blastz.strandDict" class="py-name" href="#" onclick="return doclink('link-16', 'strandDict', 'link-3');">strandDict</a></tt><tt class="py-op">[</tt><tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">3</tt><tt class="py-op">]</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">                <tt class="py-comment"># Next line in stanza</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">                <tt class="py-name">tokens</tt> <tt class="py-op">=</tt> <tt class="py-name">iFile</tt><tt class="py-op">.</tt><tt id="link-17" class="py-name" targets="Method mungo.align.Alignment.next()=mungo.align.Alignment-class.html#next,Method mungo.bowtie.BowtieTwoFilePairedEndReader.next()=mungo.bowtie.BowtieTwoFilePairedEndReader-class.html#next,Method mungo.cap3.CapReaderIndexed.next()=mungo.cap3.CapReaderIndexed-class.html#next,Method mungo.fasta.FastaReader.next()=mungo.fasta.FastaReader-class.html#next,Method mungo.fastq.FastqReader.next()=mungo.fastq.FastqReader-class.html#next,Method mungo.mungoCore.AbstractDataReader.next()=mungo.mungoCore.AbstractDataReader-class.html#next"><a title="mungo.align.Alignment.next
+mungo.bowtie.BowtieTwoFilePairedEndReader.next
+mungo.cap3.CapReaderIndexed.next
+mungo.fasta.FastaReader.next
+mungo.fastq.FastqReader.next
+mungo.mungoCore.AbstractDataReader.next" class="py-name" href="#" onclick="return doclink('link-17', 'next', 'link-17');">next</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">strip</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">                <tt class="py-name">block</tt><tt class="py-op">.</tt><tt class="py-name">filenames</tt><tt class="py-op">.</tt><tt id="link-18" class="py-name"><a title="mungo.align.Alignment.append" class="py-name" href="#" onclick="return doclink('link-18', 'append', 'link-5');">append</a></tt><tt class="py-op">(</tt><tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">                <tt class="py-name">block</tt><tt class="py-op">.</tt><tt class="py-name">lengths</tt><tt class="py-op">.</tt><tt id="link-19" class="py-name"><a title="mungo.align.Alignment.append" class="py-name" href="#" onclick="return doclink('link-19', 'append', 'link-5');">append</a></tt><tt class="py-op">(</tt><tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">2</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">                <tt class="py-name">block</tt><tt class="py-op">.</tt><tt class="py-name">strands</tt><tt class="py-op">.</tt><tt id="link-20" class="py-name"><a title="mungo.align.Alignment.append" class="py-name" href="#" onclick="return doclink('link-20', 'append', 'link-5');">append</a></tt><tt class="py-op">(</tt><tt id="link-21" class="py-name"><a title="mungo.blastz.strandDict" class="py-name" href="#" onclick="return doclink('link-21', 'strandDict', 'link-3');">strandDict</a></tt><tt class="py-op">[</tt><tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">3</tt><tt class="py-op">]</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-name">state</tt><tt class="py-op">==</tt><tt class="py-string">'HEADERS'</tt><tt class="py-op">:</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">                <tt class="py-name">block</tt><tt class="py-op">.</tt><tt class="py-name">headers</tt><tt class="py-op">.</tt><tt id="link-22" class="py-name"><a title="mungo.align.Alignment.append" class="py-name" href="#" onclick="return doclink('link-22', 'append', 'link-5');">append</a></tt><tt class="py-op">(</tt><tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">                <tt class="py-comment"># Next line in stanza</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">                <tt class="py-name">tokens</tt> <tt class="py-op">=</tt> <tt class="py-name">iFile</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name"><a title="mungo.align.Alignment.next
+mungo.bowtie.BowtieTwoFilePairedEndReader.next
+mungo.cap3.CapReaderIndexed.next
+mungo.fasta.FastaReader.next
+mungo.fastq.FastqReader.next
+mungo.mungoCore.AbstractDataReader.next" class="py-name" href="#" onclick="return doclink('link-23', 'next', 'link-17');">next</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">strip</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">                <tt class="py-name">block</tt><tt class="py-op">.</tt><tt class="py-name">headers</tt><tt class="py-op">.</tt><tt id="link-24" class="py-name"><a title="mungo.align.Alignment.append" class="py-name" href="#" onclick="return doclink('link-24', 'append', 'link-5');">append</a></tt><tt class="py-op">(</tt><tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-name">state</tt><tt class="py-op">==</tt><tt class="py-string">'ALIGN'</tt><tt class="py-op">:</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">==</tt><tt class="py-string">'s'</tt><tt class="py-op">:</tt> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">                    <tt class="py-name">chain</tt><tt class="py-op">.</tt><tt class="py-name">score</tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">                <tt class="py-keyword">elif</tt> <tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">==</tt><tt class="py-string">'b'</tt><tt class="py-op">:</tt> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line">                    <tt class="py-name">chain</tt><tt class="py-op">.</tt><tt class="py-name">interval1</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line">                    <tt class="py-name">chain</tt><tt class="py-op">.</tt><tt class="py-name">interval2</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">2</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line">                <tt class="py-keyword">elif</tt> <tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">==</tt><tt class="py-string">'e'</tt><tt class="py-op">:</tt> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line">                    <tt class="py-name">chain</tt><tt class="py-op">.</tt><tt class="py-name">interval1</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line">                    <tt class="py-name">chain</tt><tt class="py-op">.</tt><tt class="py-name">interval2</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">2</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line">                <tt class="py-keyword">elif</tt> <tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">==</tt><tt class="py-string">'l'</tt><tt class="py-op">:</tt> </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line">                    <tt class="py-name">chain</tt><tt class="py-op">.</tt><tt class="py-name">hsps</tt><tt class="py-op">.</tt><tt id="link-25" class="py-name"><a title="mungo.align.Alignment.append" class="py-name" href="#" onclick="return doclink('link-25', 'append', 'link-5');">append</a></tt><tt class="py-op">(</tt><tt id="link-26" class="py-name" targets="Class mungo.blast.HSP=mungo.blast.HSP-class.html,Class mungo.blastz.HSP=mungo.blastz.HSP-class.html"><a title="mungo.blast.HSP
+mungo.blastz.HSP" class="py-name" href="#" onclick="return doclink('link-26', 'HSP', 'link-26');">HSP</a></tt><tt class="py-op">(</tt><tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">:</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">aln</tt> </tt>
+</div></div><a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line"> </tt>
+<a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line"> </tt>
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line"><tt class="py-keyword">if</tt> <tt class="py-name">__name__</tt><tt class="py-op">==</tt><tt class="py-string">'__main__'</tt><tt class="py-op">:</tt> </tt>
+<a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line">    <tt class="py-name">aln</tt> <tt class="py-op">=</tt> <tt id="link-27" class="py-name"><a title="mungo.align.Alignment
+mungo.blastz.Alignment" class="py-name" href="#" onclick="return doclink('link-27', 'Alignment', 'link-7');">Alignment</a></tt><tt class="py-op">.</tt><tt id="link-28" class="py-name" targets="Static Method mungo.GoTools.Ontology.load()=mungo.GoTools.Ontology-class.html#load,Static Method mungo.align.Alignment.load()=mungo.align.Alignment-class.html#load,Function mungo.bed.load()=mungo.bed-module.html#load,Static Method mungo.blastz.Alignment.load()=mungo.blastz.Alignment-class.html#load,Function mungo.blat_old.load()=mungo.blat_old-module.html#load,Function mungo.generic.load()=mungo.generic-module.html#load,Function mungo.genscan.load()=mungo.genscan-module.html#load,Function mungo.transfac.load()=mungo.transfac-module.html#load,Function mungo.vista.load()=mungo.vista-module.html#load,Function mungo.wig.load()=mungo.wig-module.html#load"><a title="mungo.GoTools.Ontology.load
+mungo.align.Alignment.load
+mungo.bed.load
+mungo.blastz.Alignment.load
+mungo.blat_old.load
+mungo.generic.load
+mungo.genscan.load
+mungo.transfac.load
+mungo.vista.load
+mungo.wig.load" class="py-name" href="#" onclick="return doclink('link-28', 'load', 'link-28');">load</a></tt><tt class="py-op">(</tt><tt class="py-string">'/Users/papenfuss/tammar/margaret/blastz/chrX.txt'</tt><tt class="py-op">)</tt> </tt>
+<a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line">    <tt class="py-name">i</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">chain</tt> <tt class="py-keyword">in</tt> <tt class="py-name">aln</tt><tt class="py-op">.</tt><tt class="py-name">chains</tt><tt class="py-op">:</tt> </tt>
+<a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line">        <tt class="py-name">i</tt> <tt class="py-op">+=</tt> <tt class="py-number">1</tt> </tt>
+<a name="L167"></a><tt class="py-lineno">167</tt>  <tt class="py-line">        <tt class="py-keyword">print</tt> <tt class="py-name">i</tt><tt class="py-op">,</tt><tt class="py-name">chain</tt> </tt>
+<a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="mungo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Apr 24 16:15:02 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

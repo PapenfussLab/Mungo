@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>mungo.blast</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="mungo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="mungo-module.html">Package&nbsp;mungo</a> ::
+        Module&nbsp;blast
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="mungo.blast-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module blast</h1><p class="nomargin-top"><span class="codelink"><a href="mungo.blast-pysrc.html">source&nbsp;code</a></span></p>
+<p>blast module</p>
+  <p>Requirements:</p>
+  <ul>
+    <li>
+      getSequence uses BLAST's fastacmd
+    </li>
+  </ul>
+
+<!-- ==================== CLASSES ==================== -->
+<a name="section-Classes"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Classes"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mungo.blast.HSP-class.html" class="summary-name">HSP</a><br />
+      HSP feature
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mungo.blast.BlastReader-class.html" class="summary-name">BlastReader</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mungo.blast.MultiBlastReader-class.html" class="summary-name">MultiBlastReader</a><br />
+      Subclass of BlastReader for parsing the results of aligning a 
+        multi-fasta file to a blast database.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mungo.blast.NotFoundException-class.html" class="summary-name">NotFoundException</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mungo.blast.TooManyBlocks-class.html" class="summary-name">TooManyBlocks</a>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Functions"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="sign_to_strand"></a><span class="summary-sig-name">sign_to_strand</span>(<span class="summary-sig-arg">x</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mungo.blast-pysrc.html#sign_to_strand">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="test_to_strand"></a><span class="summary-sig-name">test_to_strand</span>(<span class="summary-sig-arg">test</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mungo.blast-pysrc.html#test_to_strand">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="mungo.blast-module.html#BlastFile" class="summary-sig-name">BlastFile</a>(<span class="summary-sig-arg">iFileHandle</span>,
+        <span class="summary-sig-arg">multi</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">**kw</span>)</span><br />
+      Factory function for Reader and Writer classes</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mungo.blast-pysrc.html#BlastFile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="mungo.blast-module.html#getSequence" class="summary-sig-name">getSequence</a>(<span class="summary-sig-arg">blastDb</span>,
+        <span class="summary-sig-arg">accession</span>,
+        <span class="summary-sig-arg">start</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">end</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">strand</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">+</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">padding</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">debug</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Load a sequence from a BLAST database.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mungo.blast-pysrc.html#getSequence">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="mungo.blast-module.html#genomeToBlock" class="summary-sig-name">genomeToBlock</a>(<span class="summary-sig-arg">chrom</span>,
+        <span class="summary-sig-arg">start</span>,
+        <span class="summary-sig-arg">end</span>,
+        <span class="summary-sig-arg">L</span>=<span class="summary-sig-default">1000000000</span>,
+        <span class="summary-sig-arg">blockSize</span>=<span class="summary-sig-default">5000000</span>,
+        <span class="summary-sig-arg">delimiter</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">.</code><code class="variable-quote">'</code></span>)</span><br />
+      Transform genomic to block coordinates.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mungo.blast-pysrc.html#genomeToBlock">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="mungo.blast-module.html#genomeToBlocks" class="summary-sig-name">genomeToBlocks</a>(<span class="summary-sig-arg">chrom</span>,
+        <span class="summary-sig-arg">start</span>,
+        <span class="summary-sig-arg">end</span>,
+        <span class="summary-sig-arg">L</span>,
+        <span class="summary-sig-arg">blockSize</span>=<span class="summary-sig-default">5000000</span>)</span><br />
+      Transform genomic to block coordinates 
+      (chrom.blockStart-blockEnd:start-end).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mungo.blast-pysrc.html#genomeToBlocks">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="mungo.blast-module.html#blockToGenome" class="summary-sig-name">blockToGenome</a>(<span class="summary-sig-arg">block</span>,
+        <span class="summary-sig-arg">startInBlock</span>,
+        <span class="summary-sig-arg">endInBlock</span>)</span><br />
+      Transform block to genomic coordinates.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mungo.blast-pysrc.html#blockToGenome">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'mungo'"><code class="variable-quote">'</code><code class="variable-string">mungo</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Function Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-FunctionDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="BlastFile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">BlastFile</span>(<span class="sig-arg">iFileHandle</span>,
+        <span class="sig-arg">multi</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">**kw</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mungo.blast-pysrc.html#BlastFile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Factory function for Reader and Writer classes</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>iFileHandle</code></strong> - BLAST file name or object</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getSequence"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getSequence</span>(<span class="sig-arg">blastDb</span>,
+        <span class="sig-arg">accession</span>,
+        <span class="sig-arg">start</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">end</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">strand</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">+</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">padding</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">debug</span>=<span class="sig-default">False</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mungo.blast-pysrc.html#getSequence">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Load a sequence from a BLAST database.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>blastDb</code></strong> - BLAST database</li>
+        <li><strong class="pname"><code>accession</code></strong> - Accession name</li>
+        <li><strong class="pname"><code>start</code></strong> - Start coordinate (Default: 0, extract from start of sequence)</li>
+        <li><strong class="pname"><code>end</code></strong> - End coordinate (Default: 0, extract to the end of sequence)</li>
+        <li><strong class="pname"><code>strand</code></strong> - Strand (Default: '+')</li>
+        <li><strong class="pname"><code>padding</code></strong> - Sequence padding (Default: 0)</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>(header,seq)</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="genomeToBlock"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">genomeToBlock</span>(<span class="sig-arg">chrom</span>,
+        <span class="sig-arg">start</span>,
+        <span class="sig-arg">end</span>,
+        <span class="sig-arg">L</span>=<span class="sig-default">1000000000</span>,
+        <span class="sig-arg">blockSize</span>=<span class="sig-default">5000000</span>,
+        <span class="sig-arg">delimiter</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">.</code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mungo.blast-pysrc.html#genomeToBlock">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Transform genomic to block coordinates.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>chrom</code></strong> - Chromosome</li>
+        <li><strong class="pname"><code>start</code></strong> - Start coordinate</li>
+        <li><strong class="pname"><code>end</code></strong> - End coorinate</li>
+        <li><strong class="pname"><code>L</code></strong> - Chromosome length</li>
+        <li><strong class="pname"><code>blockSize</code></strong> - Block size (Default: 5000000)</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>(block, relStart, relEnd)</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="genomeToBlocks"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">genomeToBlocks</span>(<span class="sig-arg">chrom</span>,
+        <span class="sig-arg">start</span>,
+        <span class="sig-arg">end</span>,
+        <span class="sig-arg">L</span>,
+        <span class="sig-arg">blockSize</span>=<span class="sig-default">5000000</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mungo.blast-pysrc.html#genomeToBlocks">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Transform genomic to block coordinates 
+  (chrom.blockStart-blockEnd:start-end).</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>chrom</code></strong> - Chromosome</li>
+        <li><strong class="pname"><code>start</code></strong> - Start coordinate</li>
+        <li><strong class="pname"><code>end</code></strong> - End coorinate</li>
+        <li><strong class="pname"><code>L</code></strong> - Chromosome length</li>
+        <li><strong class="pname"><code>blockSize</code></strong> - Block size (Default: 5000000)</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>a tuple of lists (blocks,startInBlocks,endInBlocks).</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="blockToGenome"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">blockToGenome</span>(<span class="sig-arg">block</span>,
+        <span class="sig-arg">startInBlock</span>,
+        <span class="sig-arg">endInBlock</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mungo.blast-pysrc.html#blockToGenome">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Transform block to genomic coordinates.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>block</code></strong> - Block (chrom.blockStart-blockEnd)</li>
+        <li><strong class="pname"><code>startInBlock</code></strong> - Start coordinate in block</li>
+        <li><strong class="pname"><code>endInBlock</code></strong> - End coorinate in block</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>(chrom, gStart, gEnd)</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="mungo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Apr 24 16:15:00 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

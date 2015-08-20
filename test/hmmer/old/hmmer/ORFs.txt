@@ -1,0 +1,168 @@
+hmmsearch - search a sequence database with a profile HMM
+HMMER 2.3.2 (Oct 2003)
+Copyright (C) 1992-2003 HHMI/Washington University School of Medicine
+Freely distributed under the GNU General Public License (GPL)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+HMM file:                   HMMs/MHC_I_fs.hmm [MHC_I]
+Sequence database:          seq/ORFs.fa
+per-sequence score cutoff:  [none]
+per-domain score cutoff:    [none]
+per-sequence Eval cutoff:   <= 1e+02     
+per-domain Eval cutoff:     [none]
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query HMM:   MHC_I
+Accession:   PF00129.8
+Description: Class I Histocompatibility antigen, domains alpha 1 and 2
+  [HMM has been calibrated; E-values are empirical estimates]
+
+Scores for complete sequences (score includes all domains):
+Sequence                             Description        Score    E-value  N 
+--------                             -----------        -----    ------- ---
+hg18_refGene_NM_002116.15.1405-2016  Length=204         235.8    3.7e-69   1
+hg18_refGene_NM_002116.134.1059-1478 Length=140         232.5    3.6e-68   1
+hg18_refGene_NM_002116.210.2644-2417 Length=76           -4.2        6.1   1
+hg18_refGene_NM_002116.230.571-461   Length=37           -6.9         35   1
+hg18_refGene_NM_002116.277.2289-1504 Length=262          -7.0         36   1
+hg18_refGene_NM_002116.51.4474-4755  Length=94           -7.0         37   1
+hg18_refGene_NM_002116.84.2255-2332  Length=26           -7.1         39   1
+hg18_refGene_NM_002116.222.1279-1037 Length=81           -7.3         43   1
+hg18_refGene_NM_002116.132.603-950   Length=116          -7.9         61   1
+hg18_refGene_NM_002116.326.2366-2187 Length=60           -8.0         67   1
+hg18_refGene_NM_002116.135.1482-1637 Length=52           -8.3         78   1
+hg18_refGene_NM_002116.137.1899-2234 Length=112          -8.3         79   1
+hg18_refGene_NM_002116.216.2086-1871 Length=72           -8.5         87   1
+
+Parsed for domains:
+Sequence                             Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+--------                             ------- ----- -----    ----- -----      -----  -------
+hg18_refGene_NM_002116.15.1405-2016    1/1     104   192 ..    91   180 .]   235.8  3.7e-69
+hg18_refGene_NM_002116.134.1059-1478   1/1      49   139 ..     1    91 [.   232.5  3.6e-68
+hg18_refGene_NM_002116.210.2644-2417   1/1      49    58 ..   171   180 .]    -4.2      6.1
+hg18_refGene_NM_002116.230.571-461     1/1       5     9 ..     1     5 [.    -6.9       35
+hg18_refGene_NM_002116.277.2289-1504   1/1      45    49 ..     1     5 [.    -7.0       36
+hg18_refGene_NM_002116.51.4474-4755    1/1      70    73 ..     1     4 [.    -7.0       37
+hg18_refGene_NM_002116.84.2255-2332    1/1      18    22 ..     1     5 [.    -7.1       39
+hg18_refGene_NM_002116.222.1279-1037   1/1      67    75 ..    11    19 ..    -7.3       43
+hg18_refGene_NM_002116.132.603-950     1/1      48    53 ..     1     6 [.    -7.9       61
+hg18_refGene_NM_002116.326.2366-2187   1/1      51    56 ..     1     6 [.    -8.0       67
+hg18_refGene_NM_002116.135.1482-1637   1/1      18    23 ..     1     6 [.    -8.3       78
+hg18_refGene_NM_002116.137.1899-2234   1/1     106   112 .]     1     7 [.    -8.3       79
+hg18_refGene_NM_002116.216.2086-1871   1/1      24    31 ..    44    51 ..    -8.5       87
+
+Alignments of top-scoring domains:
+hg18_refGene_NM_002116.15.1405-2016: domain 1 of 1, from 104 to 192: score 235.8, E = 3.7e-69
+                   *->GSHTlQwMyGCDvgpDgrllRGYeQfAYDGkDYIaLNeDLrsWTAaD
+                      GSHT+Q MyGCDvg+Dgr+lRGY+Q+AYDGkDYIaLNeDLrsWTAaD
+  hg18_refGe   104    GSHTIQIMYGCDVGSDGRFLRGYRQDAYDGKDYIALNEDLRSWTAAD 150  
+
+                   tAAqITkrKWEaageAerkeRaYLEgeCvEwLrRYLEnGKetL<-*
+                   +AAqITkrKWEaa+eAe+  RaYL g+CvEwLrRYLEnGKetL   
+  hg18_refGe   151 MAAQITKRKWEAAHEAEQ-LRAYLDGTCVEWLRRYLENGKETL    192  
+
+hg18_refGene_NM_002116.134.1059-1478: domain 1 of 1, from 49 to 139: score 232.5, E = 3.6e-68
+                   *->gsHSLrYFyTAVSrPGlGePrFiaVGYVDDtQFVRFDSdaenpRmeP
+                      gsHS+rYF T+VSrPG+GePrFiaVGYVDDtQFVRFDSda+++RmeP
+  hg18_refGe    49    GSHSMRYFFTSVSRPGRGEPRFIAVGYVDDTQFVRFDSDAASQRMEP 95   
+
+                   rapWieqEGpeYWereTqiaKaneqifRvnLrtLlgYYNQSegG<-*
+                   rapWieqEGpeYW++eT+++Ka+ q++Rv+L+tL+gYYNQSe+G   
+  hg18_refGe    96 RAPWIEQEGPEYWDQETRNVKAQSQTDRVDLGTLRGYYNQSEAG    139  
+
+hg18_refGene_NM_002116.210.2644-2417: domain 1 of 1, from 49 to 58: score -4.2, E = 6.1
+                   *->RYLEnGKetL<-*
+                      ++LEnG +t    
+  hg18_refGe    49    GHLENGQDTR    58   
+
+hg18_refGene_NM_002116.230.571-461: domain 1 of 1, from 5 to 9: score -6.9, E = 35
+                   *->gsHSL<-*
+                       sHSL   
+  hg18_refGe     5    DSHSL    9    
+
+hg18_refGene_NM_002116.277.2289-1504: domain 1 of 1, from 45 to 49: score -7.0, E = 36
+                   *->gsHSL<-*
+                       sHSL   
+  hg18_refGe    45    QSHSL    49   
+
+hg18_refGene_NM_002116.51.4474-4755: domain 1 of 1, from 70 to 73: score -7.0, E = 37
+                   *->gsHS<-*
+                      gsHS   
+  hg18_refGe    70    GSHS    73   
+
+hg18_refGene_NM_002116.84.2255-2332: domain 1 of 1, from 18 to 22: score -7.1, E = 39
+                   *->gsHSL<-*
+                       sHS+   
+  hg18_refGe    18    ASHSM    22   
+
+hg18_refGene_NM_002116.222.1279-1037: domain 1 of 1, from 67 to 75: score -7.3, E = 43
+                   *->AVSrPGlGe<-*
+                      A++rPGlG+   
+  hg18_refGe    67    ALTRPGLGQ    75   
+
+hg18_refGene_NM_002116.132.603-950: domain 1 of 1, from 48 to 53: score -7.9, E = 61
+                   *->gsHSLr<-*
+                      gs SLr   
+  hg18_refGe    48    GSQSLR    53   
+
+hg18_refGene_NM_002116.326.2366-2187: domain 1 of 1, from 51 to 56: score -8.0, E = 67
+                   *->gsHSLr<-*
+                       +HS r   
+  hg18_refGe    51    SRHSFR    56   
+
+hg18_refGene_NM_002116.135.1482-1637: domain 1 of 1, from 18 to 23: score -8.3, E = 78
+                   *->gsHSLr<-*
+                        HSLr   
+  hg18_refGe    18    VAHSLR    23   
+
+hg18_refGene_NM_002116.137.1899-2234: domain 1 of 1, from 106 to 112: score -8.3, E = 79
+                   *->gsHSLrY<-*
+                      g+ SL Y   
+  hg18_refGe   106    GRRSLEY    112  
+
+hg18_refGene_NM_002116.216.2086-1871: domain 1 of 1, from 24 to 31: score -8.5, E = 87
+                   *->RmePrapW<-*
+                      R+ Pr+pW   
+  hg18_refGe    24    REAPRGPW    31   
+
+
+Histogram of all scores:
+score    obs    exp  (one = represents 2 sequences)
+-----    ---    ---
+  -21      3      0|==                                                         
+  -20     14      0|=======                                                    
+  -19     18      0|=========                                                  
+  -18      4      0|==                                                         
+  -17     17      0|=========                                                  
+  -16     62      0|===============================                            
+  -15     53      0|===========================                                
+  -14     37      1|*==================                                        
+  -13     51     19|=========*================                                 
+  -12     39     59|====================         *                             
+  -11     21     81|===========                             *                  
+  -10     15     71|========                           *                       
+   -9      5     49|===                     *                                  
+   -8      4     29|==            *                                            
+   -7      2     16|=      *                                                   
+   -6      0      9|    *                                                      
+>  -5      3      -|==                                                         
+
+
+% Statistical details of theoretical EVD fit:
+              mu =   -10.4096
+          lambda =     0.6460
+chi-sq statistic =   185.5995
+  P(chi-square)  =  4.675e-39
+
+Total sequences searched: 348
+
+Whole sequence top hits:
+tophits_s report:
+     Total hits:           121
+     Satisfying E cutoff:  13
+     Total memory:         21K
+
+Domain top hits:
+tophits_s report:
+     Total hits:           121
+     Satisfying E cutoff:  121
+     Total memory:         35K

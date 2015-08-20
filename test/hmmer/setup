@@ -1,0 +1,3 @@
+hmmsearch HMMs/MHC_I_fs.hmm seq/6frames.fa > hmmer/6frames.txt
+
+hmmsearch HMMs/MHC_I_fs.hmm seq/ORFs.fa > hmmer/ORFs.txt

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>mungo.vista</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="mungo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="mungo-module.html">Package&nbsp;mungo</a> ::
+        Module&nbsp;vista
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="mungo.vista-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="mungo.vista-module.html">Module mungo.vista</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">vista2 module</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Module mungo.mungoCore=mungo.mungoCore-module.html"><a title="mungo.mungoCore" class="py-name" href="#" onclick="return doclink('link-0', 'mungoCore', 'link-0');">mungoCore</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-1" class="py-name" targets="Package mungo.useful=mungo.useful-module.html"><a title="mungo.useful" class="py-name" href="#" onclick="return doclink('link-1', 'useful', 'link-1');">useful</a></tt> <tt class="py-keyword">import</tt> <tt id="link-2" class="py-name" targets="Function mungo.useful.smartopen()=mungo.useful-module.html#smartopen"><a title="mungo.useful.smartopen" class="py-name" href="#" onclick="return doclink('link-2', 'smartopen', 'link-2');">smartopen</a></tt> </tt>
+<a name="convertStrandToPM"></a><div id="convertStrandToPM-def"><a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt> <a class="py-toggle" href="#" id="convertStrandToPM-toggle" onclick="return toggle('convertStrandToPM');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.vista-module.html#convertStrandToPM">convertStrandToPM</a><tt class="py-op">(</tt><tt class="py-param">strand</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="convertStrandToPM-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="convertStrandToPM-expanded"><a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt id="link-3" class="py-name" targets="Method mungo.blast.HSP.strand()=mungo.blast.HSP-class.html#strand"><a title="mungo.blast.HSP.strand" class="py-name" href="#" onclick="return doclink('link-3', 'strand', 'link-3');">strand</a></tt> <tt class="py-keyword">in</tt> <tt class="py-op">[</tt><tt class="py-string">'+'</tt><tt class="py-op">,</tt> <tt class="py-string">'-'</tt><tt class="py-op">]</tt><tt class="py-op">:</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-4" class="py-name"><a title="mungo.blast.HSP.strand" class="py-name" href="#" onclick="return doclink('link-4', 'strand', 'link-3');">strand</a></tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line">    <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-op">{</tt><tt class="py-string">'&gt;'</tt><tt class="py-op">:</tt> <tt class="py-string">'+'</tt><tt class="py-op">,</tt> <tt class="py-string">'&lt;'</tt><tt class="py-op">:</tt> <tt class="py-string">'-'</tt><tt class="py-op">}</tt><tt class="py-op">[</tt><tt id="link-5" class="py-name"><a title="mungo.blast.HSP.strand" class="py-name" href="#" onclick="return doclink('link-5', 'strand', 'link-3');">strand</a></tt><tt class="py-op">]</tt> </tt>
+</div><a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"> </tt>
+<a name="convertStrandToVista"></a><div id="convertStrandToVista-def"><a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt> <a class="py-toggle" href="#" id="convertStrandToVista-toggle" onclick="return toggle('convertStrandToVista');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.vista-module.html#convertStrandToVista">convertStrandToVista</a><tt class="py-op">(</tt><tt class="py-param">strand</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="convertStrandToVista-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="convertStrandToVista-expanded"><a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt id="link-6" class="py-name"><a title="mungo.blast.HSP.strand" class="py-name" href="#" onclick="return doclink('link-6', 'strand', 'link-3');">strand</a></tt> <tt class="py-keyword">in</tt> <tt class="py-op">[</tt><tt class="py-string">'&gt;'</tt><tt class="py-op">,</tt> <tt class="py-string">'&lt;'</tt><tt class="py-op">]</tt><tt class="py-op">:</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-7" class="py-name"><a title="mungo.blast.HSP.strand" class="py-name" href="#" onclick="return doclink('link-7', 'strand', 'link-3');">strand</a></tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line">    <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-op">{</tt><tt class="py-string">'&gt;'</tt><tt class="py-op">:</tt> <tt class="py-string">'+'</tt><tt class="py-op">,</tt> <tt class="py-string">'&lt;'</tt><tt class="py-op">:</tt> <tt class="py-string">'-'</tt><tt class="py-op">}</tt><tt class="py-op">[</tt><tt id="link-8" class="py-name"><a title="mungo.blast.HSP.strand" class="py-name" href="#" onclick="return doclink('link-8', 'strand', 'link-3');">strand</a></tt><tt class="py-op">]</tt> </tt>
+</div><a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"> </tt>
+<a name="Gene"></a><div id="Gene-def"><a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt> <a class="py-toggle" href="#" id="Gene-toggle" onclick="return toggle('Gene');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="mungo.vista.Gene-class.html">Gene</a><tt class="py-op">(</tt><tt class="py-base-class">AbstractFeature</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Gene-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="Gene-expanded"><a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line">    <tt class="py-docstring">"""Vista gene feature"""</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line">     </tt>
+<a name="Gene.__init__"></a><div id="Gene.__init__-def"><a name="L26"></a><tt class="py-lineno"> 26</tt> <a class="py-toggle" href="#" id="Gene.__init__-toggle" onclick="return toggle('Gene.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.vista.Gene-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">name</tt><tt class="py-op">=</tt><tt class="py-string">''</tt><tt class="py-op">,</tt> <tt class="py-param">start</tt><tt class="py-op">=</tt><tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-param">end</tt><tt class="py-op">=</tt><tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-param">strand</tt><tt class="py-op">=</tt><tt class="py-string">''</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Gene.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Gene.__init__-expanded"><a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> <tt class="py-op">=</tt> <tt class="py-name">name</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">start</tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">start</tt><tt class="py-op">)</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">end</tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">end</tt><tt class="py-op">)</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-9" class="py-name"><a title="mungo.blast.HSP.strand" class="py-name" href="#" onclick="return doclink('link-9', 'strand', 'link-3');">strand</a></tt> <tt class="py-op">=</tt> <tt id="link-10" class="py-name" targets="Function mungo.vista.convertStrandToPM()=mungo.vista-module.html#convertStrandToPM"><a title="mungo.vista.convertStrandToPM" class="py-name" href="#" onclick="return doclink('link-10', 'convertStrandToPM', 'link-10');">convertStrandToPM</a></tt><tt class="py-op">(</tt><tt id="link-11" class="py-name"><a title="mungo.blast.HSP.strand" class="py-name" href="#" onclick="return doclink('link-11', 'strand', 'link-3');">strand</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">exons</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">flipped</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+</div><a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">     </tt>
+<a name="Gene.add"></a><div id="Gene.add-def"><a name="L34"></a><tt class="py-lineno"> 34</tt> <a class="py-toggle" href="#" id="Gene.add-toggle" onclick="return toggle('Gene.add');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.vista.Gene-class.html#add">add</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">exon</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Gene.add-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Gene.add-expanded"><a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">        <tt class="py-name">exon</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">        <tt class="py-name">exon</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name"><a title="mungo.blast.HSP.strand" class="py-name" href="#" onclick="return doclink('link-12', 'strand', 'link-3');">strand</a></tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name"><a title="mungo.blast.HSP.strand" class="py-name" href="#" onclick="return doclink('link-13', 'strand', 'link-3');">strand</a></tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">exons</tt><tt class="py-op">.</tt><tt id="link-14" class="py-name" targets="Method mungo.align.Alignment.append()=mungo.align.Alignment-class.html#append"><a title="mungo.align.Alignment.append" class="py-name" href="#" onclick="return doclink('link-14', 'append', 'link-14');">append</a></tt><tt class="py-op">(</tt><tt class="py-name">exon</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">     </tt>
+<a name="Gene.flip"></a><div id="Gene.flip-def"><a name="L39"></a><tt class="py-lineno"> 39</tt> <a class="py-toggle" href="#" id="Gene.flip-toggle" onclick="return toggle('Gene.flip');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.vista.Gene-class.html#flip">flip</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">L</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Gene.flip-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Gene.flip-expanded"><a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">flipped</tt> <tt class="py-op">=</tt> <tt class="py-keyword">not</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">flipped</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">start</tt><tt class="py-op">,</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">end</tt> <tt class="py-op">=</tt> <tt class="py-name">L</tt><tt class="py-op">+</tt><tt class="py-number">1</tt><tt class="py-op">-</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">end</tt><tt class="py-op">,</tt><tt class="py-name">L</tt><tt class="py-op">+</tt><tt class="py-number">1</tt><tt class="py-op">-</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">start</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">exon</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">exons</tt><tt class="py-op">:</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">            <tt class="py-name">exon</tt><tt class="py-op">.</tt><tt class="py-name">start</tt><tt class="py-op">,</tt><tt class="py-name">exon</tt><tt class="py-op">.</tt><tt class="py-name">end</tt> <tt class="py-op">=</tt> <tt class="py-name">L</tt><tt class="py-op">+</tt><tt class="py-number">1</tt><tt class="py-op">-</tt><tt class="py-name">exon</tt><tt class="py-op">.</tt><tt class="py-name">end</tt><tt class="py-op">,</tt><tt class="py-name">L</tt><tt class="py-op">+</tt><tt class="py-number">1</tt><tt class="py-op">-</tt><tt class="py-name">exon</tt><tt class="py-op">.</tt><tt class="py-name">start</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">exons</tt><tt class="py-op">.</tt><tt id="link-15" class="py-name" targets="Function mungo.sequence.reverse()=mungo.sequence-module.html#reverse"><a title="mungo.sequence.reverse" class="py-name" href="#" onclick="return doclink('link-15', 'reverse', 'link-15');">reverse</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-16" class="py-name"><a title="mungo.blast.HSP.strand" class="py-name" href="#" onclick="return doclink('link-16', 'strand', 'link-3');">strand</a></tt><tt class="py-op">==</tt><tt class="py-string">'+'</tt><tt class="py-op">:</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-17" class="py-name"><a title="mungo.blast.HSP.strand" class="py-name" href="#" onclick="return doclink('link-17', 'strand', 'link-3');">strand</a></tt> <tt class="py-op">=</tt> <tt class="py-string">'-'</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-18" class="py-name"><a title="mungo.blast.HSP.strand" class="py-name" href="#" onclick="return doclink('link-18', 'strand', 'link-3');">strand</a></tt> <tt class="py-op">=</tt> <tt class="py-string">'+'</tt> </tt>
+</div><a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">     </tt>
+<a name="Gene.__iter__"></a><div id="Gene.__iter__-def"><a name="L50"></a><tt class="py-lineno"> 50</tt> <a class="py-toggle" href="#" id="Gene.__iter__-toggle" onclick="return toggle('Gene.__iter__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.vista.Gene-class.html#__iter__">__iter__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Gene.__iter__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Gene.__iter__-expanded"><a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">iter</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">exons</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">     </tt>
+<a name="Gene.__repr__"></a><div id="Gene.__repr__-def"><a name="L53"></a><tt class="py-lineno"> 53</tt> <a class="py-toggle" href="#" id="Gene.__repr__-toggle" onclick="return toggle('Gene.__repr__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.vista.Gene-class.html#__repr__">__repr__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Gene.__repr__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Gene.__repr__-expanded"><a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">        <tt class="py-name">output</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">'%s %i %i %s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">name</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">start</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">end</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-19" class="py-name"><a title="mungo.blast.HSP.strand" class="py-name" href="#" onclick="return doclink('link-19', 'strand', 'link-3');">strand</a></tt><tt class="py-op">)</tt><tt class="py-op">]</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">exon</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">exons</tt><tt class="py-op">:</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">            <tt class="py-name">output</tt><tt class="py-op">.</tt><tt id="link-20" class="py-name"><a title="mungo.align.Alignment.append" class="py-name" href="#" onclick="return doclink('link-20', 'append', 'link-14');">append</a></tt><tt class="py-op">(</tt><tt class="py-string">'  %s'</tt> <tt class="py-op">%</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">exon</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">        <tt class="py-name">output</tt><tt class="py-op">.</tt><tt id="link-21" class="py-name"><a title="mungo.align.Alignment.append" class="py-name" href="#" onclick="return doclink('link-21', 'append', 'link-14');">append</a></tt><tt class="py-op">(</tt><tt class="py-string">'\n'</tt><tt class="py-op">)</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-string">'\n'</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-name">output</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">     </tt>
+<a name="Gene.__getitem__"></a><div id="Gene.__getitem__-def"><a name="L60"></a><tt class="py-lineno"> 60</tt> <a class="py-toggle" href="#" id="Gene.__getitem__-toggle" onclick="return toggle('Gene.__getitem__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.vista.Gene-class.html#__getitem__">__getitem__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">i</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Gene.__getitem__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Gene.__getitem__-expanded"><a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">exons</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">]</tt> </tt>
+</div><a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">     </tt>
+<a name="Gene.__len__"></a><div id="Gene.__len__-def"><a name="L63"></a><tt class="py-lineno"> 63</tt> <a class="py-toggle" href="#" id="Gene.__len__-toggle" onclick="return toggle('Gene.__len__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.vista.Gene-class.html#__len__">__len__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Gene.__len__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Gene.__len__-expanded"><a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">exons</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">     </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">staticmethod</tt> </tt>
+<a name="Gene.fromTokens"></a><div id="Gene.fromTokens-def"><a name="L67"></a><tt class="py-lineno"> 67</tt> <a class="py-toggle" href="#" id="Gene.fromTokens-toggle" onclick="return toggle('Gene.fromTokens');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.vista.Gene-class.html#fromTokens">fromTokens</a><tt class="py-op">(</tt><tt class="py-param">tokens</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Gene.fromTokens-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Gene.fromTokens-expanded"><a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-22" class="py-name" targets="Class mungo.vista.Gene=mungo.vista.Gene-class.html"><a title="mungo.vista.Gene" class="py-name" href="#" onclick="return doclink('link-22', 'Gene', 'link-22');">Gene</a></tt><tt class="py-op">(</tt><tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">3</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">2</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"> </tt>
+<a name="Exon"></a><div id="Exon-def"><a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line"> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt> <a class="py-toggle" href="#" id="Exon-toggle" onclick="return toggle('Exon');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="mungo.vista.Exon-class.html">Exon</a><tt class="py-op">:</tt> </tt>
+</div><div id="Exon-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="Exon-expanded"><a name="Exon.__init__"></a><div id="Exon.__init__-def"><a name="L72"></a><tt class="py-lineno"> 72</tt> <a class="py-toggle" href="#" id="Exon.__init__-toggle" onclick="return toggle('Exon.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.vista.Exon-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">start</tt><tt class="py-op">,</tt> <tt class="py-param">end</tt><tt class="py-op">,</tt> <tt class="py-param">kind</tt><tt class="py-op">=</tt><tt class="py-string">'exon'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Exon.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Exon.__init__-expanded"><a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">start</tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">start</tt><tt class="py-op">)</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">end</tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">end</tt><tt class="py-op">)</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">kind</tt> <tt class="py-op">=</tt> <tt class="py-name">kind</tt> </tt>
+</div><a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">     </tt>
+<a name="Exon.__repr__"></a><div id="Exon.__repr__-def"><a name="L77"></a><tt class="py-lineno"> 77</tt> <a class="py-toggle" href="#" id="Exon.__repr__-toggle" onclick="return toggle('Exon.__repr__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.vista.Exon-class.html#__repr__">__repr__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Exon.__repr__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Exon.__repr__-expanded"><a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-string">'%i %i %s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">start</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">end</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">kind</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">     </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">staticmethod</tt> </tt>
+<a name="Exon.fromTokens"></a><div id="Exon.fromTokens-def"><a name="L81"></a><tt class="py-lineno"> 81</tt> <a class="py-toggle" href="#" id="Exon.fromTokens-toggle" onclick="return toggle('Exon.fromTokens');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.vista.Exon-class.html#fromTokens">fromTokens</a><tt class="py-op">(</tt><tt class="py-param">tokens</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Exon.fromTokens-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Exon.fromTokens-expanded"><a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-23" class="py-name" targets="Class mungo.vista.Exon=mungo.vista.Exon-class.html"><a title="mungo.vista.Exon" class="py-name" href="#" onclick="return doclink('link-23', 'Exon', 'link-23');">Exon</a></tt><tt class="py-op">(</tt><tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">tokens</tt><tt class="py-op">[</tt><tt class="py-number">2</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"> </tt>
+<a name="load_iter"></a><div id="load_iter-def"><a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt> <a class="py-toggle" href="#" id="load_iter-toggle" onclick="return toggle('load_iter');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.vista-module.html#load_iter">load_iter</a><tt class="py-op">(</tt><tt class="py-param">iFileHandle</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="load_iter-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="load_iter-expanded"><a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">    <tt class="py-name">iFile</tt> <tt class="py-op">=</tt> <tt id="link-24" class="py-name"><a title="mungo.useful.smartopen" class="py-name" href="#" onclick="return doclink('link-24', 'smartopen', 'link-2');">smartopen</a></tt><tt class="py-op">(</tt><tt class="py-name">iFileHandle</tt><tt class="py-op">)</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">    <tt class="py-name">first</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">line</tt> <tt class="py-keyword">in</tt> <tt class="py-name">iFile</tt><tt class="py-op">:</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">        <tt class="py-name">tokens</tt> <tt class="py-op">=</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt class="py-name">strip</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">line</tt> <tt class="py-keyword">or</tt> <tt class="py-name">line</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">==</tt><tt class="py-string">'#'</tt><tt class="py-op">:</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">            <tt class="py-keyword">continue</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-keyword">in</tt> <tt class="py-op">[</tt><tt class="py-string">'&lt;'</tt><tt class="py-op">,</tt> <tt class="py-string">'&gt;'</tt><tt class="py-op">]</tt><tt class="py-op">:</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">first</tt><tt class="py-op">:</tt>  </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">                <tt class="py-keyword">yield</tt> <tt class="py-name">gene</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">            <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">                <tt class="py-name">first</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">            <tt class="py-name">gene</tt> <tt class="py-op">=</tt> <tt id="link-25" class="py-name"><a title="mungo.vista.Gene" class="py-name" href="#" onclick="return doclink('link-25', 'Gene', 'link-22');">Gene</a></tt><tt class="py-op">.</tt><tt id="link-26" class="py-name" targets="Method mungo.bowtie.PairedEnds.fromTokens()=mungo.bowtie.PairedEnds-class.html#fromTokens,Static Method mungo.vista.Exon.fromTokens()=mungo.vista.Exon-class.html#fromTokens,Static Method mungo.vista.Gene.fromTokens()=mungo.vista.Gene-class.html#fromTokens"><a title="mungo.bowtie.PairedEnds.fromTokens
+mungo.vista.Exon.fromTokens
+mungo.vista.Gene.fromTokens" class="py-name" href="#" onclick="return doclink('link-26', 'fromTokens', 'link-26');">fromTokens</a></tt><tt class="py-op">(</tt><tt class="py-name">tokens</tt><tt class="py-op">)</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">            <tt class="py-name">gene</tt><tt class="py-op">.</tt><tt id="link-27" class="py-name" targets="Method mungo.GoTools.Ontology.add()=mungo.GoTools.Ontology-class.html#add,Method mungo.align.Alignment.add()=mungo.align.Alignment-class.html#add,Method mungo.config.Config.add()=mungo.config.Config-class.html#add,Method mungo.vista.Gene.add()=mungo.vista.Gene-class.html#add"><a title="mungo.GoTools.Ontology.add
+mungo.align.Alignment.add
+mungo.config.Config.add
+mungo.vista.Gene.add" class="py-name" href="#" onclick="return doclink('link-27', 'add', 'link-27');">add</a></tt><tt class="py-op">(</tt><tt id="link-28" class="py-name"><a title="mungo.vista.Exon" class="py-name" href="#" onclick="return doclink('link-28', 'Exon', 'link-23');">Exon</a></tt><tt class="py-op">.</tt><tt id="link-29" class="py-name"><a title="mungo.bowtie.PairedEnds.fromTokens
+mungo.vista.Exon.fromTokens
+mungo.vista.Gene.fromTokens" class="py-name" href="#" onclick="return doclink('link-29', 'fromTokens', 'link-26');">fromTokens</a></tt><tt class="py-op">(</tt><tt class="py-name">tokens</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">    <tt class="py-keyword">yield</tt> <tt class="py-name">gene</tt> </tt>
+</div><a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"> </tt>
+<a name="load"></a><div id="load-def"><a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt> <a class="py-toggle" href="#" id="load-toggle" onclick="return toggle('load');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.vista-module.html#load">load</a><tt class="py-op">(</tt><tt class="py-param">iFileHandle</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="load-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="load-expanded"><a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">    <tt class="py-name">genes</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">gene</tt> <tt class="py-keyword">in</tt> <tt id="link-30" class="py-name" targets="Function mungo.bed.load_iter()=mungo.bed-module.html#load_iter,Function mungo.blat_old.load_iter()=mungo.blat_old-module.html#load_iter,Function mungo.generic.load_iter()=mungo.generic-module.html#load_iter,Function mungo.transfac.load_iter()=mungo.transfac-module.html#load_iter,Function mungo.vista.load_iter()=mungo.vista-module.html#load_iter"><a title="mungo.bed.load_iter
+mungo.blat_old.load_iter
+mungo.generic.load_iter
+mungo.transfac.load_iter
+mungo.vista.load_iter" class="py-name" href="#" onclick="return doclink('link-30', 'load_iter', 'link-30');">load_iter</a></tt><tt class="py-op">(</tt><tt class="py-name">iFileHandle</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">        <tt class="py-name">genes</tt><tt class="py-op">.</tt><tt id="link-31" class="py-name"><a title="mungo.align.Alignment.append" class="py-name" href="#" onclick="return doclink('link-31', 'append', 'link-14');">append</a></tt><tt class="py-op">(</tt><tt class="py-name">gene</tt><tt class="py-op">)</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">genes</tt> </tt>
+</div><a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line"> </tt>
+<a name="load2"></a><div id="load2-def"><a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line"> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt> <a class="py-toggle" href="#" id="load2-toggle" onclick="return toggle('load2');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.vista-module.html#load2">load2</a><tt class="py-op">(</tt><tt class="py-param">iFileHandle</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="load2-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="load2-expanded"><a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">    <tt class="py-name">iFile</tt> <tt class="py-op">=</tt> <tt id="link-32" class="py-name"><a title="mungo.useful.smartopen" class="py-name" href="#" onclick="return doclink('link-32', 'smartopen', 'link-2');">smartopen</a></tt><tt class="py-op">(</tt><tt class="py-name">iFileHandle</tt><tt class="py-op">)</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">    <tt class="py-name">genes</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">line</tt> <tt class="py-keyword">in</tt> <tt class="py-name">iFile</tt><tt class="py-op">:</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">        <tt class="py-name">tokens</tt> <tt class="py-op">=</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt class="py-name">strip</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">line</tt> <tt class="py-keyword">or</tt> <tt class="py-name">line</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">==</tt><tt class="py-string">'#'</tt><tt class="py-op">:</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">            <tt class="py-keyword">continue</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-keyword">in</tt> <tt class="py-op">[</tt><tt class="py-string">'&lt;'</tt><tt class="py-op">,</tt> <tt class="py-string">'&gt;'</tt><tt class="py-op">]</tt><tt class="py-op">:</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">            <tt class="py-name">genes</tt><tt class="py-op">.</tt><tt id="link-33" class="py-name"><a title="mungo.align.Alignment.append" class="py-name" href="#" onclick="return doclink('link-33', 'append', 'link-14');">append</a></tt><tt class="py-op">(</tt><tt id="link-34" class="py-name"><a title="mungo.vista.Gene" class="py-name" href="#" onclick="return doclink('link-34', 'Gene', 'link-22');">Gene</a></tt><tt class="py-op">.</tt><tt id="link-35" class="py-name"><a title="mungo.bowtie.PairedEnds.fromTokens
+mungo.vista.Exon.fromTokens
+mungo.vista.Gene.fromTokens" class="py-name" href="#" onclick="return doclink('link-35', 'fromTokens', 'link-26');">fromTokens</a></tt><tt class="py-op">(</tt><tt class="py-name">tokens</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">            <tt class="py-name">genes</tt><tt class="py-op">[</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt id="link-36" class="py-name"><a title="mungo.GoTools.Ontology.add
+mungo.align.Alignment.add
+mungo.config.Config.add
+mungo.vista.Gene.add" class="py-name" href="#" onclick="return doclink('link-36', 'add', 'link-27');">add</a></tt><tt class="py-op">(</tt><tt id="link-37" class="py-name"><a title="mungo.vista.Exon" class="py-name" href="#" onclick="return doclink('link-37', 'Exon', 'link-23');">Exon</a></tt><tt class="py-op">.</tt><tt id="link-38" class="py-name"><a title="mungo.bowtie.PairedEnds.fromTokens
+mungo.vista.Exon.fromTokens
+mungo.vista.Gene.fromTokens" class="py-name" href="#" onclick="return doclink('link-38', 'fromTokens', 'link-26');">fromTokens</a></tt><tt class="py-op">(</tt><tt class="py-name">tokens</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="mungo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Apr 24 16:15:02 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>mungo.fastq</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="mungo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="mungo-module.html">Package&nbsp;mungo</a> ::
+        Module&nbsp;fastq
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="mungo.fastq-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="mungo.fastq-module.html">Module mungo.fastq</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">fastq module</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Module mungo.mungoCore=mungo.mungoCore-module.html"><a title="mungo.mungoCore" class="py-name" href="#" onclick="return doclink('link-0', 'mungoCore', 'link-0');">mungoCore</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-1" class="py-name" targets="Package mungo.useful=mungo.useful-module.html"><a title="mungo.useful" class="py-name" href="#" onclick="return doclink('link-1', 'useful', 'link-1');">useful</a></tt> <tt class="py-keyword">import</tt> <tt id="link-2" class="py-name" targets="Function mungo.useful.smartopen()=mungo.useful-module.html#smartopen"><a title="mungo.useful.smartopen" class="py-name" href="#" onclick="return doclink('link-2', 'smartopen', 'link-2');">smartopen</a></tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"> </tt>
+<a name="FastqFile"></a><div id="FastqFile-def"><a name="L9"></a><tt class="py-lineno">  9</tt> <a class="py-toggle" href="#" id="FastqFile-toggle" onclick="return toggle('FastqFile');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.fastq-module.html#FastqFile">FastqFile</a><tt class="py-op">(</tt><tt class="py-param">fileHandle</tt><tt class="py-op">,</tt> <tt class="py-param">mode</tt><tt class="py-op">=</tt><tt class="py-string">'r'</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-param">kw</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FastqFile-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="FastqFile-expanded"><a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line">    <tt class="py-docstring">"""Factory function for Reader and Writer classes.</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-docstring">    @param iFileHandle: Fasta file name or object</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-docstring">    @keyword mode: read(r), write(w) or append(a)</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-docstring">    @keyword indexed: Index the fasta file; reading only (default False)</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">mode</tt><tt class="py-op">==</tt><tt class="py-string">'r'</tt><tt class="py-op">:</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-3" class="py-name" targets="Class mungo.fastq.FastqReader=mungo.fastq.FastqReader-class.html"><a title="mungo.fastq.FastqReader" class="py-name" href="#" onclick="return doclink('link-3', 'FastqReader', 'link-3');">FastqReader</a></tt><tt class="py-op">(</tt><tt class="py-name">fileHandle</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-name">kw</tt><tt class="py-op">)</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">mode</tt><tt class="py-op">==</tt><tt class="py-string">"w"</tt><tt class="py-op">:</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-4" class="py-name" targets="Class mungo.fastq.FastqWriter=mungo.fastq.FastqWriter-class.html"><a title="mungo.fastq.FastqWriter" class="py-name" href="#" onclick="return doclink('link-4', 'FastqWriter', 'link-4');">FastqWriter</a></tt><tt class="py-op">(</tt><tt class="py-name">fileHandle</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-name">kw</tt><tt class="py-op">)</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line">    <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line">        <tt class="py-keyword">raise</tt> <tt class="py-name">NotImplemented</tt> </tt>
+</div><a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"> </tt>
+<a name="FastqReader"></a><div id="FastqReader-def"><a name="L24"></a><tt class="py-lineno"> 24</tt> <a class="py-toggle" href="#" id="FastqReader-toggle" onclick="return toggle('FastqReader');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="mungo.fastq.FastqReader-class.html">FastqReader</a><tt class="py-op">(</tt><tt class="py-base-class">AbstractDataReader</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FastqReader-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="FastqReader-expanded"><a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line">    <tt class="py-docstring">"""Simple class for reading fastq files"""</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line">     </tt>
+<a name="FastqReader.__init__"></a><div id="FastqReader.__init__-def"><a name="L27"></a><tt class="py-lineno"> 27</tt> <a class="py-toggle" href="#" id="FastqReader.__init__-toggle" onclick="return toggle('FastqReader.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.fastq.FastqReader-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">iFileHandle</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-param">kw</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FastqReader.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="FastqReader.__init__-expanded"><a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-docstring">        @param iFileHandle: Fasta file name or object</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">        <tt id="link-5" class="py-name" targets="Class mungo.mungoCore.AbstractDataReader=mungo.mungoCore.AbstractDataReader-class.html"><a title="mungo.mungoCore.AbstractDataReader" class="py-name" href="#" onclick="return doclink('link-5', 'AbstractDataReader', 'link-5');">AbstractDataReader</a></tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Method mungo.GoTools.GoTerm.__init__()=mungo.GoTools.GoTerm-class.html#__init__,Method mungo.GoTools.Ontology.__init__()=mungo.GoTools.Ontology-class.html#__init__,Method mungo.alchemy.Alchemy.__init__()=mungo.alchemy.Alchemy-class.html#__init__,Method mungo.align.Alignment.__init__()=mungo.align.Alignment-class.html#__init__,Method mungo.align.Transform.__init__()=mungo.align.Transform-class.html#__init__,Method mungo.bed.Feature.__init__()=mungo.bed.Feature-class.html#__init__,Method mungo.blast.BlastReader.__init__()=mungo.blast.BlastReader-class.html#__init__,Method mungo.blast.HSP.__init__()=mungo.blast.HSP-class.html#__init__,Method mungo.blast.TooManyBlocks.__init__()=mungo.blast.TooManyBlocks-class.html#__init__,Method mungo.blastz.Alignment.__init__()=mungo.blastz.Alignment-class.html#__init__,Method mungo.blastz.Block.__init__()=mungo.blastz.Block-class.html#__init__,Method mungo.blastz.Chain.__init__()=mungo.blastz.Chain-class.html#__init__,Method mungo.blastz.HSP.__init__()=mungo.blastz.HSP-class.html#__init__,Method mungo.blat.BlatReader.__init__()=mungo.blat.BlatReader-class.html#__init__,Method mungo.blat.Chain.__init__()=mungo.blat.Chain-class.html#__init__,Method mungo.blat_old.Chain.__init__()=mungo.blat_old.Chain-class.html#__init__,Method mungo.bowtie.BowtieReader.__init__()=mungo.bowtie.BowtieReader-class.html#__init__,Method mungo.bowtie.BowtieTwoFilePairedEndReader.__init__()=mungo.bowtie.BowtieTwoFilePairedEndReader-class.html#__init__,Method mungo.bowtie.Feature.__init__()=mungo.bowtie.Feature-class.html#__init__,Method mungo.bowtie.PairedEnds.__init__()=mungo.bowtie.PairedEnds-class.html#__init__,Method mungo.cap3.CapIndexFile.__init__()=mungo.cap3.CapIndexFile-class.html#__init__,Method mungo.cap3.CapReaderIndexed.__init__()=mungo.cap3.CapReaderIndexed-class.html#__init__,Method mungo.config.Config.__init__()=mungo.config.Config-class.html#__init__,Method mungo.diagram.Glyphs.Arrow.__init__()=mungo.diagram.Glyphs.Arrow-class.html#__init__,Method mungo.diagram.Glyphs.Block.__init__()=mungo.diagram.Glyphs.Block-class.html#__init__,Method mungo.diagram.Glyphs.PointyBlock.__init__()=mungo.diagram.Glyphs.PointyBlock-class.html#__init__,Method mungo.diagram.Glyphs.Triangle.__init__()=mungo.diagram.Glyphs.Triangle-class.html#__init__,Method mungo.diagram.Glyphs._Glyph.__init__()=mungo.diagram.Glyphs._Glyph-class.html#__init__,Method mungo.diagram.Mapping.__init__()=mungo.diagram.Mapping-class.html#__init__,Method mungo.diagram.UniformMapping.__init__()=mungo.diagram.UniformMapping-class.html#__init__,Method mungo.diagram.UniformMapping2.__init__()=mungo.diagram.UniformMapping2-class.html#__init__,Method mungo.fasta.FastaIndexFile.__init__()=mungo.fasta.FastaIndexFile-class.html#__init__,Method mungo.fasta.FastaIndexPickleFile.__init__()=mungo.fasta.FastaIndexPickleFile-class.html#__init__,Method mungo.fasta.FastaIndexTextFile.__init__()=mungo.fasta.FastaIndexTextFile-class.html#__init__,Method mungo.fasta.FastaReader.__init__()=mungo.fasta.FastaReader-class.html#__init__,Method mungo.fasta.FastaReaderIndexed.__init__()=mungo.fasta.FastaReaderIndexed-class.html#__init__,Method mungo.fasta.FastaWriter.__init__()=mungo.fasta.FastaWriter-class.html#__init__,Method mungo.fasta.Sequence.__init__()=mungo.fasta.Sequence-class.html#__init__,Method mungo.fastaQuality.Quality.__init__()=mungo.fastaQuality.Quality-class.html#__init__,Method mungo.fastaQuality.QualityReaderIndexed.__init__()=mungo.fastaQuality.QualityReaderIndexed-class.html#__init__,Method mungo.fastq.FastqReader.__init__()=mungo.fastq.FastqReader-class.html#__init__,Method mungo.fastq.FastqWriter.__init__()=mungo.fastq.FastqWriter-class.html#__init__,Method mungo.generic.Feature.__init__()=mungo.generic.Feature-class.html#__init__,Method mungo.generic.GenericReader.__init__()=mungo.generic.GenericReader-class.html#__init__,Method mungo.genscan.Predicted.__init__()=mungo.genscan.Predicted-class.html#__init__,Method mungo.gff.Feature.__init__()=mungo.gff.Feature-class.html#__init__,Method mungo.gff.GffReader.__init__()=mungo.gff.GffReader-class.html#__init__,Method mungo.gff.SimpleGffReader.__init__()=mungo.gff.SimpleGffReader-class.html#__init__,Method mungo.hmmer.Domain.__init__()=mungo.hmmer.Domain-class.html#__init__,Method mungo.hmmer.GenomicDomain.__init__()=mungo.hmmer.GenomicDomain-class.html#__init__,Method mungo.hmmer.HmmerReader.__init__()=mungo.hmmer.HmmerReader-class.html#__init__,Method mungo.hmmer.PfamReader.__init__()=mungo.hmmer.PfamReader-class.html#__init__,Method mungo.hmmer3.Domain.__init__()=mungo.hmmer3.Domain-class.html#__init__,Method mungo.hmmer3.DomainHitsReader.__init__()=mungo.hmmer3.DomainHitsReader-class.html#__init__,Method mungo.intervals.Interval.__init__()=mungo.intervals.Interval-class.html#__init__,Method mungo.intervals.RichInterval.__init__()=mungo.intervals.RichInterval-class.html#__init__,Method mungo.mungoCore.AbstractDataReader.__init__()=mungo.mungoCore.AbstractDataReader-class.html#__init__,Method mungo.mungoCore.AbstractFeature.__init__()=mungo.mungoCore.AbstractFeature-class.html#__init__,Method mungo.possum.Motif.__init__()=mungo.possum.Motif-class.html#__init__,Method mungo.possum.PossumOutputReader.__init__()=mungo.possum.PossumOutputReader-class.html#__init__,Method mungo.transfac.Match.__init__()=mungo.transfac.Match-class.html#__init__,Method mungo.useful.ClassFromDict.__init__()=mungo.useful.ClassFromDict-class.html#__init__,Method mungo.vista.Exon.__init__()=mungo.vista.Exon-class.html#__init__,Method mungo.vista.Gene.__init__()=mungo.vista.Gene-class.html#__init__"><a title="mungo.GoTools.GoTerm.__init__
+mungo.GoTools.Ontology.__init__
+mungo.alchemy.Alchemy.__init__
+mungo.align.Alignment.__init__
+mungo.align.Transform.__init__
+mungo.bed.Feature.__init__
+mungo.blast.BlastReader.__init__
+mungo.blast.HSP.__init__
+mungo.blast.TooManyBlocks.__init__
+mungo.blastz.Alignment.__init__
+mungo.blastz.Block.__init__
+mungo.blastz.Chain.__init__
+mungo.blastz.HSP.__init__
+mungo.blat.BlatReader.__init__
+mungo.blat.Chain.__init__
+mungo.blat_old.Chain.__init__
+mungo.bowtie.BowtieReader.__init__
+mungo.bowtie.BowtieTwoFilePairedEndReader.__init__
+mungo.bowtie.Feature.__init__
+mungo.bowtie.PairedEnds.__init__
+mungo.cap3.CapIndexFile.__init__
+mungo.cap3.CapReaderIndexed.__init__
+mungo.config.Config.__init__
+mungo.diagram.Glyphs.Arrow.__init__
+mungo.diagram.Glyphs.Block.__init__
+mungo.diagram.Glyphs.PointyBlock.__init__
+mungo.diagram.Glyphs.Triangle.__init__
+mungo.diagram.Glyphs._Glyph.__init__
+mungo.diagram.Mapping.__init__
+mungo.diagram.UniformMapping.__init__
+mungo.diagram.UniformMapping2.__init__
+mungo.fasta.FastaIndexFile.__init__
+mungo.fasta.FastaIndexPickleFile.__init__
+mungo.fasta.FastaIndexTextFile.__init__
+mungo.fasta.FastaReader.__init__
+mungo.fasta.FastaReaderIndexed.__init__
+mungo.fasta.FastaWriter.__init__
+mungo.fasta.Sequence.__init__
+mungo.fastaQuality.Quality.__init__
+mungo.fastaQuality.QualityReaderIndexed.__init__
+mungo.fastq.FastqReader.__init__
+mungo.fastq.FastqWriter.__init__
+mungo.generic.Feature.__init__
+mungo.generic.GenericReader.__init__
+mungo.genscan.Predicted.__init__
+mungo.gff.Feature.__init__
+mungo.gff.GffReader.__init__
+mungo.gff.SimpleGffReader.__init__
+mungo.hmmer.Domain.__init__
+mungo.hmmer.GenomicDomain.__init__
+mungo.hmmer.HmmerReader.__init__
+mungo.hmmer.PfamReader.__init__
+mungo.hmmer3.Domain.__init__
+mungo.hmmer3.DomainHitsReader.__init__
+mungo.intervals.Interval.__init__
+mungo.intervals.RichInterval.__init__
+mungo.mungoCore.AbstractDataReader.__init__
+mungo.mungoCore.AbstractFeature.__init__
+mungo.possum.Motif.__init__
+mungo.possum.PossumOutputReader.__init__
+mungo.transfac.Match.__init__
+mungo.useful.ClassFromDict.__init__
+mungo.vista.Exon.__init__
+mungo.vista.Gene.__init__" class="py-name" href="#" onclick="return doclink('link-6', '__init__', 'link-6');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">iFileHandle</tt><tt class="py-op">)</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">kw</tt><tt class="py-op">:</tt>  </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">            <tt class="py-keyword">print</tt> <tt class="py-string">'Uncaptured keywords'</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">            <tt class="py-keyword">print</tt> <tt class="py-name">kw</tt> </tt>
+</div><a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">     </tt>
+<a name="FastqReader.__iter__"></a><div id="FastqReader.__iter__-def"><a name="L36"></a><tt class="py-lineno"> 36</tt> <a class="py-toggle" href="#" id="FastqReader.__iter__-toggle" onclick="return toggle('FastqReader.__iter__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.fastq.FastqReader-class.html#__iter__">__iter__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FastqReader.__iter__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="FastqReader.__iter__-expanded"><a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_iter</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-7" class="py-name" targets="Method mungo.GoTools.GoReader._generator()=mungo.GoTools.GoReader-class.html#_generator,Method mungo.blast.BlastReader._generator()=mungo.blast.BlastReader-class.html#_generator,Method mungo.blat.BlatReader._generator()=mungo.blat.BlatReader-class.html#_generator,Method mungo.bowtie.BowtieReader._generator()=mungo.bowtie.BowtieReader-class.html#_generator,Method mungo.bowtie.BowtieTwoFilePairedEndReader._generator()=mungo.bowtie.BowtieTwoFilePairedEndReader-class.html#_generator,Method mungo.cap3.CapReaderIndexed._generator()=mungo.cap3.CapReaderIndexed-class.html#_generator,Method mungo.fasta.FastaReader._generator()=mungo.fasta.FastaReader-class.html#_generator,Method mungo.fastaQuality.QualityReader._generator()=mungo.fastaQuality.QualityReader-class.html#_generator,Method mungo.fastq.FastqReader._generator()=mungo.fastq.FastqReader-class.html#_generator,Method mungo.generic.GenericReader._generator()=mungo.generic.GenericReader-class.html#_generator,Method mungo.gff.GffReader._generator()=mungo.gff.GffReader-class.html#_generator,Method mungo.gff.SimpleGffReader._generator()=mungo.gff.SimpleGffReader-class.html#_generator,Method mungo.hmmer.HmmerReader._generator()=mungo.hmmer.HmmerReader-class.html#_generator,Method mungo.hmmer.PfamReader._generator()=mungo.hmmer.PfamReader-class.html#_generator,Method mungo.hmmer3.DomainHitsReader._generator()=mungo.hmmer3.DomainHitsReader-class.html#_generator,Method mungo.mungoCore.AbstractDataReader._generator()=mungo.mungoCore.AbstractDataReader-class.html#_generator,Method mungo.possum.PossumOutputReader._generator()=mungo.possum.PossumOutputReader-class.html#_generator"><a title="mungo.GoTools.GoReader._generator
+mungo.blast.BlastReader._generator
+mungo.blat.BlatReader._generator
+mungo.bowtie.BowtieReader._generator
+mungo.bowtie.BowtieTwoFilePairedEndReader._generator
+mungo.cap3.CapReaderIndexed._generator
+mungo.fasta.FastaReader._generator
+mungo.fastaQuality.QualityReader._generator
+mungo.fastq.FastqReader._generator
+mungo.generic.GenericReader._generator
+mungo.gff.GffReader._generator
+mungo.gff.SimpleGffReader._generator
+mungo.hmmer.HmmerReader._generator
+mungo.hmmer.PfamReader._generator
+mungo.hmmer3.DomainHitsReader._generator
+mungo.mungoCore.AbstractDataReader._generator
+mungo.possum.PossumOutputReader._generator" class="py-name" href="#" onclick="return doclink('link-7', '_generator', 'link-7');">_generator</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">     </tt>
+<a name="FastqReader.next"></a><div id="FastqReader.next-def"><a name="L40"></a><tt class="py-lineno"> 40</tt> <a class="py-toggle" href="#" id="FastqReader.next-toggle" onclick="return toggle('FastqReader.next');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.fastq.FastqReader-class.html#next">next</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FastqReader.next-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="FastqReader.next-expanded"><a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">h</tt><tt class="py-op">,</tt><tt class="py-name">s</tt><tt class="py-op">,</tt><tt class="py-name">q</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_iter</tt><tt class="py-op">:</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">h</tt><tt class="py-op">,</tt><tt class="py-name">s</tt><tt class="py-op">,</tt><tt class="py-name">q</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">        <tt class="py-keyword">raise</tt> <tt class="py-name">StopIteration</tt> </tt>
+</div><a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">     </tt>
+<a name="FastqReader._generator"></a><div id="FastqReader._generator-def"><a name="L45"></a><tt class="py-lineno"> 45</tt> <a class="py-toggle" href="#" id="FastqReader._generator-toggle" onclick="return toggle('FastqReader._generator');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.fastq.FastqReader-class.html#_generator">_generator</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FastqReader._generator-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="FastqReader._generator-expanded"><a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">        <tt id="link-8" class="py-name" targets="Variable mungo.transfac.Match.header=mungo.transfac.Match-class.html#header"><a title="mungo.transfac.Match.header" class="py-name" href="#" onclick="return doclink('link-8', 'header', 'link-8');">header</a></tt> <tt class="py-op">=</tt> <tt class="py-string">""</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">        <tt class="py-name">qheader</tt> <tt class="py-op">=</tt> <tt class="py-string">""</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">        <tt class="py-name">seq</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">        <tt class="py-name">qual</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">        <tt class="py-name">state</tt> <tt class="py-op">=</tt> <tt class="py-string">"B"</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">line</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">iFile</tt><tt class="py-op">:</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">            <tt class="py-name">line</tt> <tt class="py-op">=</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt class="py-name">strip</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">line</tt><tt class="py-op">:</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">state</tt><tt class="py-op">==</tt><tt class="py-string">"Q"</tt> <tt class="py-keyword">and</tt> <tt class="py-name">line</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">==</tt><tt class="py-string">"@"</tt><tt class="py-op">:</tt>  <tt class="py-comment"># Internal read header</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">                    <tt class="py-keyword">yield</tt> <tt id="link-9" class="py-name"><a title="mungo.transfac.Match.header" class="py-name" href="#" onclick="return doclink('link-9', 'header', 'link-8');">header</a></tt><tt class="py-op">,</tt> <tt class="py-string">""</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-name">seq</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-string">""</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-name">qual</tt><tt class="py-op">)</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">                    <tt class="py-name">state</tt> <tt class="py-op">=</tt> <tt class="py-string">"S"</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">                    <tt id="link-10" class="py-name"><a title="mungo.transfac.Match.header" class="py-name" href="#" onclick="return doclink('link-10', 'header', 'link-8');">header</a></tt> <tt class="py-op">=</tt> <tt class="py-name">line</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">:</tt><tt class="py-op">]</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">                    <tt class="py-name">seq</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">                    <tt class="py-name">qual</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">                <tt class="py-keyword">elif</tt> <tt class="py-name">state</tt><tt class="py-op">==</tt><tt class="py-string">"S"</tt> <tt class="py-keyword">and</tt> <tt class="py-name">line</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">==</tt><tt class="py-string">"+"</tt><tt class="py-op">:</tt>  <tt class="py-comment"># Internal quality header</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">                    <tt class="py-name">state</tt> <tt class="py-op">=</tt> <tt class="py-string">"Q"</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">                    <tt id="link-11" class="py-name"><a title="mungo.transfac.Match.header" class="py-name" href="#" onclick="return doclink('link-11', 'header', 'link-8');">header</a></tt> <tt class="py-op">=</tt> <tt class="py-name">line</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">:</tt><tt class="py-op">]</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">                <tt class="py-keyword">elif</tt> <tt class="py-name">state</tt><tt class="py-op">==</tt><tt class="py-string">"B"</tt> <tt class="py-keyword">and</tt> <tt class="py-name">line</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">==</tt><tt class="py-string">"@"</tt><tt class="py-op">:</tt> <tt class="py-comment"># Starting read header</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">                    <tt class="py-name">state</tt> <tt class="py-op">=</tt> <tt class="py-string">"S"</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">                    <tt id="link-12" class="py-name"><a title="mungo.transfac.Match.header" class="py-name" href="#" onclick="return doclink('link-12', 'header', 'link-8');">header</a></tt> <tt class="py-op">=</tt> <tt class="py-name">line</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">:</tt><tt class="py-op">]</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">                    <tt class="py-name">seq</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">                    <tt class="py-name">qual</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">                <tt class="py-keyword">else</tt><tt class="py-op">:</tt> <tt class="py-comment"># Internal read or quality sequence</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">                    <tt class="py-keyword">if</tt> <tt class="py-name">state</tt><tt class="py-op">==</tt><tt class="py-string">"S"</tt><tt class="py-op">:</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">                        <tt class="py-name">seq</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Method mungo.align.Alignment.append()=mungo.align.Alignment-class.html#append"><a title="mungo.align.Alignment.append" class="py-name" href="#" onclick="return doclink('link-13', 'append', 'link-13');">append</a></tt><tt class="py-op">(</tt><tt class="py-name">line</tt><tt class="py-op">)</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">                    <tt class="py-keyword">elif</tt> <tt class="py-name">state</tt><tt class="py-op">==</tt><tt class="py-string">"Q"</tt><tt class="py-op">:</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">                        <tt class="py-name">qual</tt><tt class="py-op">.</tt><tt id="link-14" class="py-name"><a title="mungo.align.Alignment.append" class="py-name" href="#" onclick="return doclink('link-14', 'append', 'link-13');">append</a></tt><tt class="py-op">(</tt><tt class="py-name">line</tt><tt class="py-op">)</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">         </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">state</tt><tt class="py-op">==</tt><tt class="py-string">"Q"</tt><tt class="py-op">:</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">            <tt class="py-keyword">yield</tt> <tt id="link-15" class="py-name"><a title="mungo.transfac.Match.header" class="py-name" href="#" onclick="return doclink('link-15', 'header', 'link-8');">header</a></tt><tt class="py-op">,</tt> <tt class="py-string">""</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-name">seq</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-string">""</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-name">qual</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"> </tt>
+<a name="FastqWriter"></a><div id="FastqWriter-def"><a name="L78"></a><tt class="py-lineno"> 78</tt> <a class="py-toggle" href="#" id="FastqWriter-toggle" onclick="return toggle('FastqWriter');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="mungo.fastq.FastqWriter-class.html">FastqWriter</a><tt class="py-op">(</tt><tt class="py-base-class">AbstractDataFile</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FastqWriter-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="FastqWriter-expanded"><a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">    <tt class="py-docstring">"""Simple class for writing fastq files"""</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"> </tt>
+<a name="FastqWriter.__init__"></a><div id="FastqWriter.__init__-def"><a name="L81"></a><tt class="py-lineno"> 81</tt> <a class="py-toggle" href="#" id="FastqWriter.__init__-toggle" onclick="return toggle('FastqWriter.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.fastq.FastqWriter-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">fileHandle</tt><tt class="py-op">,</tt> <tt class="py-param">mode</tt><tt class="py-op">=</tt><tt class="py-string">'w'</tt><tt class="py-op">,</tt> <tt class="py-param">width</tt><tt class="py-op">=</tt><tt class="py-number">60</tt><tt class="py-op">,</tt> <tt class="py-param">blockSize</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-param">kw</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FastqWriter.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="FastqWriter.__init__-expanded"><a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"><tt class="py-docstring">        @param iFileHandle: Output file or name</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"><tt class="py-docstring">        @keyword mode: File mode - write(w) or append(a)</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">        <tt class="py-keyword">assert</tt> <tt class="py-name">mode</tt> <tt class="py-keyword">in</tt> <tt class="py-op">(</tt><tt class="py-string">'w'</tt><tt class="py-op">,</tt> <tt class="py-string">'a'</tt><tt class="py-op">)</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">iFile</tt> <tt class="py-op">=</tt> <tt id="link-16" class="py-name"><a title="mungo.useful.smartopen" class="py-name" href="#" onclick="return doclink('link-16', 'smartopen', 'link-2');">smartopen</a></tt><tt class="py-op">(</tt><tt class="py-name">fileHandle</tt><tt class="py-op">,</tt> <tt class="py-name">mode</tt><tt class="py-op">)</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">iFilename</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">iFile</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">         </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">kw</tt><tt class="py-op">:</tt>  </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">            <tt class="py-keyword">print</tt> <tt class="py-string">'Uncaptured keywords'</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">            <tt class="py-keyword">print</tt> <tt class="py-name">kw</tt> </tt>
+</div><a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">     </tt>
+<a name="FastqWriter.write"></a><div id="FastqWriter.write-def"><a name="L94"></a><tt class="py-lineno"> 94</tt> <a class="py-toggle" href="#" id="FastqWriter.write-toggle" onclick="return toggle('FastqWriter.write');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.fastq.FastqWriter-class.html#write">write</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">header</tt><tt class="py-op">,</tt> <tt class="py-param">seq</tt><tt class="py-op">,</tt> <tt class="py-param">qseq</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FastqWriter.write-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="FastqWriter.write-expanded"><a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">        <tt class="py-docstring">"""Write a fasta entry.</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"><tt class="py-docstring">        @param header: Fasta header</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"><tt class="py-docstring">        @param seq: Sequence</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt class="py-docstring">        @param qseq: Quality sequence</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">        <tt class="py-keyword">print</tt> <tt class="py-op">&gt;&gt;</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">iFile</tt><tt class="py-op">,</tt> <tt class="py-string">"@%s"</tt> <tt class="py-op">%</tt> <tt id="link-17" class="py-name"><a title="mungo.transfac.Match.header" class="py-name" href="#" onclick="return doclink('link-17', 'header', 'link-8');">header</a></tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">        <tt class="py-keyword">print</tt> <tt class="py-op">&gt;&gt;</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">iFile</tt><tt class="py-op">,</tt> <tt class="py-name">seq</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">        <tt class="py-keyword">print</tt> <tt class="py-op">&gt;&gt;</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">iFile</tt><tt class="py-op">,</tt> <tt class="py-string">"+%s"</tt> <tt class="py-op">%</tt> <tt id="link-18" class="py-name"><a title="mungo.transfac.Match.header" class="py-name" href="#" onclick="return doclink('link-18', 'header', 'link-8');">header</a></tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">        <tt class="py-keyword">print</tt> <tt class="py-op">&gt;&gt;</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">iFile</tt><tt class="py-op">,</tt> <tt class="py-name">qseq</tt> </tt>
+</div><a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">     </tt>
+<a name="FastqWriter.__call__"></a><div id="FastqWriter.__call__-def"><a name="L106"></a><tt class="py-lineno">106</tt> <a class="py-toggle" href="#" id="FastqWriter.__call__-toggle" onclick="return toggle('FastqWriter.__call__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.fastq.FastqWriter-class.html#__call__">__call__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">header</tt><tt class="py-op">,</tt> <tt class="py-param">seq</tt><tt class="py-op">,</tt> <tt class="py-param">qseq</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FastqWriter.__call__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="FastqWriter.__call__-expanded"><a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">        <tt class="py-docstring">"""Call interface to write."""</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-19" class="py-name" targets="Method mungo.fasta.FastaWriter.write()=mungo.fasta.FastaWriter-class.html#write,Method mungo.fastaQuality.QualityWriter.write()=mungo.fastaQuality.QualityWriter-class.html#write,Method mungo.fastq.FastqWriter.write()=mungo.fastq.FastqWriter-class.html#write"><a title="mungo.fasta.FastaWriter.write
+mungo.fastaQuality.QualityWriter.write
+mungo.fastq.FastqWriter.write" class="py-name" href="#" onclick="return doclink('link-19', 'write', 'link-19');">write</a></tt><tt class="py-op">(</tt><tt id="link-20" class="py-name"><a title="mungo.transfac.Match.header" class="py-name" href="#" onclick="return doclink('link-20', 'header', 'link-8');">header</a></tt><tt class="py-op">,</tt> <tt class="py-name">seq</tt><tt class="py-op">,</tt> <tt class="py-name">qseq</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="mungo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Apr 24 16:15:01 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

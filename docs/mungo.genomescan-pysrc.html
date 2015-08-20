@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>mungo.genomescan</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="mungo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="mungo-module.html">Package&nbsp;mungo</a> ::
+        Module&nbsp;genomescan
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="mungo.genomescan-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="mungo.genomescan-module.html">Module mungo.genomescan</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">genomescan module</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">os</tt><tt class="py-op">,</tt> <tt class="py-name">sys</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">time</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Module mungo.fasta=mungo.fasta-module.html"><a title="mungo.fasta" class="py-name" href="#" onclick="return doclink('link-0', 'fasta', 'link-0');">fasta</a></tt><tt class="py-op">,</tt> <tt id="link-1" class="py-name" targets="Module mungo.genscan=mungo.genscan-module.html"><a title="mungo.genscan" class="py-name" href="#" onclick="return doclink('link-1', 'genscan', 'link-1');">genscan</a></tt><tt class="py-op">,</tt> <tt id="link-2" class="py-name" targets="Module mungo.sequence=mungo.sequence-module.html"><a title="mungo.sequence" class="py-name" href="#" onclick="return doclink('link-2', 'sequence', 'link-2');">sequence</a></tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-3" class="py-name" targets="Package mungo.useful=mungo.useful-module.html"><a title="mungo.useful" class="py-name" href="#" onclick="return doclink('link-3', 'useful', 'link-3');">useful</a></tt> <tt class="py-keyword">import</tt> <tt id="link-4" class="py-name" targets="Function mungo.useful.smartopen()=mungo.useful-module.html#smartopen"><a title="mungo.useful.smartopen" class="py-name" href="#" onclick="return doclink('link-4', 'smartopen', 'link-4');">smartopen</a></tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-5" class="py-name"><a title="mungo.useful" class="py-name" href="#" onclick="return doclink('link-5', 'useful', 'link-3');">useful</a></tt> <tt class="py-keyword">import</tt> <tt id="link-6" class="py-name" targets="Module mungo.useful.multipart=mungo.useful.multipart-module.html"><a title="mungo.useful.multipart" class="py-name" href="#" onclick="return doclink('link-6', 'multipart', 'link-6');">multipart</a></tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"> </tt>
+<a name="genomescan"></a><div id="genomescan-def"><a name="L12"></a><tt class="py-lineno"> 12</tt> <a class="py-toggle" href="#" id="genomescan-toggle" onclick="return toggle('genomescan');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.genomescan-module.html#genomescan">genomescan</a><tt class="py-op">(</tt><tt class="py-param">dna</tt><tt class="py-op">,</tt> <tt class="py-param">protein</tt><tt class="py-op">,</tt> <tt class="py-param">description</tt><tt class="py-op">=</tt><tt class="py-string">''</tt><tt class="py-op">,</tt> <tt class="py-param">email</tt><tt class="py-op">=</tt><tt class="py-string">''</tt><tt class="py-op">,</tt> <tt class="py-param">oFileHandle</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt>  </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line">  <tt class="py-param">proxy</tt><tt class="py-op">=</tt><tt class="py-string">'wehiproxy.alpha.wehi.edu.au'</tt><tt class="py-op">,</tt> <tt class="py-param">proxyPort</tt><tt class="py-op">=</tt><tt class="py-number">3128</tt><tt class="py-op">,</tt> <tt class="py-param">debug</tt><tt class="py-op">=</tt><tt class="py-name">False</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="genomescan-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="genomescan-expanded"><a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-docstring">    @param dna: DNA sequence in fasta format.</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-docstring">    @param protein: protein sequence in fasta format.</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-docstring">    @param description: Description of job (default: '').</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-docstring">    @param email: Email address (default: '').</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-docstring">    @param oFileHandle: Output file or filename (default: None/no output)</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt class="py-docstring">    @param proxy: Proxy setting (default: WEHI proxy)</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-docstring">    @param proxyPort: Proxy port setting (default: WEHI proxy port)</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-docstring">    @param debug: Debug output (default: False)</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-docstring">    @returns: HTML output of GenomeScan webserver.</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line">    <tt class="py-name">genomeScanURL</tt> <tt class="py-op">=</tt> <tt class="py-string">'http://genes.mit.edu/cgi-bin/genomescanw.cgi'</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line">     </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">debug</tt><tt class="py-op">:</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line">        <tt class="py-keyword">print</tt> <tt class="py-name">dna</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line">        <tt class="py-keyword">print</tt> <tt class="py-name">protein</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">     </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">    <tt class="py-comment"># Do genomescan prediction using webserver</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">    <tt class="py-name">fields</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">        <tt class="py-op">(</tt><tt class="py-string">'-g'</tt><tt class="py-op">,</tt> <tt class="py-name">protein</tt><tt class="py-op">)</tt><tt class="py-op">,</tt>  </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">        <tt class="py-op">(</tt><tt class="py-string">'-s'</tt><tt class="py-op">,</tt> <tt class="py-name">dna</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">        <tt class="py-op">(</tt><tt class="py-string">'-o'</tt><tt class="py-op">,</tt> <tt class="py-string">'Vertebrate'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">        <tt class="py-op">(</tt><tt class="py-string">'-n'</tt><tt class="py-op">,</tt> <tt class="py-name">description</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">        <tt class="py-op">(</tt><tt class="py-string">'-p'</tt><tt class="py-op">,</tt> <tt class="py-string">'Predicted peptides only'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">        <tt class="py-op">(</tt><tt class="py-string">'-a'</tt><tt class="py-op">,</tt> <tt class="py-name">email</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">    <tt class="py-op">]</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">    <tt class="py-name">files</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">(</tt><tt class="py-string">'-u'</tt><tt class="py-op">,</tt> <tt class="py-string">''</tt><tt class="py-op">,</tt> <tt class="py-string">''</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-op">(</tt><tt class="py-string">'-v'</tt><tt class="py-op">,</tt> <tt class="py-string">''</tt><tt class="py-op">,</tt> <tt class="py-string">''</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">     </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">    <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">        <tt class="py-name">html</tt> <tt class="py-op">=</tt> <tt id="link-7" class="py-name"><a title="mungo.useful.multipart" class="py-name" href="#" onclick="return doclink('link-7', 'multipart', 'link-6');">multipart</a></tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Function mungo.useful.multipart.post()=mungo.useful.multipart-module.html#post"><a title="mungo.useful.multipart.post" class="py-name" href="#" onclick="return doclink('link-8', 'post', 'link-8');">post</a></tt><tt class="py-op">(</tt><tt class="py-name">genomeScanURL</tt><tt class="py-op">,</tt> <tt class="py-name">fields</tt><tt class="py-op">,</tt> <tt class="py-name">files</tt><tt class="py-op">,</tt> <tt class="py-name">proxy</tt><tt class="py-op">,</tt> <tt class="py-name">proxyPort</tt><tt class="py-op">)</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">    <tt class="py-keyword">except</tt> <tt id="link-9" class="py-name"><a title="mungo.useful.multipart" class="py-name" href="#" onclick="return doclink('link-9', 'multipart', 'link-6');">multipart</a></tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Class mungo.useful.multipart.FormSubmissionException=mungo.useful.multipart.FormSubmissionException-class.html"><a title="mungo.useful.multipart.FormSubmissionException" class="py-name" href="#" onclick="return doclink('link-10', 'FormSubmissionException', 'link-10');">FormSubmissionException</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">        <tt class="py-keyword">print</tt> <tt class="py-op">&gt;&gt;</tt> <tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">stderr</tt><tt class="py-op">,</tt> <tt class="py-string">"*** %s submission failed. Retry later"</tt> <tt class="py-op">%</tt> <tt class="py-name">description</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">    <tt class="py-keyword">except</tt> <tt class="py-name">Exception</tt><tt class="py-op">,</tt> <tt class="py-name">e</tt><tt class="py-op">:</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">        <tt class="py-keyword">print</tt> <tt class="py-name">e</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">        <tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">exit</tt><tt class="py-op">(</tt><tt class="py-string">'Argh!'</tt><tt class="py-op">)</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">     </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">oFileHandle</tt><tt class="py-op">:</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">        <tt class="py-name">oFile</tt> <tt class="py-op">=</tt> <tt id="link-11" class="py-name"><a title="mungo.useful.smartopen" class="py-name" href="#" onclick="return doclink('link-11', 'smartopen', 'link-4');">smartopen</a></tt><tt class="py-op">(</tt><tt class="py-name">oFileHandle</tt><tt class="py-op">,</tt> <tt class="py-string">'w'</tt><tt class="py-op">)</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">        <tt class="py-keyword">print</tt> <tt class="py-op">&gt;&gt;</tt> <tt class="py-name">oFile</tt><tt class="py-op">,</tt> <tt class="py-name">html</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">        <tt class="py-name">oFile</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name" targets="Method mungo.mungoCore.AbstractDataFile.close()=mungo.mungoCore.AbstractDataFile-class.html#close"><a title="mungo.mungoCore.AbstractDataFile.close" class="py-name" href="#" onclick="return doclink('link-12', 'close', 'link-12');">close</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">     </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">html</tt> </tt>
+</div><a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"> </tt>
+<a name="extractSeq"></a><div id="extractSeq-def"><a name="L60"></a><tt class="py-lineno"> 60</tt> <a class="py-toggle" href="#" id="extractSeq-toggle" onclick="return toggle('extractSeq');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.genomescan-module.html#extractSeq">extractSeq</a><tt class="py-op">(</tt><tt class="py-param">feature</tt><tt class="py-op">,</tt> <tt class="py-param">blastDb</tt><tt class="py-op">,</tt> <tt class="py-param">dx</tt><tt class="py-op">,</tt> <tt class="py-param">dy</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="extractSeq-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="extractSeq-expanded"><a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">    <tt class="py-docstring">"""Extract the translated sequence of a feature and DNA </tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"><tt class="py-docstring">    sequence of the surrounding the genomic region.</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"><tt class="py-docstring">    @param feature: Feature object. Mandatory attributes: accession, sStart, sEnd.</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line"><tt class="py-docstring">    @param blastDb: Blast database.</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line"><tt class="py-docstring">    @param dx: Length of sequence to extract upstream.</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line"><tt class="py-docstring">    @param dy: Length of sequence to extract downstream.</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line"><tt class="py-docstring">    @returns: tuple of fasta strings (DNA, protein).</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">    <tt class="py-comment"># Extract hmmer hit &amp; translate</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">    <tt id="link-13" class="py-name" targets="Variable mungo.transfac.Match.header=mungo.transfac.Match-class.html#header"><a title="mungo.transfac.Match.header" class="py-name" href="#" onclick="return doclink('link-13', 'header', 'link-13');">header</a></tt><tt class="py-op">,</tt><tt class="py-name">seq</tt> <tt class="py-op">=</tt> <tt id="link-14" class="py-name"><a title="mungo.fasta" class="py-name" href="#" onclick="return doclink('link-14', 'fasta', 'link-0');">fasta</a></tt><tt class="py-op">.</tt><tt id="link-15" class="py-name" targets="Method mungo.blast.HSP.getSequence()=mungo.blast.HSP-class.html#getSequence,Function mungo.blast.getSequence()=mungo.blast-module.html#getSequence,Method mungo.gff.Feature.getSequence()=mungo.gff.Feature-class.html#getSequence,Method mungo.hmmer.Domain.getSequence()=mungo.hmmer.Domain-class.html#getSequence,Method mungo.hmmer.GenomicDomain.getSequence()=mungo.hmmer.GenomicDomain-class.html#getSequence,Method mungo.hmmer.SixFrameDomain.getSequence()=mungo.hmmer.SixFrameDomain-class.html#getSequence,Method mungo.hmmer3.Domain.getSequence()=mungo.hmmer3.Domain-class.html#getSequence,Method mungo.intervals.Interval.getSequence()=mungo.intervals.Interval-class.html#getSequence"><a title="mungo.blast.HSP.getSequence
+mungo.blast.getSequence
+mungo.gff.Feature.getSequence
+mungo.hmmer.Domain.getSequence
+mungo.hmmer.GenomicDomain.getSequence
+mungo.hmmer.SixFrameDomain.getSequence
+mungo.hmmer3.Domain.getSequence
+mungo.intervals.Interval.getSequence" class="py-name" href="#" onclick="return doclink('link-15', 'getSequence', 'link-15');">getSequence</a></tt><tt class="py-op">(</tt><tt class="py-name">blastDb</tt><tt class="py-op">,</tt> <tt class="py-name">feature</tt><tt class="py-op">.</tt><tt class="py-name">accession</tt><tt class="py-op">,</tt>  </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">        <tt class="py-name">start</tt><tt class="py-op">=</tt><tt class="py-name">feature</tt><tt class="py-op">.</tt><tt class="py-name">sStart</tt><tt class="py-op">,</tt> <tt class="py-name">end</tt><tt class="py-op">=</tt><tt class="py-name">feature</tt><tt class="py-op">.</tt><tt class="py-name">sEnd</tt><tt class="py-op">,</tt> <tt id="link-16" class="py-name" targets="Method mungo.blast.HSP.strand()=mungo.blast.HSP-class.html#strand"><a title="mungo.blast.HSP.strand" class="py-name" href="#" onclick="return doclink('link-16', 'strand', 'link-16');">strand</a></tt><tt class="py-op">=</tt><tt class="py-name">feature</tt><tt class="py-op">.</tt><tt id="link-17" class="py-name"><a title="mungo.blast.HSP.strand" class="py-name" href="#" onclick="return doclink('link-17', 'strand', 'link-16');">strand</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">    <tt class="py-name">protein</tt> <tt class="py-op">=</tt> <tt class="py-string">'\n'</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-string">'&gt;'</tt> <tt class="py-op">+</tt> <tt id="link-18" class="py-name"><a title="mungo.transfac.Match.header" class="py-name" href="#" onclick="return doclink('link-18', 'header', 'link-13');">header</a></tt><tt class="py-op">,</tt> <tt id="link-19" class="py-name"><a title="mungo.sequence" class="py-name" href="#" onclick="return doclink('link-19', 'sequence', 'link-2');">sequence</a></tt><tt class="py-op">.</tt><tt id="link-20" class="py-name" targets="Function mungo.sequence.translate()=mungo.sequence-module.html#translate"><a title="mungo.sequence.translate" class="py-name" href="#" onclick="return doclink('link-20', 'translate', 'link-20');">translate</a></tt><tt class="py-op">(</tt><tt class="py-name">seq</tt><tt class="py-op">)</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">     </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">feature</tt><tt class="py-op">.</tt><tt id="link-21" class="py-name"><a title="mungo.blast.HSP.strand" class="py-name" href="#" onclick="return doclink('link-21', 'strand', 'link-16');">strand</a></tt><tt class="py-op">==</tt><tt class="py-string">'+'</tt><tt class="py-op">:</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">        <tt class="py-name">start</tt> <tt class="py-op">=</tt> <tt class="py-name">feature</tt><tt class="py-op">.</tt><tt class="py-name">sStart</tt><tt class="py-op">-</tt><tt class="py-name">dx</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">        <tt class="py-name">end</tt> <tt class="py-op">=</tt> <tt class="py-name">feature</tt><tt class="py-op">.</tt><tt class="py-name">sEnd</tt><tt class="py-op">+</tt><tt class="py-name">dy</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">    <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">        <tt class="py-name">start</tt> <tt class="py-op">=</tt> <tt class="py-name">feature</tt><tt class="py-op">.</tt><tt class="py-name">sStart</tt><tt class="py-op">-</tt><tt class="py-name">dy</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">        <tt class="py-name">end</tt> <tt class="py-op">=</tt> <tt class="py-name">feature</tt><tt class="py-op">.</tt><tt class="py-name">sEnd</tt><tt class="py-op">+</tt><tt class="py-name">dx</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">     </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">start</tt><tt class="py-op">&lt;</tt><tt class="py-number">0</tt> <tt class="py-keyword">or</tt> <tt class="py-name">end</tt><tt class="py-op">&gt;</tt><tt class="py-number">5000000</tt><tt class="py-op">:</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">        <tt class="py-keyword">raise</tt> <tt class="py-name">Exception</tt><tt class="py-op">(</tt><tt class="py-string">'Out of block bounds.'</tt><tt class="py-op">)</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">     </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">    <tt class="py-comment"># Extract surrounding DNA sequence</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">    <tt id="link-22" class="py-name"><a title="mungo.transfac.Match.header" class="py-name" href="#" onclick="return doclink('link-22', 'header', 'link-13');">header</a></tt><tt class="py-op">,</tt><tt class="py-name">seq</tt> <tt class="py-op">=</tt> <tt id="link-23" class="py-name"><a title="mungo.fasta" class="py-name" href="#" onclick="return doclink('link-23', 'fasta', 'link-0');">fasta</a></tt><tt class="py-op">.</tt><tt id="link-24" class="py-name"><a title="mungo.blast.HSP.getSequence
+mungo.blast.getSequence
+mungo.gff.Feature.getSequence
+mungo.hmmer.Domain.getSequence
+mungo.hmmer.GenomicDomain.getSequence
+mungo.hmmer.SixFrameDomain.getSequence
+mungo.hmmer3.Domain.getSequence
+mungo.intervals.Interval.getSequence" class="py-name" href="#" onclick="return doclink('link-24', 'getSequence', 'link-15');">getSequence</a></tt><tt class="py-op">(</tt><tt class="py-name">blastDb</tt><tt class="py-op">,</tt> <tt class="py-name">feature</tt><tt class="py-op">.</tt><tt class="py-name">accession</tt><tt class="py-op">,</tt>  </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">        <tt class="py-name">start</tt><tt class="py-op">=</tt><tt class="py-name">start</tt><tt class="py-op">,</tt> <tt class="py-name">end</tt><tt class="py-op">=</tt><tt class="py-name">end</tt><tt class="py-op">)</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">    <tt id="link-25" class="py-name"><a title="mungo.transfac.Match.header" class="py-name" href="#" onclick="return doclink('link-25', 'header', 'link-13');">header</a></tt> <tt class="py-op">=</tt> <tt class="py-string">'%(accession)s:%(sStart)s-%(sEnd)s'</tt> <tt class="py-op">%</tt> <tt class="py-name">feature</tt><tt class="py-op">.</tt><tt class="py-name">__dict__</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">    <tt class="py-name">dna</tt> <tt class="py-op">=</tt> <tt class="py-string">'\n'</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-string">'&gt;'</tt> <tt class="py-op">+</tt> <tt id="link-26" class="py-name"><a title="mungo.transfac.Match.header" class="py-name" href="#" onclick="return doclink('link-26', 'header', 'link-13');">header</a></tt><tt class="py-op">,</tt> <tt class="py-name">seq</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">     </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">dna</tt><tt class="py-op">,</tt> <tt class="py-name">protein</tt> </tt>
+</div><a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line"> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"> </tt>
+<a name="genomescanFromFeature"></a><div id="genomescanFromFeature-def"><a name="L94"></a><tt class="py-lineno"> 94</tt> <a class="py-toggle" href="#" id="genomescanFromFeature-toggle" onclick="return toggle('genomescanFromFeature');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.genomescan-module.html#genomescanFromFeature">genomescanFromFeature</a><tt class="py-op">(</tt><tt class="py-param">feature</tt><tt class="py-op">,</tt> <tt class="py-param">blastDb</tt><tt class="py-op">,</tt> <tt class="py-param">dx</tt><tt class="py-op">=</tt><tt class="py-number">15000</tt><tt class="py-op">,</tt> <tt class="py-param">dy</tt><tt class="py-op">=</tt><tt class="py-number">7000</tt><tt class="py-op">,</tt>  </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">  <tt class="py-param">oFileHandle</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-param">debug</tt><tt class="py-op">=</tt><tt class="py-name">False</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="genomescanFromFeature-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="genomescanFromFeature-expanded"><a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">    <tt class="py-docstring">"""Predict a gene in the neighbourhood of a known feature.</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"><tt class="py-docstring">    @param feature: Feature object. Mandatory attributes: accession, sStart, sEnd.</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt class="py-docstring">    @param blastDb: Blast database.</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"><tt class="py-docstring">    @param dx: Length of sequence to extract upstream (default: 20000)</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"><tt class="py-docstring">    @param dy: Length of sequence to extract downstream (default: 7000)</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"><tt class="py-docstring">    @param oFileHandle: Output file or filename (default: None/no output)</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"><tt class="py-docstring">    @param debug: Debug output (default: False)</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"><tt class="py-docstring">    @returns: HTML output of GenomeScan webserver.</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">    <tt class="py-name">description</tt> <tt class="py-op">=</tt> <tt class="py-name">feature</tt><tt class="py-op">.</tt><tt class="py-name">domain</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">debug</tt><tt class="py-op">:</tt> <tt class="py-keyword">print</tt> <tt class="py-string">'%s  L=%i  time="%s"'</tt> \ </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">      <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">description</tt><tt class="py-op">,</tt> <tt class="py-name">feature</tt><tt class="py-op">.</tt><tt class="py-name">sEnd</tt><tt class="py-op">-</tt><tt class="py-name">feature</tt><tt class="py-op">.</tt><tt class="py-name">sStart</tt><tt class="py-op">+</tt><tt class="py-number">1</tt><tt class="py-op">+</tt><tt class="py-name">dx</tt><tt class="py-op">+</tt><tt class="py-name">dy</tt><tt class="py-op">,</tt> <tt class="py-name">time</tt><tt class="py-op">.</tt><tt class="py-name">ctime</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">    <tt class="py-name">dna</tt><tt class="py-op">,</tt><tt class="py-name">protein</tt> <tt class="py-op">=</tt> <tt id="link-27" class="py-name" targets="Function mungo.genomescan.extractSeq()=mungo.genomescan-module.html#extractSeq"><a title="mungo.genomescan.extractSeq" class="py-name" href="#" onclick="return doclink('link-27', 'extractSeq', 'link-27');">extractSeq</a></tt><tt class="py-op">(</tt><tt class="py-name">feature</tt><tt class="py-op">,</tt> <tt class="py-name">blastDb</tt><tt class="py-op">,</tt> <tt class="py-name">dx</tt><tt class="py-op">,</tt> <tt class="py-name">dy</tt><tt class="py-op">)</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">    <tt class="py-name">html</tt> <tt class="py-op">=</tt> <tt id="link-28" class="py-name" targets="Module mungo.genomescan=mungo.genomescan-module.html,Function mungo.genomescan.genomescan()=mungo.genomescan-module.html#genomescan"><a title="mungo.genomescan
+mungo.genomescan.genomescan" class="py-name" href="#" onclick="return doclink('link-28', 'genomescan', 'link-28');">genomescan</a></tt><tt class="py-op">(</tt><tt class="py-name">dna</tt><tt class="py-op">,</tt> <tt class="py-name">protein</tt><tt class="py-op">,</tt> <tt class="py-name">description</tt><tt class="py-op">=</tt><tt class="py-name">description</tt><tt class="py-op">,</tt> \ </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">        <tt class="py-name">oFileHandle</tt><tt class="py-op">=</tt><tt class="py-name">oFileHandle</tt><tt class="py-op">,</tt> <tt class="py-name">debug</tt><tt class="py-op">=</tt><tt class="py-name">debug</tt><tt class="py-op">)</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">html</tt> </tt>
+</div><a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line"> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line"> </tt>
+<a name="parseGenomeScanOutput"></a><div id="parseGenomeScanOutput-def"><a name="L115"></a><tt class="py-lineno">115</tt> <a class="py-toggle" href="#" id="parseGenomeScanOutput-toggle" onclick="return toggle('parseGenomeScanOutput');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.genomescan-module.html#parseGenomeScanOutput">parseGenomeScanOutput</a><tt class="py-op">(</tt><tt class="py-param">html</tt><tt class="py-op">,</tt> <tt class="py-param">debug</tt><tt class="py-op">=</tt><tt class="py-name">False</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="parseGenomeScanOutput-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="parseGenomeScanOutput-expanded"><a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">    <tt class="py-docstring">"""A simple stateful parser for genomescan output.</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line"><tt class="py-docstring">    @param html: Raw HTML output of genomescan webserver.</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line"><tt class="py-docstring">    @param debug: Debug output (default: False)</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line"><tt class="py-docstring">    @returns: Tuple (annotation, predicted proteins in fasta format).</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">    <tt class="py-keyword">class</tt> <tt class="py-def-name">Start</tt><tt class="py-op">:</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">        <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">     </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">    <tt class="py-keyword">class</tt> <tt class="py-def-name">AnnotationStart</tt><tt class="py-op">:</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">        <tt class="py-name">token</tt> <tt class="py-op">=</tt> <tt class="py-string">'&lt;b&gt;Predicted genes/exons:'</tt> </tt>
+</div><a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">     </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">    <tt class="py-keyword">class</tt> <tt class="py-def-name">AnnotationEnd</tt><tt class="py-op">:</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">        <tt class="py-name">token</tt> <tt class="py-op">=</tt> <tt class="py-string">'&lt;a href=#exp2&gt;explanation&lt;/a&gt;'</tt> </tt>
+</div><a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">     </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">    <tt class="py-keyword">class</tt> <tt class="py-def-name">NoAnnotation</tt><tt class="py-op">:</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">        <tt class="py-name">token</tt> <tt class="py-op">=</tt> <tt class="py-string">'&lt;/b&gt;&lt;b&gt;NO EXONS/GENES PREDICTED IN SEQUENCE'</tt> </tt>
+</div><a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line">     </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">    <tt class="py-keyword">class</tt> <tt class="py-def-name">PeptideStart</tt><tt class="py-op">:</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">        <tt class="py-name">token</tt> <tt class="py-op">=</tt> <tt class="py-string">'&lt;b&gt;Predicted peptide sequence(s):'</tt> </tt>
+</div><a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">     </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">    <tt class="py-keyword">class</tt> <tt class="py-def-name">PeptideEnd</tt><tt class="py-op">:</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">        <tt class="py-name">token</tt> <tt class="py-op">=</tt> <tt class="py-string">'&lt;a name=exp1&gt;'</tt> </tt>
+</div><a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">     </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">    <tt class="py-name">annot</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">    <tt id="link-29" class="py-name"><a title="mungo.transfac.Match.header" class="py-name" href="#" onclick="return doclink('link-29', 'header', 'link-13');">header</a></tt> <tt class="py-op">=</tt> <tt class="py-string">''</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">    <tt class="py-name">seq</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">     </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">    <tt class="py-name">state</tt> <tt class="py-op">=</tt> <tt class="py-name">Start</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">    <tt class="py-name">htmlIter</tt> <tt class="py-op">=</tt> <tt class="py-name">iter</tt><tt class="py-op">(</tt><tt class="py-name">html</tt><tt class="py-op">)</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">line</tt> <tt class="py-keyword">in</tt> <tt class="py-name">htmlIter</tt><tt class="py-op">:</tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">        <tt class="py-name">line</tt> <tt class="py-op">=</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt class="py-name">strip</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">         </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">line</tt><tt class="py-op">==</tt><tt class="py-name">AnnotationStart</tt><tt class="py-op">.</tt><tt class="py-name">token</tt><tt class="py-op">:</tt> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">            <tt class="py-name">state</tt> <tt class="py-op">=</tt> <tt class="py-name">AnnotationStart</tt> </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">            <tt class="py-keyword">continue</tt> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">==</tt><tt class="py-name">AnnotationEnd</tt><tt class="py-op">.</tt><tt class="py-name">token</tt><tt class="py-op">:</tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line">            <tt class="py-name">state</tt> <tt class="py-op">=</tt> <tt class="py-name">AnnotationEnd</tt> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line">            <tt class="py-keyword">continue</tt> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">==</tt><tt class="py-name">NoAnnotation</tt><tt class="py-op">.</tt><tt class="py-name">token</tt><tt class="py-op">:</tt> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line">            <tt class="py-name">state</tt><tt class="py-op">==</tt><tt class="py-name">NoAnnotation</tt> </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line">            <tt class="py-keyword">break</tt> </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">==</tt><tt class="py-name">PeptideStart</tt><tt class="py-op">.</tt><tt class="py-name">token</tt><tt class="py-op">:</tt> </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line">            <tt class="py-name">state</tt> <tt class="py-op">=</tt> <tt class="py-name">PeptideStart</tt> </tt>
+<a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line">            <tt class="py-name">htmlIter</tt><tt class="py-op">.</tt><tt id="link-30" class="py-name" targets="Method mungo.align.Alignment.next()=mungo.align.Alignment-class.html#next,Method mungo.bowtie.BowtieTwoFilePairedEndReader.next()=mungo.bowtie.BowtieTwoFilePairedEndReader-class.html#next,Method mungo.cap3.CapReaderIndexed.next()=mungo.cap3.CapReaderIndexed-class.html#next,Method mungo.fasta.FastaReader.next()=mungo.fasta.FastaReader-class.html#next,Method mungo.fastq.FastqReader.next()=mungo.fastq.FastqReader-class.html#next,Method mungo.mungoCore.AbstractDataReader.next()=mungo.mungoCore.AbstractDataReader-class.html#next"><a title="mungo.align.Alignment.next
+mungo.bowtie.BowtieTwoFilePairedEndReader.next
+mungo.cap3.CapReaderIndexed.next
+mungo.fasta.FastaReader.next
+mungo.fastq.FastqReader.next
+mungo.mungoCore.AbstractDataReader.next" class="py-name" href="#" onclick="return doclink('link-30', 'next', 'link-30');">next</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line">            <tt class="py-name">htmlIter</tt><tt class="py-op">.</tt><tt id="link-31" class="py-name"><a title="mungo.align.Alignment.next
+mungo.bowtie.BowtieTwoFilePairedEndReader.next
+mungo.cap3.CapReaderIndexed.next
+mungo.fasta.FastaReader.next
+mungo.fastq.FastqReader.next
+mungo.mungoCore.AbstractDataReader.next" class="py-name" href="#" onclick="return doclink('link-31', 'next', 'link-30');">next</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line">            <tt class="py-keyword">continue</tt> </tt>
+<a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">line</tt><tt class="py-op">==</tt><tt class="py-name">PeptideEnd</tt><tt class="py-op">.</tt><tt class="py-name">token</tt><tt class="py-op">:</tt> </tt>
+<a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line">            <tt class="py-name">state</tt> <tt class="py-op">=</tt> <tt class="py-name">PeptideEnd</tt> </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line">            <tt class="py-keyword">break</tt> </tt>
+<a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line">         </tt>
+<a name="L167"></a><tt class="py-lineno">167</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">state</tt><tt class="py-op">==</tt><tt class="py-name">AnnotationStart</tt><tt class="py-op">:</tt> </tt>
+<a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">line</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">:</tt><tt class="py-number">7</tt><tt class="py-op">]</tt><tt class="py-op">==</tt><tt class="py-string">'&lt;/b&gt;&lt;b&gt;'</tt><tt class="py-op">:</tt> </tt>
+<a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line">                <tt class="py-name">annot</tt><tt class="py-op">.</tt><tt id="link-32" class="py-name" targets="Method mungo.align.Alignment.append()=mungo.align.Alignment-class.html#append"><a title="mungo.align.Alignment.append" class="py-name" href="#" onclick="return doclink('link-32', 'append', 'link-32');">append</a></tt><tt class="py-op">(</tt><tt class="py-name">line</tt><tt class="py-op">[</tt><tt class="py-number">7</tt><tt class="py-op">:</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">debug</tt><tt class="py-op">:</tt> <tt class="py-keyword">print</tt> <tt class="py-name">annot</tt> </tt>
+<a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">state</tt><tt class="py-op">==</tt><tt class="py-name">PeptideStart</tt><tt class="py-op">:</tt> </tt>
+<a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line">            <tt class="py-name">seq</tt><tt class="py-op">.</tt><tt id="link-33" class="py-name"><a title="mungo.align.Alignment.append" class="py-name" href="#" onclick="return doclink('link-33', 'append', 'link-32');">append</a></tt><tt class="py-op">(</tt><tt class="py-name">line</tt><tt class="py-op">)</tt> </tt>
+<a name="L173"></a><tt class="py-lineno">173</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">debug</tt><tt class="py-op">:</tt> <tt class="py-keyword">print</tt> <tt class="py-name">seq</tt> </tt>
+<a name="L174"></a><tt class="py-lineno">174</tt>  <tt class="py-line">     </tt>
+<a name="L175"></a><tt class="py-lineno">175</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-string">'\n'</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-name">annot</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-string">'\n'</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-name">seq</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L176"></a><tt class="py-lineno">176</tt>  <tt class="py-line"> </tt>
+<a name="L177"></a><tt class="py-lineno">177</tt>  <tt class="py-line"> </tt>
+<a name="parseGenscan"></a><div id="parseGenscan-def"><a name="L178"></a><tt class="py-lineno">178</tt> <a class="py-toggle" href="#" id="parseGenscan-toggle" onclick="return toggle('parseGenscan');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.genomescan-module.html#parseGenscan">parseGenscan</a><tt class="py-op">(</tt><tt class="py-param">lines</tt><tt class="py-op">,</tt> <tt class="py-param">skipLines</tt><tt class="py-op">=</tt><tt class="py-number">2</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="parseGenscan-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="parseGenscan-expanded"><a name="L179"></a><tt class="py-lineno">179</tt>  <tt class="py-line">    <tt class="py-docstring">"""Parse lines in genscan or genomescan output.</tt> </tt>
+<a name="L180"></a><tt class="py-lineno">180</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L181"></a><tt class="py-lineno">181</tt>  <tt class="py-line"><tt class="py-docstring">    @param lines: Lines from genscan/genomescan annotation.</tt> </tt>
+<a name="L182"></a><tt class="py-lineno">182</tt>  <tt class="py-line"><tt class="py-docstring">    @param skipLines: Number of lines to skip at start (default 3).</tt> </tt>
+<a name="L183"></a><tt class="py-lineno">183</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L184"></a><tt class="py-lineno">184</tt>  <tt class="py-line">    <tt class="py-name">data</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L185"></a><tt class="py-lineno">185</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">line</tt> <tt class="py-keyword">in</tt> <tt class="py-name">lines</tt><tt class="py-op">[</tt><tt class="py-name">skipLines</tt><tt class="py-op">:</tt><tt class="py-op">]</tt><tt class="py-op">:</tt> </tt>
+<a name="L186"></a><tt class="py-lineno">186</tt>  <tt class="py-line">        <tt class="py-name">line</tt> <tt class="py-op">=</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt class="py-name">strip</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L187"></a><tt class="py-lineno">187</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">line</tt><tt class="py-op">:</tt> </tt>
+<a name="L188"></a><tt class="py-lineno">188</tt>  <tt class="py-line">            <tt class="py-name">tokens</tt> <tt class="py-op">=</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L189"></a><tt class="py-lineno">189</tt>  <tt class="py-line">            <tt class="py-name">d</tt> <tt class="py-op">=</tt> <tt id="link-34" class="py-name"><a title="mungo.genscan" class="py-name" href="#" onclick="return doclink('link-34', 'genscan', 'link-1');">genscan</a></tt><tt class="py-op">.</tt><tt id="link-35" class="py-name" targets="Class mungo.genscan.Predicted=mungo.genscan.Predicted-class.html"><a title="mungo.genscan.Predicted" class="py-name" href="#" onclick="return doclink('link-35', 'Predicted', 'link-35');">Predicted</a></tt><tt class="py-op">(</tt><tt class="py-name">tokens</tt><tt class="py-op">)</tt> </tt>
+<a name="L190"></a><tt class="py-lineno">190</tt>  <tt class="py-line">            <tt class="py-comment"># gene = int(d.gene_exon.split('.')[0])</tt> </tt>
+<a name="L191"></a><tt class="py-lineno">191</tt>  <tt class="py-line">            <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L192"></a><tt class="py-lineno">192</tt>  <tt class="py-line">                <tt class="py-name">data</tt><tt class="py-op">[</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt id="link-36" class="py-name"><a title="mungo.align.Alignment.append" class="py-name" href="#" onclick="return doclink('link-36', 'append', 'link-32');">append</a></tt><tt class="py-op">(</tt><tt class="py-name">d</tt><tt class="py-op">)</tt> </tt>
+<a name="L193"></a><tt class="py-lineno">193</tt>  <tt class="py-line">            <tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L194"></a><tt class="py-lineno">194</tt>  <tt class="py-line">                <tt class="py-name">data</tt><tt class="py-op">.</tt><tt id="link-37" class="py-name"><a title="mungo.align.Alignment.append" class="py-name" href="#" onclick="return doclink('link-37', 'append', 'link-32');">append</a></tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-name">d</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L195"></a><tt class="py-lineno">195</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">data</tt> </tt>
+</div><a name="L196"></a><tt class="py-lineno">196</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="mungo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Apr 24 16:15:01 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

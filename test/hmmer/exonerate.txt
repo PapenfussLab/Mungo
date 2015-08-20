@@ -1,0 +1,89 @@
+Command line: [exonerate --model protein2genome --ryo >match\n%tas\n\n seq/pep_matches.fa seq/dna.fa]
+Hostname: [mac1684.local]
+
+C4 Alignment:
+------------
+         Query: match2
+        Target: chr6:29907008-29916976
+         Model: protein2genome
+     Raw score: 488
+   Query range: 0 -> 91
+  Target range: 3525 -> 3798
+
+    1 : GlySerHisSerMetArgTyrPhePheThrSerValSerArgProGlyArgGlyGluProAr :   21
+        ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+        GlySerHisSerMetArgTyrPhePheThrSerValSerArgProGlyArgGlyGluProAr
+ 3526 : GGCTCCCACTCCATGAGGTATTTCTTCACATCCGTGTCCCGGCCCGGCCGCGGGGAGCCCCG : 3586
+
+   22 : gPheIleAlaValGlyTyrValAspAspThrGlnPheValArgPheAspSerAspAlaAlaS :   42
+        ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+        gPheIleAlaValGlyTyrValAspAspThrGlnPheValArgPheAspSerAspAlaAlaS
+ 3587 : CTTCATCGCCGTGGGCTACGTGGACGACACGCAGTTCGTGCGGTTCGACAGCGACGCCGCGA : 3649
+
+   43 : erGlnArgMetGluProArgAlaProTrpIleGluGlnGluGlyProGluTyrTrpAspGln :   62
+        ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+        erGlnArgMetGluProArgAlaProTrpIleGluGlnGluGlyProGluTyrTrpAspGln
+ 3650 : GCCAGAGGATGGAGCCGCGGGCGCCGTGGATAGAGCAGGAGGGGCCGGAGTATTGGGACCAG : 3709
+
+   63 : GluThrArgAsnValLysAlaGlnSerGlnThrAspArgValAspLeuGlyThrLeuArgGl :   83
+        ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+        GluThrArgAsnValLysAlaGlnSerGlnThrAspArgValAspLeuGlyThrLeuArgGl
+ 3710 : GAGACACGGAATGTGAAGGCCCAGTCACAGACTGACCGAGTGGACCTGGGGACCCTGCGCGG : 3772
+
+   84 : yTyrTyrAsnGlnSerGluAlaGly :   91
+        |||||||||||||||||||||||||
+        yTyrTyrAsnGlnSerGluAlaGly
+ 3773 : CTACTACAACCAGAGCGAGGCCGGT : 3798
+
+vulgar: match2 0 91 . chr6:29907008-29916976 3525 3798 + 488 M 91 273
+>match
+GGCTCCCACTCCATGAGGTATTTCTTCACATCCGTGTCCCGGCCCGGCCGCGGGGAGCCCCGCTTCATCG
+CCGTGGGCTACGTGGACGACACGCAGTTCGTGCGGTTCGACAGCGACGCCGCGAGCCAGAGGATGGAGCC
+GCGGGCGCCGTGGATAGAGCAGGAGGGGCCGGAGTATTGGGACCAGGAGACACGGAATGTGAAGGCCCAG
+TCACAGACTGACCGAGTGGACCTGGGGACCCTGCGCGGCTACTACAACCAGAGCGAGGCCGGT
+
+
+
+C4 Alignment:
+------------
+         Query: match1
+        Target: chr6:29907008-29916976
+         Model: protein2genome
+     Raw score: 498
+   Query range: 0 -> 92
+  Target range: 4027 -> 4303
+
+    1 : SerGlyProGlySerHisThrIleGlnIleMetTyrGlyCysAspValGlySerAspGlyAr :   21
+        ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+        SerGlyProGlySerHisThrIleGlnIleMetTyrGlyCysAspValGlySerAspGlyAr
+ 4028 : TCGGGGCCAGGTTCTCACACCATCCAGATAATGTATGGCTGCGACGTGGGGTCGGACGGGCG : 4088
+
+   22 : gPheLeuArgGlyTyrArgGlnAspAlaTyrAspGlyLysAspTyrIleAlaLeuAsnGluA :   42
+        ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+        gPheLeuArgGlyTyrArgGlnAspAlaTyrAspGlyLysAspTyrIleAlaLeuAsnGluA
+ 4089 : CTTCCTCCGCGGGTACCGGCAGGACGCCTACGACGGCAAGGATTACATCGCCCTGAACGAGG : 4151
+
+   43 : spLeuArgSerTrpThrAlaAlaAspMetAlaAlaGlnIleThrLysArgLysTrpGluAla :   62
+        ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+        spLeuArgSerTrpThrAlaAlaAspMetAlaAlaGlnIleThrLysArgLysTrpGluAla
+ 4152 : ACCTGCGCTCTTGGACCGCGGCGGACATGGCGGCTCAGATCACCAAGCGCAAGTGGGAGGCG : 4211
+
+   63 : AlaHisGluAlaGluGlnLeuArgAlaTyrLeuAspGlyThrCysValGluTrpLeuArgAr :   83
+        ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+        AlaHisGluAlaGluGlnLeuArgAlaTyrLeuAspGlyThrCysValGluTrpLeuArgAr
+ 4212 : GCCCATGAGGCGGAGCAGTTGAGAGCCTACCTGGATGGCACGTGCGTGGAGTGGCTCCGCAG : 4274
+
+   84 : gTyrLeuGluAsnGlyLysGluThrLeu :   92
+        ||||||||||||||||||||||||||||
+        gTyrLeuGluAsnGlyLysGluThrLeu
+ 4275 : ATACCTGGAGAACGGGAAGGAGACGCTG : 4303
+
+vulgar: match1 0 92 . chr6:29907008-29916976 4027 4303 + 498 M 92 276
+>match
+TCGGGGCCAGGTTCTCACACCATCCAGATAATGTATGGCTGCGACGTGGGGTCGGACGGGCGCTTCCTCC
+GCGGGTACCGGCAGGACGCCTACGACGGCAAGGATTACATCGCCCTGAACGAGGACCTGCGCTCTTGGAC
+CGCGGCGGACATGGCGGCTCAGATCACCAAGCGCAAGTGGGAGGCGGCCCATGAGGCGGAGCAGTTGAGA
+GCCTACCTGGATGGCACGTGCGTGGAGTGGCTCCGCAGATACCTGGAGAACGGGAAGGAGACGCTG
+
+
+-- completed exonerate analysis

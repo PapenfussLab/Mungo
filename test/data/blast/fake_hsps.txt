@@ -1,0 +1,9 @@
+# This is fake data.
+#
+# TBLASTN 2.2.10 [Oct-19-2004]
+# Query: FAKE_DATA
+# Database: /database/mono_data/assembly/blastdb/assembly
+# Fields: Query id, Subject id, % identity, alignment length, mismatches, gap openings, q. start, q. end, s. start, s. end, e-value, bit score
+FAKE_DATA	scaffold_42.15000001-20000000	80.17	116	23	0	30	145	4250719	4250372	1e-50	 201
+FAKE_DATA	scaffold_42.15000001-20000000	48.23	141	73	2	4	144	1949325	1948927	1e-50	 201
+FAKE_DATA	scaffold_42.15000001-20000000	42.25	142	82	1	12	153	1886274	1885855	1e-24	 101

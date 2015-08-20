@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>mungo.hmmer3</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="mungo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="mungo-module.html">Package&nbsp;mungo</a> ::
+        Module&nbsp;hmmer3
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="mungo.hmmer3-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="mungo.hmmer3-module.html">Module mungo.hmmer3</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">hmmer3 module</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package mungo=mungo-module.html"><a title="mungo" class="py-name" href="#" onclick="return doclink('link-0', 'mungo', 'link-0');">mungo</a></tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Module mungo.mungoCore=mungo.mungoCore-module.html"><a title="mungo.mungoCore" class="py-name" href="#" onclick="return doclink('link-1', 'mungoCore', 'link-1');">mungoCore</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-2" class="py-name"><a title="mungo" class="py-name" href="#" onclick="return doclink('link-2', 'mungo', 'link-0');">mungo</a></tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Package mungo.useful=mungo.useful-module.html"><a title="mungo.useful" class="py-name" href="#" onclick="return doclink('link-3', 'useful', 'link-3');">useful</a></tt> <tt class="py-keyword">import</tt> <tt id="link-4" class="py-name" targets="Function mungo.useful.smartopen()=mungo.useful-module.html#smartopen"><a title="mungo.useful.smartopen" class="py-name" href="#" onclick="return doclink('link-4', 'smartopen', 'link-4');">smartopen</a></tt><tt class="py-op">,</tt> <tt id="link-5" class="py-name" targets="Function mungo.useful.extractRootName()=mungo.useful-module.html#extractRootName"><a title="mungo.useful.extractRootName" class="py-name" href="#" onclick="return doclink('link-5', 'extractRootName', 'link-5');">extractRootName</a></tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">sys</tt><tt class="py-op">,</tt> <tt class="py-name">re</tt><tt class="py-op">,</tt> <tt class="py-name">warnings</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt id="link-6" class="py-name" targets="Variable mungo.hmmer.hmmer2frame=mungo.hmmer-module.html#hmmer2frame,Variable mungo.hmmer3.hmmer2frame=mungo.hmmer3-module.html#hmmer2frame"><a title="mungo.hmmer.hmmer2frame
+mungo.hmmer3.hmmer2frame" class="py-name" href="#" onclick="return doclink('link-6', 'hmmer2frame', 'link-6');">hmmer2frame</a></tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-number">0</tt><tt class="py-op">:</tt> <tt class="py-number">1</tt><tt class="py-op">,</tt> <tt class="py-number">1</tt><tt class="py-op">:</tt> <tt class="py-number">2</tt><tt class="py-op">,</tt> <tt class="py-number">2</tt><tt class="py-op">:</tt> <tt class="py-number">3</tt><tt class="py-op">,</tt> <tt class="py-number">3</tt><tt class="py-op">:</tt> <tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">,</tt> <tt class="py-number">4</tt><tt class="py-op">:</tt> <tt class="py-op">-</tt><tt class="py-number">2</tt><tt class="py-op">,</tt> <tt class="py-number">5</tt><tt class="py-op">:</tt> <tt class="py-op">-</tt><tt class="py-number">3</tt><tt class="py-op">}</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt id="link-7" class="py-name" targets="Variable mungo.hmmer.frame2hmmer=mungo.hmmer-module.html#frame2hmmer,Variable mungo.hmmer3.frame2hmmer=mungo.hmmer3-module.html#frame2hmmer"><a title="mungo.hmmer.frame2hmmer
+mungo.hmmer3.frame2hmmer" class="py-name" href="#" onclick="return doclink('link-7', 'frame2hmmer', 'link-7');">frame2hmmer</a></tt> <tt class="py-op">=</tt> <tt class="py-name">dict</tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-op">(</tt><tt id="link-8" class="py-name" targets="Variable mungo.hmmer.v=mungo.hmmer-module.html#v,Variable mungo.hmmer3.v=mungo.hmmer3-module.html#v"><a title="mungo.hmmer.v
+mungo.hmmer3.v" class="py-name" href="#" onclick="return doclink('link-8', 'v', 'link-8');">v</a></tt><tt class="py-op">,</tt><tt id="link-9" class="py-name" targets="Variable mungo.hmmer.k=mungo.hmmer-module.html#k,Variable mungo.hmmer3.k=mungo.hmmer3-module.html#k"><a title="mungo.hmmer.k
+mungo.hmmer3.k" class="py-name" href="#" onclick="return doclink('link-9', 'k', 'link-9');">k</a></tt><tt class="py-op">)</tt> <tt class="py-keyword">for</tt> <tt id="link-10" class="py-name"><a title="mungo.hmmer.k
+mungo.hmmer3.k" class="py-name" href="#" onclick="return doclink('link-10', 'k', 'link-9');">k</a></tt><tt class="py-op">,</tt><tt id="link-11" class="py-name"><a title="mungo.hmmer.v
+mungo.hmmer3.v" class="py-name" href="#" onclick="return doclink('link-11', 'v', 'link-8');">v</a></tt> <tt class="py-keyword">in</tt> <tt id="link-12" class="py-name"><a title="mungo.hmmer.hmmer2frame
+mungo.hmmer3.hmmer2frame" class="py-name" href="#" onclick="return doclink('link-12', 'hmmer2frame', 'link-6');">hmmer2frame</a></tt><tt class="py-op">.</tt><tt class="py-name">iteritems</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"> </tt>
+<a name="Domain"></a><div id="Domain-def"><a name="L13"></a><tt class="py-lineno"> 13</tt> <a class="py-toggle" href="#" id="Domain-toggle" onclick="return toggle('Domain');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="mungo.hmmer3.Domain-class.html">Domain</a><tt class="py-op">(</tt><tt class="py-base-class">AbstractFeature</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Domain-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="Domain-expanded"><a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line">    <tt class="py-docstring">"""Domain feature class"""</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line">     </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line">    <tt id="link-13" class="py-name" targets="Variable mungo.bed.Feature.attributes=mungo.bed.Feature-class.html#attributes,Variable mungo.blast.HSP.attributes=mungo.blast.HSP-class.html#attributes,Variable mungo.blat.Chain.attributes=mungo.blat.Chain-class.html#attributes,Variable mungo.blat_old.Chain.attributes=mungo.blat_old.Chain-class.html#attributes,Variable mungo.genscan.Predicted.attributes=mungo.genscan.Predicted-class.html#attributes,Variable mungo.gff.Feature.attributes=mungo.gff.Feature-class.html#attributes,Variable mungo.hmmer.Domain.attributes=mungo.hmmer.Domain-class.html#attributes,Variable mungo.hmmer.GenomicDomain.attributes=mungo.hmmer.GenomicDomain-class.html#attributes,Variable mungo.hmmer3.Domain.attributes=mungo.hmmer3.Domain-class.html#attributes,Variable mungo.intervals.Interval.attributes=mungo.intervals.Interval-class.html#attributes,Variable mungo.intervals.RichInterval.attributes=mungo.intervals.RichInterval-class.html#attributes,Variable mungo.possum.Motif.attributes=mungo.possum.Motif-class.html#attributes,Variable mungo.transfac.Match.attributes=mungo.transfac.Match-class.html#attributes"><a title="mungo.bed.Feature.attributes
+mungo.blast.HSP.attributes
+mungo.blat.Chain.attributes
+mungo.blat_old.Chain.attributes
+mungo.genscan.Predicted.attributes
+mungo.gff.Feature.attributes
+mungo.hmmer.Domain.attributes
+mungo.hmmer.GenomicDomain.attributes
+mungo.hmmer3.Domain.attributes
+mungo.intervals.Interval.attributes
+mungo.intervals.RichInterval.attributes
+mungo.possum.Motif.attributes
+mungo.transfac.Match.attributes" class="py-name" href="#" onclick="return doclink('link-13', 'attributes', 'link-13');">attributes</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">"targetName"</tt><tt class="py-op">,</tt><tt class="py-string">"accession"</tt><tt class="py-op">,</tt><tt class="py-string">"targetLen"</tt><tt class="py-op">,</tt><tt class="py-string">"queryName"</tt><tt class="py-op">,</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line">        <tt class="py-string">"accession"</tt><tt class="py-op">,</tt><tt class="py-string">"qlen"</tt><tt class="py-op">,</tt><tt class="py-string">"evalue"</tt><tt class="py-op">,</tt><tt class="py-string">"seqScore"</tt><tt class="py-op">,</tt><tt class="py-string">"seqBias"</tt><tt class="py-op">,</tt><tt class="py-string">"i"</tt><tt class="py-op">,</tt><tt class="py-string">"N"</tt><tt class="py-op">,</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line">        <tt class="py-string">"c_evalue"</tt><tt class="py-op">,</tt><tt class="py-string">"i_evalue"</tt><tt class="py-op">,</tt><tt class="py-string">"domainScore"</tt><tt class="py-op">,</tt><tt class="py-string">"domainBias"</tt><tt class="py-op">,</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line">        <tt class="py-string">"hmmStart"</tt><tt class="py-op">,</tt><tt class="py-string">"hmmEnd"</tt><tt class="py-op">,</tt><tt class="py-string">"alnStart"</tt><tt class="py-op">,</tt><tt class="py-string">"alnEnd"</tt><tt class="py-op">,</tt> <tt class="py-string">"envStart"</tt><tt class="py-op">,</tt><tt class="py-string">"envEnd"</tt><tt class="py-op">,</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line">        <tt class="py-string">"acc"</tt><tt class="py-op">,</tt><tt class="py-string">"description"</tt><tt class="py-op">]</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line">    <tt id="link-14" class="py-name" targets="Variable mungo.blast.HSP.converters=mungo.blast.HSP-class.html#converters,Variable mungo.blat.Chain.converters=mungo.blat.Chain-class.html#converters,Variable mungo.blat_old.Chain.converters=mungo.blat_old.Chain-class.html#converters,Variable mungo.genscan.Predicted.converters=mungo.genscan.Predicted-class.html#converters,Variable mungo.gff.Feature.converters=mungo.gff.Feature-class.html#converters,Variable mungo.hmmer.Domain.converters=mungo.hmmer.Domain-class.html#converters,Variable mungo.hmmer.GenomicDomain.converters=mungo.hmmer.GenomicDomain-class.html#converters,Variable mungo.hmmer3.Domain.converters=mungo.hmmer3.Domain-class.html#converters,Variable mungo.possum.Motif.converters=mungo.possum.Motif-class.html#converters,Variable mungo.transfac.Match.converters=mungo.transfac.Match-class.html#converters"><a title="mungo.blast.HSP.converters
+mungo.blat.Chain.converters
+mungo.blat_old.Chain.converters
+mungo.genscan.Predicted.converters
+mungo.gff.Feature.converters
+mungo.hmmer.Domain.converters
+mungo.hmmer.GenomicDomain.converters
+mungo.hmmer3.Domain.converters
+mungo.possum.Motif.converters
+mungo.transfac.Match.converters" class="py-name" href="#" onclick="return doclink('link-14', 'converters', 'link-14');">converters</a></tt> <tt class="py-op">=</tt> <tt class="py-name">zip</tt><tt class="py-op">(</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line">        <tt class="py-op">[</tt><tt class="py-string">"hmmStart"</tt><tt class="py-op">,</tt><tt class="py-string">"hmmEnd"</tt><tt class="py-op">,</tt><tt class="py-string">"alnStart"</tt><tt class="py-op">,</tt><tt class="py-string">"alnEnd"</tt><tt class="py-op">,</tt><tt class="py-string">"envStart"</tt><tt class="py-op">,</tt><tt class="py-string">"envEnd"</tt><tt class="py-op">,</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line">            <tt class="py-string">"seqScore"</tt><tt class="py-op">,</tt><tt class="py-string">"domainScore"</tt><tt class="py-op">,</tt><tt class="py-string">"evalue"</tt><tt class="py-op">,</tt><tt class="py-string">"c_evalue"</tt><tt class="py-op">,</tt><tt class="py-string">"i_evalue"</tt><tt class="py-op">,</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line">            <tt class="py-string">"seqScore"</tt><tt class="py-op">,</tt> <tt class="py-string">"seqBias"</tt><tt class="py-op">,</tt> <tt class="py-string">"domainScore"</tt><tt class="py-op">,</tt> <tt class="py-string">"domainBias"</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line">        <tt class="py-op">[</tt><tt class="py-name">int</tt><tt class="py-op">,</tt><tt class="py-name">int</tt><tt class="py-op">,</tt><tt class="py-name">int</tt><tt class="py-op">,</tt><tt class="py-name">int</tt><tt class="py-op">,</tt><tt class="py-name">int</tt><tt class="py-op">,</tt><tt class="py-name">int</tt><tt class="py-op">,</tt><tt class="py-name">float</tt><tt class="py-op">,</tt><tt class="py-name">float</tt><tt class="py-op">,</tt><tt class="py-name">float</tt><tt class="py-op">,</tt><tt class="py-name">float</tt><tt class="py-op">,</tt><tt class="py-name">float</tt><tt class="py-op">,</tt><tt class="py-name">float</tt><tt class="py-op">,</tt><tt class="py-name">float</tt><tt class="py-op">,</tt><tt class="py-name">float</tt><tt class="py-op">,</tt><tt class="py-name">float</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line">    <tt id="link-15" class="py-name" targets="Variable mungo.bed.Feature.format=mungo.bed.Feature-class.html#format,Variable mungo.blast.HSP.format=mungo.blast.HSP-class.html#format,Variable mungo.blat.Chain.format=mungo.blat.Chain-class.html#format,Variable mungo.blat_old.Chain.format=mungo.blat_old.Chain-class.html#format,Variable mungo.genscan.Predicted.format=mungo.genscan.Predicted-class.html#format,Variable mungo.gff.Feature.format=mungo.gff.Feature-class.html#format,Variable mungo.hmmer.Domain.format=mungo.hmmer.Domain-class.html#format,Variable mungo.hmmer.GenomicDomain.format=mungo.hmmer.GenomicDomain-class.html#format,Variable mungo.hmmer3.Domain.format=mungo.hmmer3.Domain-class.html#format,Variable mungo.intervals.Interval.format=mungo.intervals.Interval-class.html#format,Variable mungo.intervals.RichInterval.format=mungo.intervals.RichInterval-class.html#format,Variable mungo.possum.Motif.format=mungo.possum.Motif-class.html#format,Variable mungo.transfac.Match.format=mungo.transfac.Match-class.html#format"><a title="mungo.bed.Feature.format
+mungo.blast.HSP.format
+mungo.blat.Chain.format
+mungo.blat_old.Chain.format
+mungo.genscan.Predicted.format
+mungo.gff.Feature.format
+mungo.hmmer.Domain.format
+mungo.hmmer.GenomicDomain.format
+mungo.hmmer3.Domain.format
+mungo.intervals.Interval.format
+mungo.intervals.RichInterval.format
+mungo.possum.Motif.format
+mungo.transfac.Match.format" class="py-name" href="#" onclick="return doclink('link-15', 'format', 'link-15');">format</a></tt> <tt class="py-op">=</tt> <tt id="link-16" class="py-name" targets="Function mungo.mungoCore.attributesToFormat()=mungo.mungoCore-module.html#attributesToFormat"><a title="mungo.mungoCore.attributesToFormat" class="py-name" href="#" onclick="return doclink('link-16', 'attributesToFormat', 'link-16');">attributesToFormat</a></tt><tt class="py-op">(</tt><tt id="link-17" class="py-name"><a title="mungo.bed.Feature.attributes
+mungo.blast.HSP.attributes
+mungo.blat.Chain.attributes
+mungo.blat_old.Chain.attributes
+mungo.genscan.Predicted.attributes
+mungo.gff.Feature.attributes
+mungo.hmmer.Domain.attributes
+mungo.hmmer.GenomicDomain.attributes
+mungo.hmmer3.Domain.attributes
+mungo.intervals.Interval.attributes
+mungo.intervals.RichInterval.attributes
+mungo.possum.Motif.attributes
+mungo.transfac.Match.attributes" class="py-name" href="#" onclick="return doclink('link-17', 'attributes', 'link-13');">attributes</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line">     </tt>
+<a name="Domain.__init__"></a><div id="Domain.__init__-def"><a name="L28"></a><tt class="py-lineno"> 28</tt> <a class="py-toggle" href="#" id="Domain.__init__-toggle" onclick="return toggle('Domain.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.hmmer3.Domain-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-op">*</tt><tt class="py-param">args</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-param">kw</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Domain.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Domain.__init__-expanded"><a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line">        <tt class="py-docstring">"""Constructor"""</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line">        <tt class="py-name">super</tt><tt class="py-op">(</tt><tt id="link-18" class="py-name" targets="Class mungo.hmmer.Domain=mungo.hmmer.Domain-class.html,Class mungo.hmmer3.Domain=mungo.hmmer3.Domain-class.html"><a title="mungo.hmmer.Domain
+mungo.hmmer3.Domain" class="py-name" href="#" onclick="return doclink('link-18', 'Domain', 'link-18');">Domain</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-19" class="py-name" targets="Method mungo.GoTools.GoTerm.__init__()=mungo.GoTools.GoTerm-class.html#__init__,Method mungo.GoTools.Ontology.__init__()=mungo.GoTools.Ontology-class.html#__init__,Method mungo.alchemy.Alchemy.__init__()=mungo.alchemy.Alchemy-class.html#__init__,Method mungo.align.Alignment.__init__()=mungo.align.Alignment-class.html#__init__,Method mungo.align.Transform.__init__()=mungo.align.Transform-class.html#__init__,Method mungo.bed.Feature.__init__()=mungo.bed.Feature-class.html#__init__,Method mungo.blast.BlastReader.__init__()=mungo.blast.BlastReader-class.html#__init__,Method mungo.blast.HSP.__init__()=mungo.blast.HSP-class.html#__init__,Method mungo.blast.TooManyBlocks.__init__()=mungo.blast.TooManyBlocks-class.html#__init__,Method mungo.blastz.Alignment.__init__()=mungo.blastz.Alignment-class.html#__init__,Method mungo.blastz.Block.__init__()=mungo.blastz.Block-class.html#__init__,Method mungo.blastz.Chain.__init__()=mungo.blastz.Chain-class.html#__init__,Method mungo.blastz.HSP.__init__()=mungo.blastz.HSP-class.html#__init__,Method mungo.blat.BlatReader.__init__()=mungo.blat.BlatReader-class.html#__init__,Method mungo.blat.Chain.__init__()=mungo.blat.Chain-class.html#__init__,Method mungo.blat_old.Chain.__init__()=mungo.blat_old.Chain-class.html#__init__,Method mungo.bowtie.BowtieReader.__init__()=mungo.bowtie.BowtieReader-class.html#__init__,Method mungo.bowtie.BowtieTwoFilePairedEndReader.__init__()=mungo.bowtie.BowtieTwoFilePairedEndReader-class.html#__init__,Method mungo.bowtie.Feature.__init__()=mungo.bowtie.Feature-class.html#__init__,Method mungo.bowtie.PairedEnds.__init__()=mungo.bowtie.PairedEnds-class.html#__init__,Method mungo.cap3.CapIndexFile.__init__()=mungo.cap3.CapIndexFile-class.html#__init__,Method mungo.cap3.CapReaderIndexed.__init__()=mungo.cap3.CapReaderIndexed-class.html#__init__,Method mungo.config.Config.__init__()=mungo.config.Config-class.html#__init__,Method mungo.diagram.Glyphs.Arrow.__init__()=mungo.diagram.Glyphs.Arrow-class.html#__init__,Method mungo.diagram.Glyphs.Block.__init__()=mungo.diagram.Glyphs.Block-class.html#__init__,Method mungo.diagram.Glyphs.PointyBlock.__init__()=mungo.diagram.Glyphs.PointyBlock-class.html#__init__,Method mungo.diagram.Glyphs.Triangle.__init__()=mungo.diagram.Glyphs.Triangle-class.html#__init__,Method mungo.diagram.Glyphs._Glyph.__init__()=mungo.diagram.Glyphs._Glyph-class.html#__init__,Method mungo.diagram.Mapping.__init__()=mungo.diagram.Mapping-class.html#__init__,Method mungo.diagram.UniformMapping.__init__()=mungo.diagram.UniformMapping-class.html#__init__,Method mungo.diagram.UniformMapping2.__init__()=mungo.diagram.UniformMapping2-class.html#__init__,Method mungo.fasta.FastaIndexFile.__init__()=mungo.fasta.FastaIndexFile-class.html#__init__,Method mungo.fasta.FastaIndexPickleFile.__init__()=mungo.fasta.FastaIndexPickleFile-class.html#__init__,Method mungo.fasta.FastaIndexTextFile.__init__()=mungo.fasta.FastaIndexTextFile-class.html#__init__,Method mungo.fasta.FastaReader.__init__()=mungo.fasta.FastaReader-class.html#__init__,Method mungo.fasta.FastaReaderIndexed.__init__()=mungo.fasta.FastaReaderIndexed-class.html#__init__,Method mungo.fasta.FastaWriter.__init__()=mungo.fasta.FastaWriter-class.html#__init__,Method mungo.fasta.Sequence.__init__()=mungo.fasta.Sequence-class.html#__init__,Method mungo.fastaQuality.Quality.__init__()=mungo.fastaQuality.Quality-class.html#__init__,Method mungo.fastaQuality.QualityReaderIndexed.__init__()=mungo.fastaQuality.QualityReaderIndexed-class.html#__init__,Method mungo.fastq.FastqReader.__init__()=mungo.fastq.FastqReader-class.html#__init__,Method mungo.fastq.FastqWriter.__init__()=mungo.fastq.FastqWriter-class.html#__init__,Method mungo.generic.Feature.__init__()=mungo.generic.Feature-class.html#__init__,Method mungo.generic.GenericReader.__init__()=mungo.generic.GenericReader-class.html#__init__,Method mungo.genscan.Predicted.__init__()=mungo.genscan.Predicted-class.html#__init__,Method mungo.gff.Feature.__init__()=mungo.gff.Feature-class.html#__init__,Method mungo.gff.GffReader.__init__()=mungo.gff.GffReader-class.html#__init__,Method mungo.gff.SimpleGffReader.__init__()=mungo.gff.SimpleGffReader-class.html#__init__,Method mungo.hmmer.Domain.__init__()=mungo.hmmer.Domain-class.html#__init__,Method mungo.hmmer.GenomicDomain.__init__()=mungo.hmmer.GenomicDomain-class.html#__init__,Method mungo.hmmer.HmmerReader.__init__()=mungo.hmmer.HmmerReader-class.html#__init__,Method mungo.hmmer.PfamReader.__init__()=mungo.hmmer.PfamReader-class.html#__init__,Method mungo.hmmer3.Domain.__init__()=mungo.hmmer3.Domain-class.html#__init__,Method mungo.hmmer3.DomainHitsReader.__init__()=mungo.hmmer3.DomainHitsReader-class.html#__init__,Method mungo.intervals.Interval.__init__()=mungo.intervals.Interval-class.html#__init__,Method mungo.intervals.RichInterval.__init__()=mungo.intervals.RichInterval-class.html#__init__,Method mungo.mungoCore.AbstractDataReader.__init__()=mungo.mungoCore.AbstractDataReader-class.html#__init__,Method mungo.mungoCore.AbstractFeature.__init__()=mungo.mungoCore.AbstractFeature-class.html#__init__,Method mungo.possum.Motif.__init__()=mungo.possum.Motif-class.html#__init__,Method mungo.possum.PossumOutputReader.__init__()=mungo.possum.PossumOutputReader-class.html#__init__,Method mungo.transfac.Match.__init__()=mungo.transfac.Match-class.html#__init__,Method mungo.useful.ClassFromDict.__init__()=mungo.useful.ClassFromDict-class.html#__init__,Method mungo.vista.Exon.__init__()=mungo.vista.Exon-class.html#__init__,Method mungo.vista.Gene.__init__()=mungo.vista.Gene-class.html#__init__"><a title="mungo.GoTools.GoTerm.__init__
+mungo.GoTools.Ontology.__init__
+mungo.alchemy.Alchemy.__init__
+mungo.align.Alignment.__init__
+mungo.align.Transform.__init__
+mungo.bed.Feature.__init__
+mungo.blast.BlastReader.__init__
+mungo.blast.HSP.__init__
+mungo.blast.TooManyBlocks.__init__
+mungo.blastz.Alignment.__init__
+mungo.blastz.Block.__init__
+mungo.blastz.Chain.__init__
+mungo.blastz.HSP.__init__
+mungo.blat.BlatReader.__init__
+mungo.blat.Chain.__init__
+mungo.blat_old.Chain.__init__
+mungo.bowtie.BowtieReader.__init__
+mungo.bowtie.BowtieTwoFilePairedEndReader.__init__
+mungo.bowtie.Feature.__init__
+mungo.bowtie.PairedEnds.__init__
+mungo.cap3.CapIndexFile.__init__
+mungo.cap3.CapReaderIndexed.__init__
+mungo.config.Config.__init__
+mungo.diagram.Glyphs.Arrow.__init__
+mungo.diagram.Glyphs.Block.__init__
+mungo.diagram.Glyphs.PointyBlock.__init__
+mungo.diagram.Glyphs.Triangle.__init__
+mungo.diagram.Glyphs._Glyph.__init__
+mungo.diagram.Mapping.__init__
+mungo.diagram.UniformMapping.__init__
+mungo.diagram.UniformMapping2.__init__
+mungo.fasta.FastaIndexFile.__init__
+mungo.fasta.FastaIndexPickleFile.__init__
+mungo.fasta.FastaIndexTextFile.__init__
+mungo.fasta.FastaReader.__init__
+mungo.fasta.FastaReaderIndexed.__init__
+mungo.fasta.FastaWriter.__init__
+mungo.fasta.Sequence.__init__
+mungo.fastaQuality.Quality.__init__
+mungo.fastaQuality.QualityReaderIndexed.__init__
+mungo.fastq.FastqReader.__init__
+mungo.fastq.FastqWriter.__init__
+mungo.generic.Feature.__init__
+mungo.generic.GenericReader.__init__
+mungo.genscan.Predicted.__init__
+mungo.gff.Feature.__init__
+mungo.gff.GffReader.__init__
+mungo.gff.SimpleGffReader.__init__
+mungo.hmmer.Domain.__init__
+mungo.hmmer.GenomicDomain.__init__
+mungo.hmmer.HmmerReader.__init__
+mungo.hmmer.PfamReader.__init__
+mungo.hmmer3.Domain.__init__
+mungo.hmmer3.DomainHitsReader.__init__
+mungo.intervals.Interval.__init__
+mungo.intervals.RichInterval.__init__
+mungo.mungoCore.AbstractDataReader.__init__
+mungo.mungoCore.AbstractFeature.__init__
+mungo.possum.Motif.__init__
+mungo.possum.PossumOutputReader.__init__
+mungo.transfac.Match.__init__
+mungo.useful.ClassFromDict.__init__
+mungo.vista.Exon.__init__
+mungo.vista.Gene.__init__" class="py-name" href="#" onclick="return doclink('link-19', '__init__', 'link-19');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-op">*</tt><tt class="py-name">args</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-name">kw</tt><tt class="py-op">)</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">genomic</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+</div><a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">     </tt>
+<a name="Domain.__repr__"></a><div id="Domain.__repr__-def"><a name="L33"></a><tt class="py-lineno"> 33</tt> <a class="py-toggle" href="#" id="Domain.__repr__-toggle" onclick="return toggle('Domain.__repr__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.hmmer3.Domain-class.html#__repr__">__repr__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Domain.__repr__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Domain.__repr__-expanded"><a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">        <tt class="py-name">d</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt id="link-20" class="py-name"><a title="mungo.hmmer.k
+mungo.hmmer3.k" class="py-name" href="#" onclick="return doclink('link-20', 'k', 'link-9');">k</a></tt><tt class="py-op">,</tt><tt id="link-21" class="py-name"><a title="mungo.hmmer.v
+mungo.hmmer3.v" class="py-name" href="#" onclick="return doclink('link-21', 'v', 'link-8');">v</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__dict__</tt><tt class="py-op">.</tt><tt class="py-name">iteritems</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">            <tt class="py-name">d</tt><tt class="py-op">[</tt><tt id="link-22" class="py-name"><a title="mungo.hmmer.k
+mungo.hmmer3.k" class="py-name" href="#" onclick="return doclink('link-22', 'k', 'link-9');">k</a></tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt id="link-23" class="py-name"><a title="mungo.hmmer.v
+mungo.hmmer3.v" class="py-name" href="#" onclick="return doclink('link-23', 'v', 'link-8');">v</a></tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-24" class="py-name"><a title="mungo.bed.Feature.format
+mungo.blast.HSP.format
+mungo.blat.Chain.format
+mungo.blat_old.Chain.format
+mungo.genscan.Predicted.format
+mungo.gff.Feature.format
+mungo.hmmer.Domain.format
+mungo.hmmer.GenomicDomain.format
+mungo.hmmer3.Domain.format
+mungo.intervals.Interval.format
+mungo.intervals.RichInterval.format
+mungo.possum.Motif.format
+mungo.transfac.Match.format" class="py-name" href="#" onclick="return doclink('link-24', 'format', 'link-15');">format</a></tt> <tt class="py-op">%</tt> <tt class="py-name">d</tt> </tt>
+</div><a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">     </tt>
+<a name="Domain.getSequence"></a><div id="Domain.getSequence-def"><a name="L39"></a><tt class="py-lineno"> 39</tt> <a class="py-toggle" href="#" id="Domain.getSequence-toggle" onclick="return toggle('Domain.getSequence');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.hmmer3.Domain-class.html#getSequence">getSequence</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">blastdb</tt><tt class="py-op">,</tt> <tt class="py-param">getAll</tt><tt class="py-op">=</tt><tt class="py-name">False</tt><tt class="py-op">,</tt> <tt class="py-param">convertAccession</tt><tt class="py-op">=</tt><tt class="py-keyword">lambda</tt> <tt class="py-name">x</tt><tt class="py-op">:</tt> <tt class="py-name">x</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Domain.getSequence-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Domain.getSequence-expanded"><a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">getAll</tt><tt class="py-op">:</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">            <tt class="py-name">start</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">            <tt class="py-name">end</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">            <tt class="py-name">start</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">alnStart</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">            <tt class="py-name">end</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">alnEnd</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">        <tt class="py-name">accession</tt> <tt class="py-op">=</tt> <tt class="py-name">convertAccession</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">accession</tt><tt class="py-op">)</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">        <tt class="py-name">h</tt><tt class="py-op">,</tt><tt class="py-name">s</tt> <tt class="py-op">=</tt> <tt id="link-25" class="py-name" targets="Module mungo.blast=mungo.blast-module.html"><a title="mungo.blast" class="py-name" href="#" onclick="return doclink('link-25', 'blast', 'link-25');">blast</a></tt><tt class="py-op">.</tt><tt id="link-26" class="py-name" targets="Method mungo.blast.HSP.getSequence()=mungo.blast.HSP-class.html#getSequence,Function mungo.blast.getSequence()=mungo.blast-module.html#getSequence,Method mungo.gff.Feature.getSequence()=mungo.gff.Feature-class.html#getSequence,Method mungo.hmmer.Domain.getSequence()=mungo.hmmer.Domain-class.html#getSequence,Method mungo.hmmer.GenomicDomain.getSequence()=mungo.hmmer.GenomicDomain-class.html#getSequence,Method mungo.hmmer.SixFrameDomain.getSequence()=mungo.hmmer.SixFrameDomain-class.html#getSequence,Method mungo.hmmer3.Domain.getSequence()=mungo.hmmer3.Domain-class.html#getSequence,Method mungo.intervals.Interval.getSequence()=mungo.intervals.Interval-class.html#getSequence"><a title="mungo.blast.HSP.getSequence
+mungo.blast.getSequence
+mungo.gff.Feature.getSequence
+mungo.hmmer.Domain.getSequence
+mungo.hmmer.GenomicDomain.getSequence
+mungo.hmmer.SixFrameDomain.getSequence
+mungo.hmmer3.Domain.getSequence
+mungo.intervals.Interval.getSequence" class="py-name" href="#" onclick="return doclink('link-26', 'getSequence', 'link-26');">getSequence</a></tt><tt class="py-op">(</tt><tt class="py-name">blastdb</tt><tt class="py-op">,</tt> <tt class="py-name">accession</tt><tt class="py-op">,</tt> <tt class="py-name">start</tt><tt class="py-op">,</tt> <tt class="py-name">end</tt><tt class="py-op">)</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">h</tt><tt class="py-op">,</tt><tt class="py-name">s</tt> </tt>
+</div></div><a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"> </tt>
+<a name="BlockSixFrameDomain"></a><div id="BlockSixFrameDomain-def"><a name="L51"></a><tt class="py-lineno"> 51</tt> <a class="py-toggle" href="#" id="BlockSixFrameDomain-toggle" onclick="return toggle('BlockSixFrameDomain');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="mungo.hmmer3.BlockSixFrameDomain-class.html">BlockSixFrameDomain</a><tt class="py-op">(</tt><tt class="py-base-class">Domain</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="BlockSixFrameDomain-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="BlockSixFrameDomain-expanded"><a name="BlockSixFrameDomain.toGenomic"></a><div id="BlockSixFrameDomain.toGenomic-def"><a name="L52"></a><tt class="py-lineno"> 52</tt> <a class="py-toggle" href="#" id="BlockSixFrameDomain.toGenomic-toggle" onclick="return toggle('BlockSixFrameDomain.toGenomic');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.hmmer3.BlockSixFrameDomain-class.html#toGenomic">toGenomic</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="BlockSixFrameDomain.toGenomic-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="BlockSixFrameDomain.toGenomic-expanded"><a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">        <tt class="py-docstring">"""Convert from 6 frame to genomic coordinates."""</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">        <tt class="py-name">prog</tt> <tt class="py-op">=</tt> <tt class="py-name">re</tt><tt class="py-op">.</tt><tt class="py-name">compile</tt><tt class="py-op">(</tt><tt class="py-string">'\.|-|\:'</tt><tt class="py-op">)</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">        <tt class="py-name">chrom</tt><tt class="py-op">,</tt><tt class="py-name">blockStart</tt><tt class="py-op">,</tt><tt class="py-name">blockEnd</tt><tt class="py-op">,</tt><tt class="py-name">hmmerFrame</tt> <tt class="py-op">=</tt> <tt class="py-name">prog</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">targetName</tt><tt class="py-op">)</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">        <tt class="py-name">blockStart</tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">blockStart</tt><tt class="py-op">)</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">        <tt class="py-name">blockEnd</tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">blockEnd</tt><tt class="py-op">)</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">        <tt class="py-name">L</tt> <tt class="py-op">=</tt> <tt class="py-name">blockEnd</tt><tt class="py-op">-</tt><tt class="py-name">blockStart</tt><tt class="py-op">+</tt><tt class="py-number">1</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">        <tt class="py-name">hmmerFrame</tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">hmmerFrame</tt><tt class="py-op">)</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">        <tt class="py-name">frame</tt> <tt class="py-op">=</tt> <tt id="link-27" class="py-name"><a title="mungo.hmmer.hmmer2frame
+mungo.hmmer3.hmmer2frame" class="py-name" href="#" onclick="return doclink('link-27', 'hmmer2frame', 'link-6');">hmmer2frame</a></tt><tt class="py-op">[</tt><tt class="py-name">hmmerFrame</tt><tt class="py-op">]</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">         </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">frame</tt><tt class="py-op">&gt;</tt><tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">            <tt id="link-28" class="py-name" targets="Method mungo.blast.HSP.strand()=mungo.blast.HSP-class.html#strand"><a title="mungo.blast.HSP.strand" class="py-name" href="#" onclick="return doclink('link-28', 'strand', 'link-28');">strand</a></tt> <tt class="py-op">=</tt> <tt class="py-string">'+'</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">            <tt id="link-29" class="py-name"><a title="mungo.blast.HSP.strand" class="py-name" href="#" onclick="return doclink('link-29', 'strand', 'link-28');">strand</a></tt> <tt class="py-op">=</tt> <tt class="py-string">'-'</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">         </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">        <tt class="py-name">gStart</tt><tt class="py-op">,</tt><tt class="py-name">gEnd</tt> <tt class="py-op">=</tt> <tt id="link-30" class="py-name" targets="Function mungo.hmmer.convertSixFrameToGenomic()=mungo.hmmer-module.html#convertSixFrameToGenomic,Function mungo.hmmer3.convertSixFrameToGenomic()=mungo.hmmer3-module.html#convertSixFrameToGenomic"><a title="mungo.hmmer.convertSixFrameToGenomic
+mungo.hmmer3.convertSixFrameToGenomic" class="py-name" href="#" onclick="return doclink('link-30', 'convertSixFrameToGenomic', 'link-30');">convertSixFrameToGenomic</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">alnStart</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">alnEnd</tt><tt class="py-op">,</tt> <tt class="py-name">frame</tt><tt class="py-op">,</tt> <tt class="py-name">L</tt><tt class="py-op">)</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">genomic</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">targetName</tt> <tt class="py-op">=</tt> <tt class="py-name">chrom</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">alnStart</tt> <tt class="py-op">=</tt> <tt class="py-name">gStart</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">alnEnd</tt> <tt class="py-op">=</tt> <tt class="py-name">gEnd</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-31" class="py-name"><a title="mungo.blast.HSP.strand" class="py-name" href="#" onclick="return doclink('link-31', 'strand', 'link-28');">strand</a></tt> <tt class="py-op">=</tt> <tt id="link-32" class="py-name"><a title="mungo.blast.HSP.strand" class="py-name" href="#" onclick="return doclink('link-32', 'strand', 'link-28');">strand</a></tt> </tt>
+</div></div><a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"> </tt>
+<a name="convertSixFrameToGenomic"></a><div id="convertSixFrameToGenomic-def"><a name="L75"></a><tt class="py-lineno"> 75</tt> <a class="py-toggle" href="#" id="convertSixFrameToGenomic-toggle" onclick="return toggle('convertSixFrameToGenomic');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.hmmer3-module.html#convertSixFrameToGenomic">convertSixFrameToGenomic</a><tt class="py-op">(</tt><tt class="py-param">start</tt><tt class="py-op">,</tt> <tt class="py-param">end</tt><tt class="py-op">,</tt> <tt class="py-param">frame</tt><tt class="py-op">,</tt> <tt class="py-param">L</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="convertSixFrameToGenomic-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="convertSixFrameToGenomic-expanded"><a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">    <tt class="py-docstring">"""Convert 6 frame coords to genomic.</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"><tt class="py-docstring">    @param start: Amino acid start coord</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"><tt class="py-docstring">    @param end: Amino acid end coord</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"><tt class="py-docstring">    @param frame: Frame</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"><tt class="py-docstring">    @param L: Nucleotide seq length</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"><tt class="py-docstring">    @return: (gStart, gEnd, strand)</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">frame</tt><tt class="py-op">&gt;=</tt><tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">        <tt class="py-name">gStart</tt> <tt class="py-op">=</tt> <tt class="py-number">3</tt><tt class="py-op">*</tt><tt class="py-op">(</tt><tt class="py-name">start</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">)</tt><tt class="py-op">+</tt><tt class="py-op">(</tt><tt class="py-name">frame</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">)</tt><tt class="py-op">+</tt><tt class="py-number">1</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">        <tt class="py-name">gEnd</tt> <tt class="py-op">=</tt> <tt class="py-number">3</tt><tt class="py-op">*</tt><tt class="py-op">(</tt><tt class="py-name">end</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">)</tt><tt class="py-op">+</tt><tt class="py-op">(</tt><tt class="py-name">frame</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">)</tt><tt class="py-op">+</tt><tt class="py-number">3</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">    <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">        <tt class="py-name">gStart</tt> <tt class="py-op">=</tt> <tt class="py-name">L</tt><tt class="py-op">-</tt><tt class="py-op">(</tt><tt class="py-number">3</tt><tt class="py-op">*</tt><tt class="py-op">(</tt><tt class="py-name">start</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">)</tt><tt class="py-op">+</tt><tt class="py-name">abs</tt><tt class="py-op">(</tt><tt class="py-name">frame</tt><tt class="py-op">)</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">        <tt class="py-name">gEnd</tt> <tt class="py-op">=</tt> <tt class="py-name">L</tt><tt class="py-op">-</tt><tt class="py-op">(</tt><tt class="py-number">3</tt><tt class="py-op">*</tt><tt class="py-op">(</tt><tt class="py-name">end</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">)</tt><tt class="py-op">+</tt><tt class="py-name">abs</tt><tt class="py-op">(</tt><tt class="py-name">frame</tt><tt class="py-op">)</tt><tt class="py-op">+</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">gStart</tt><tt class="py-op">,</tt><tt class="py-name">gEnd</tt> </tt>
+</div><a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line"> </tt>
+<a name="HmmerFile"></a><div id="HmmerFile-def"><a name="L93"></a><tt class="py-lineno"> 93</tt> <a class="py-toggle" href="#" id="HmmerFile-toggle" onclick="return toggle('HmmerFile');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.hmmer3-module.html#HmmerFile">HmmerFile</a><tt class="py-op">(</tt><tt class="py-param">iFileHandle</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-param">kw</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HmmerFile-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="HmmerFile-expanded"><a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">    <tt class="py-docstring">"Factory function returning a HmmerFileReader"</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-33" class="py-name" targets="Class mungo.hmmer3.DomainHitsReader=mungo.hmmer3.DomainHitsReader-class.html"><a title="mungo.hmmer3.DomainHitsReader" class="py-name" href="#" onclick="return doclink('link-33', 'DomainHitsReader', 'link-33');">DomainHitsReader</a></tt><tt class="py-op">(</tt><tt class="py-name">iFileHandle</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-name">kw</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"> </tt>
+<a name="DomainHitsReader"></a><div id="DomainHitsReader-def"><a name="L98"></a><tt class="py-lineno"> 98</tt> <a class="py-toggle" href="#" id="DomainHitsReader-toggle" onclick="return toggle('DomainHitsReader');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="mungo.hmmer3.DomainHitsReader-class.html">DomainHitsReader</a><tt class="py-op">(</tt><tt class="py-base-class">AbstractDataReader</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DomainHitsReader-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="DomainHitsReader-expanded"><a name="DomainHitsReader.__init__"></a><div id="DomainHitsReader.__init__-def"><a name="L99"></a><tt class="py-lineno"> 99</tt> <a class="py-toggle" href="#" id="DomainHitsReader.__init__-toggle" onclick="return toggle('DomainHitsReader.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.hmmer3.DomainHitsReader-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">iFileHandle</tt><tt class="py-op">,</tt> <tt class="py-param">seqType</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-param">eValueCutoff</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-param">scoreCutoff</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DomainHitsReader.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="DomainHitsReader.__init__-expanded"><a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">seqType</tt> <tt class="py-op">=</tt> <tt class="py-name">seqType</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">eValueCutoff</tt> <tt class="py-op">=</tt> <tt class="py-name">eValueCutoff</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">scoreCutoff</tt> <tt class="py-op">=</tt> <tt class="py-name">scoreCutoff</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">        <tt class="py-name">super</tt><tt class="py-op">(</tt><tt id="link-34" class="py-name"><a title="mungo.hmmer3.DomainHitsReader" class="py-name" href="#" onclick="return doclink('link-34', 'DomainHitsReader', 'link-33');">DomainHitsReader</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-35" class="py-name"><a title="mungo.GoTools.GoTerm.__init__
+mungo.GoTools.Ontology.__init__
+mungo.alchemy.Alchemy.__init__
+mungo.align.Alignment.__init__
+mungo.align.Transform.__init__
+mungo.bed.Feature.__init__
+mungo.blast.BlastReader.__init__
+mungo.blast.HSP.__init__
+mungo.blast.TooManyBlocks.__init__
+mungo.blastz.Alignment.__init__
+mungo.blastz.Block.__init__
+mungo.blastz.Chain.__init__
+mungo.blastz.HSP.__init__
+mungo.blat.BlatReader.__init__
+mungo.blat.Chain.__init__
+mungo.blat_old.Chain.__init__
+mungo.bowtie.BowtieReader.__init__
+mungo.bowtie.BowtieTwoFilePairedEndReader.__init__
+mungo.bowtie.Feature.__init__
+mungo.bowtie.PairedEnds.__init__
+mungo.cap3.CapIndexFile.__init__
+mungo.cap3.CapReaderIndexed.__init__
+mungo.config.Config.__init__
+mungo.diagram.Glyphs.Arrow.__init__
+mungo.diagram.Glyphs.Block.__init__
+mungo.diagram.Glyphs.PointyBlock.__init__
+mungo.diagram.Glyphs.Triangle.__init__
+mungo.diagram.Glyphs._Glyph.__init__
+mungo.diagram.Mapping.__init__
+mungo.diagram.UniformMapping.__init__
+mungo.diagram.UniformMapping2.__init__
+mungo.fasta.FastaIndexFile.__init__
+mungo.fasta.FastaIndexPickleFile.__init__
+mungo.fasta.FastaIndexTextFile.__init__
+mungo.fasta.FastaReader.__init__
+mungo.fasta.FastaReaderIndexed.__init__
+mungo.fasta.FastaWriter.__init__
+mungo.fasta.Sequence.__init__
+mungo.fastaQuality.Quality.__init__
+mungo.fastaQuality.QualityReaderIndexed.__init__
+mungo.fastq.FastqReader.__init__
+mungo.fastq.FastqWriter.__init__
+mungo.generic.Feature.__init__
+mungo.generic.GenericReader.__init__
+mungo.genscan.Predicted.__init__
+mungo.gff.Feature.__init__
+mungo.gff.GffReader.__init__
+mungo.gff.SimpleGffReader.__init__
+mungo.hmmer.Domain.__init__
+mungo.hmmer.GenomicDomain.__init__
+mungo.hmmer.HmmerReader.__init__
+mungo.hmmer.PfamReader.__init__
+mungo.hmmer3.Domain.__init__
+mungo.hmmer3.DomainHitsReader.__init__
+mungo.intervals.Interval.__init__
+mungo.intervals.RichInterval.__init__
+mungo.mungoCore.AbstractDataReader.__init__
+mungo.mungoCore.AbstractFeature.__init__
+mungo.possum.Motif.__init__
+mungo.possum.PossumOutputReader.__init__
+mungo.transfac.Match.__init__
+mungo.useful.ClassFromDict.__init__
+mungo.vista.Exon.__init__
+mungo.vista.Gene.__init__" class="py-name" href="#" onclick="return doclink('link-35', '__init__', 'link-19');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">iFileHandle</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">     </tt>
+<a name="DomainHitsReader._generator"></a><div id="DomainHitsReader._generator-def"><a name="L105"></a><tt class="py-lineno">105</tt> <a class="py-toggle" href="#" id="DomainHitsReader._generator-toggle" onclick="return toggle('DomainHitsReader._generator');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="mungo.hmmer3.DomainHitsReader-class.html#_generator">_generator</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DomainHitsReader._generator-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="DomainHitsReader._generator-expanded"><a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">        <tt class="py-docstring">"""Return an iterator to a HMMer file."""</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">seqType</tt> <tt class="py-keyword">in</tt> <tt class="py-op">[</tt><tt id="link-36" class="py-name"><a title="mungo.hmmer.Domain
+mungo.hmmer3.Domain" class="py-name" href="#" onclick="return doclink('link-36', 'Domain', 'link-18');">Domain</a></tt><tt class="py-op">,</tt> <tt id="link-37" class="py-name" targets="Class mungo.hmmer.BlockSixFrameDomain=mungo.hmmer.BlockSixFrameDomain-class.html,Class mungo.hmmer3.BlockSixFrameDomain=mungo.hmmer3.BlockSixFrameDomain-class.html"><a title="mungo.hmmer.BlockSixFrameDomain
+mungo.hmmer3.BlockSixFrameDomain" class="py-name" href="#" onclick="return doclink('link-37', 'BlockSixFrameDomain', 'link-37');">BlockSixFrameDomain</a></tt><tt class="py-op">]</tt><tt class="py-op">:</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">            <tt class="py-name">_Domain</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">seqType</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">seqType</tt><tt class="py-op">==</tt><tt class="py-string">'SixFrame'</tt><tt class="py-op">:</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">            <tt class="py-name">_Domain</tt> <tt class="py-op">=</tt> <tt id="link-38" class="py-name" targets="Class mungo.hmmer.SixFrameDomain=mungo.hmmer.SixFrameDomain-class.html"><a title="mungo.hmmer.SixFrameDomain" class="py-name" href="#" onclick="return doclink('link-38', 'SixFrameDomain', 'link-38');">SixFrameDomain</a></tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">seqType</tt><tt class="py-op">==</tt><tt class="py-string">'BlockSixFrame'</tt><tt class="py-op">:</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">            <tt class="py-name">_Domain</tt> <tt class="py-op">=</tt> <tt id="link-39" class="py-name"><a title="mungo.hmmer.BlockSixFrameDomain
+mungo.hmmer3.BlockSixFrameDomain" class="py-name" href="#" onclick="return doclink('link-39', 'BlockSixFrameDomain', 'link-37');">BlockSixFrameDomain</a></tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">            <tt class="py-name">_Domain</tt> <tt class="py-op">=</tt> <tt id="link-40" class="py-name"><a title="mungo.hmmer.Domain
+mungo.hmmer3.Domain" class="py-name" href="#" onclick="return doclink('link-40', 'Domain', 'link-18');">Domain</a></tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">         </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">line</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">iFile</tt><tt class="py-op">:</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">            <tt class="py-name">line</tt> <tt class="py-op">=</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt class="py-name">strip</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">line</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">==</tt><tt class="py-string">"#"</tt><tt class="py-op">:</tt> <tt class="py-keyword">continue</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">            <tt class="py-name">tokens</tt> <tt class="py-op">=</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">            <tt class="py-name">d</tt> <tt class="py-op">=</tt> <tt class="py-name">_Domain</tt><tt class="py-op">(</tt><tt class="py-name">dict</tt><tt class="py-op">(</tt><tt class="py-name">zip</tt><tt class="py-op">(</tt><tt id="link-41" class="py-name"><a title="mungo.hmmer.Domain
+mungo.hmmer3.Domain" class="py-name" href="#" onclick="return doclink('link-41', 'Domain', 'link-18');">Domain</a></tt><tt class="py-op">.</tt><tt id="link-42" class="py-name"><a title="mungo.bed.Feature.attributes
+mungo.blast.HSP.attributes
+mungo.blat.Chain.attributes
+mungo.blat_old.Chain.attributes
+mungo.genscan.Predicted.attributes
+mungo.gff.Feature.attributes
+mungo.hmmer.Domain.attributes
+mungo.hmmer.GenomicDomain.attributes
+mungo.hmmer3.Domain.attributes
+mungo.intervals.Interval.attributes
+mungo.intervals.RichInterval.attributes
+mungo.possum.Motif.attributes
+mungo.transfac.Match.attributes" class="py-name" href="#" onclick="return doclink('link-42', 'attributes', 'link-13');">attributes</a></tt><tt class="py-op">,</tt> <tt class="py-name">tokens</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">eValueCutoff</tt> <tt class="py-keyword">and</tt> <tt class="py-name">d</tt><tt class="py-op">.</tt><tt class="py-name">eValue</tt><tt class="py-op">&gt;</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">eValueCutoff</tt><tt class="py-op">)</tt> <tt class="py-keyword">or</tt> \ </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">              <tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">scoreCutoff</tt> <tt class="py-keyword">and</tt> <tt class="py-name">d</tt><tt class="py-op">.</tt><tt class="py-name">score</tt><tt class="py-op">&lt;</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">scoreCutoff</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-keyword">continue</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">            <tt class="py-keyword">yield</tt> <tt class="py-name">d</tt> </tt>
+</div></div><a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="mungo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Apr 24 16:15:02 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
